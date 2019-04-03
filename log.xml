@@ -1,0 +1,7000 @@
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000715</calcTime>
+	<allocTime>0.006936</allocTime>
+	<readTime>0.000556</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011883</calcTime>
+	<allocTime>0.101285</allocTime>
+	<readTime>0.001634</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>155902.00</distance>
+	<calcTime>0.004691</calcTime>
+	<allocTime>0.031412</allocTime>
+	<readTime>0.001256</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000019</calcTime>
+	<allocTime>0.000120</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000017</calcTime>
+	<allocTime>0.000117</allocTime>
+	<readTime>0.000148</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004470</calcTime>
+	<allocTime>0.052749</allocTime>
+	<readTime>0.000976</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>101165.00</distance>
+	<calcTime>0.000288</calcTime>
+	<allocTime>0.001921</allocTime>
+	<readTime>0.000399</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003598</calcTime>
+	<allocTime>0.020759</allocTime>
+	<readTime>0.000735</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>2.665478</calcTime>
+	<allocTime>5.824068</allocTime>
+	<readTime>0.004796</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.678043</calcTime>
+	<allocTime>4.140560</allocTime>
+	<readTime>0.005553</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166760.00</distance>
+	<calcTime>0.004860</calcTime>
+	<allocTime>0.033500</allocTime>
+	<readTime>0.001206</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.620846</calcTime>
+	<allocTime>3.727285</allocTime>
+	<readTime>0.005152</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6809809.00</distance>
+	<calcTime>0.009701</calcTime>
+	<allocTime>0.057959</allocTime>
+	<readTime>0.001734</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>248373.00</distance>
+	<calcTime>0.001830</calcTime>
+	<allocTime>0.010559</allocTime>
+	<readTime>0.000736</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002448</calcTime>
+	<allocTime>0.010763</allocTime>
+	<readTime>0.000585</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>114062.00</distance>
+	<calcTime>0.008867</calcTime>
+	<allocTime>0.054540</allocTime>
+	<readTime>0.001166</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>3.476849</calcTime>
+	<allocTime>7.859235</allocTime>
+	<readTime>0.006161</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>399842.00</distance>
+	<calcTime>0.001066</calcTime>
+	<allocTime>0.007743</allocTime>
+	<readTime>0.000667</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047050.00</distance>
+	<calcTime>0.009835</calcTime>
+	<allocTime>0.081761</allocTime>
+	<readTime>0.001028</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112000.00</distance>
+	<calcTime>0.000068</calcTime>
+	<allocTime>0.000397</allocTime>
+	<readTime>0.000183</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000768</calcTime>
+	<allocTime>0.004809</allocTime>
+	<readTime>0.000383</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012204</calcTime>
+	<allocTime>0.124966</allocTime>
+	<readTime>0.001576</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>159493.00</distance>
+	<calcTime>0.004334</calcTime>
+	<allocTime>0.027696</allocTime>
+	<readTime>0.001133</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000064</allocTime>
+	<readTime>0.000223</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000061</allocTime>
+	<readTime>0.000144</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004846</calcTime>
+	<allocTime>0.036699</allocTime>
+	<readTime>0.000938</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>103183.00</distance>
+	<calcTime>0.000276</calcTime>
+	<allocTime>0.001598</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357944.00</distance>
+	<calcTime>0.003637</calcTime>
+	<allocTime>0.022639</allocTime>
+	<readTime>0.000573</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.618071</calcTime>
+	<allocTime>4.937163</allocTime>
+	<readTime>0.004490</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.721155</calcTime>
+	<allocTime>4.550745</allocTime>
+	<readTime>0.004586</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>176520.00</distance>
+	<calcTime>0.004941</calcTime>
+	<allocTime>0.040237</allocTime>
+	<readTime>0.001290</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.622681</calcTime>
+	<allocTime>3.983690</allocTime>
+	<readTime>0.005263</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6714846.00</distance>
+	<calcTime>0.009283</calcTime>
+	<allocTime>0.064175</allocTime>
+	<readTime>0.001484</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>251810.00</distance>
+	<calcTime>0.001575</calcTime>
+	<allocTime>0.007310</allocTime>
+	<readTime>0.000638</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002320</calcTime>
+	<allocTime>0.009945</allocTime>
+	<readTime>0.000419</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109425.00</distance>
+	<calcTime>0.008480</calcTime>
+	<allocTime>0.059114</allocTime>
+	<readTime>0.001160</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.266634</calcTime>
+	<allocTime>7.246927</allocTime>
+	<readTime>0.007387</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60219.00</distance>
+	<calcTime>0.001143</calcTime>
+	<allocTime>0.008976</allocTime>
+	<readTime>0.000822</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046849.00</distance>
+	<calcTime>0.008211</calcTime>
+	<allocTime>0.050299</allocTime>
+	<readTime>0.001107</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>116201.00</distance>
+	<calcTime>0.000076</calcTime>
+	<allocTime>0.000377</allocTime>
+	<readTime>0.000275</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000508</calcTime>
+	<allocTime>0.004739</allocTime>
+	<readTime>0.000498</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012337</calcTime>
+	<allocTime>0.088763</allocTime>
+	<readTime>0.001340</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154879.00</distance>
+	<calcTime>0.004978</calcTime>
+	<allocTime>0.039627</allocTime>
+	<readTime>0.001143</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000018</calcTime>
+	<allocTime>0.000106</allocTime>
+	<readTime>0.000294</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000016</calcTime>
+	<allocTime>0.000078</allocTime>
+	<readTime>0.000153</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.005194</calcTime>
+	<allocTime>0.036563</allocTime>
+	<readTime>0.000722</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>99771.00</distance>
+	<calcTime>0.000328</calcTime>
+	<allocTime>0.002768</allocTime>
+	<readTime>0.000353</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003363</calcTime>
+	<allocTime>0.029951</allocTime>
+	<readTime>0.001008</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.598331</calcTime>
+	<allocTime>4.683761</allocTime>
+	<readTime>0.005099</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.759664</calcTime>
+	<allocTime>3.979983</allocTime>
+	<readTime>0.005371</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161253.00</distance>
+	<calcTime>0.004311</calcTime>
+	<allocTime>0.031618</allocTime>
+	<readTime>0.001205</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581566396.00</distance>
+	<calcTime>0.617695</calcTime>
+	<allocTime>3.622122</allocTime>
+	<readTime>0.006098</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6741143.00</distance>
+	<calcTime>0.009103</calcTime>
+	<allocTime>0.068877</allocTime>
+	<readTime>0.000973</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>246968.00</distance>
+	<calcTime>0.001415</calcTime>
+	<allocTime>0.006934</allocTime>
+	<readTime>0.000378</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>85600.00</distance>
+	<calcTime>0.002928</calcTime>
+	<allocTime>0.016230</allocTime>
+	<readTime>0.000470</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>105944.00</distance>
+	<calcTime>0.009478</calcTime>
+	<allocTime>0.057812</allocTime>
+	<readTime>0.000786</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.208443</calcTime>
+	<allocTime>7.162517</allocTime>
+	<readTime>0.003786</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60078.00</distance>
+	<calcTime>0.001091</calcTime>
+	<allocTime>0.005439</allocTime>
+	<readTime>0.000295</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047919.00</distance>
+	<calcTime>0.008337</calcTime>
+	<allocTime>0.048822</allocTime>
+	<readTime>0.000465</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000061</calcTime>
+	<allocTime>0.000325</allocTime>
+	<readTime>0.000108</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000716</calcTime>
+	<allocTime>0.003642</allocTime>
+	<readTime>0.000157</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012507</calcTime>
+	<allocTime>0.086774</allocTime>
+	<readTime>0.000706</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003891</calcTime>
+	<allocTime>0.024449</allocTime>
+	<readTime>0.000348</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000058</allocTime>
+	<readTime>0.000096</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000011</calcTime>
+	<allocTime>0.000042</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275527.00</distance>
+	<calcTime>0.004449</calcTime>
+	<allocTime>0.029609</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000281</calcTime>
+	<allocTime>0.001457</allocTime>
+	<readTime>0.000136</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357730.00</distance>
+	<calcTime>0.003386</calcTime>
+	<allocTime>0.018766</allocTime>
+	<readTime>0.000289</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.581384</calcTime>
+	<allocTime>4.600348</allocTime>
+	<readTime>0.002832</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.690753</calcTime>
+	<allocTime>4.019906</allocTime>
+	<readTime>0.002256</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164688.00</distance>
+	<calcTime>0.005327</calcTime>
+	<allocTime>0.028170</allocTime>
+	<readTime>0.000406</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.619517</calcTime>
+	<allocTime>3.635867</allocTime>
+	<readTime>0.003139</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6809809.00</distance>
+	<calcTime>0.009143</calcTime>
+	<allocTime>0.060758</allocTime>
+	<readTime>0.000492</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>243479.00</distance>
+	<calcTime>0.001679</calcTime>
+	<allocTime>0.007655</allocTime>
+	<readTime>0.000243</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>177011.00</distance>
+	<calcTime>0.002399</calcTime>
+	<allocTime>0.009709</allocTime>
+	<readTime>0.000205</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>106549.00</distance>
+	<calcTime>0.008620</calcTime>
+	<allocTime>0.052439</allocTime>
+	<readTime>0.000658</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.219341</calcTime>
+	<allocTime>7.078978</allocTime>
+	<readTime>0.003313</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60098.00</distance>
+	<calcTime>0.000847</calcTime>
+	<allocTime>0.004995</allocTime>
+	<readTime>0.000227</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047535.00</distance>
+	<calcTime>0.008310</calcTime>
+	<allocTime>0.050790</allocTime>
+	<readTime>0.000430</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112559.00</distance>
+	<calcTime>0.000065</calcTime>
+	<allocTime>0.000354</allocTime>
+	<readTime>0.000122</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.001100</calcTime>
+	<allocTime>0.006952</allocTime>
+	<readTime>0.000298</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012899</calcTime>
+	<allocTime>0.089777</allocTime>
+	<readTime>0.001074</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003877</calcTime>
+	<allocTime>0.024543</allocTime>
+	<readTime>0.000347</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000060</allocTime>
+	<readTime>0.000099</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000043</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275527.00</distance>
+	<calcTime>0.004248</calcTime>
+	<allocTime>0.029978</allocTime>
+	<readTime>0.000313</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>101159.00</distance>
+	<calcTime>0.000242</calcTime>
+	<allocTime>0.001354</allocTime>
+	<readTime>0.000099</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358714.00</distance>
+	<calcTime>0.003624</calcTime>
+	<allocTime>0.020187</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.581697</calcTime>
+	<allocTime>4.594486</allocTime>
+	<readTime>0.002792</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684124</calcTime>
+	<allocTime>3.970700</allocTime>
+	<readTime>0.002272</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165753.00</distance>
+	<calcTime>0.004982</calcTime>
+	<allocTime>0.028843</allocTime>
+	<readTime>0.000396</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.609200</calcTime>
+	<allocTime>3.638576</allocTime>
+	<readTime>0.002917</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6839453.00</distance>
+	<calcTime>0.009443</calcTime>
+	<allocTime>0.063470</allocTime>
+	<readTime>0.000525</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>432840.00</distance>
+	<calcTime>0.001523</calcTime>
+	<allocTime>0.008045</allocTime>
+	<readTime>0.000297</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002236</calcTime>
+	<allocTime>0.010073</allocTime>
+	<readTime>0.000187</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>116791.00</distance>
+	<calcTime>0.008271</calcTime>
+	<allocTime>0.053507</allocTime>
+	<readTime>0.000493</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.194651</calcTime>
+	<allocTime>7.057478</allocTime>
+	<readTime>0.003390</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60469.00</distance>
+	<calcTime>0.001037</calcTime>
+	<allocTime>0.005245</allocTime>
+	<readTime>0.000228</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10048633.00</distance>
+	<calcTime>0.008989</calcTime>
+	<allocTime>0.048031</allocTime>
+	<readTime>0.000446</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000323</allocTime>
+	<readTime>0.000109</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000586</calcTime>
+	<allocTime>0.003700</allocTime>
+	<readTime>0.000154</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011488</calcTime>
+	<allocTime>0.087285</allocTime>
+	<readTime>0.000540</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.004171</calcTime>
+	<allocTime>0.026388</allocTime>
+	<readTime>0.000384</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000096</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000046</allocTime>
+	<readTime>0.000047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004401</calcTime>
+	<allocTime>0.029196</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97558.00</distance>
+	<calcTime>0.000243</calcTime>
+	<allocTime>0.001340</allocTime>
+	<readTime>0.000128</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003416</calcTime>
+	<allocTime>0.021260</allocTime>
+	<readTime>0.000270</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.582586</calcTime>
+	<allocTime>4.609787</allocTime>
+	<readTime>0.002848</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.678178</calcTime>
+	<allocTime>3.963208</allocTime>
+	<readTime>0.002450</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165795.00</distance>
+	<calcTime>0.005135</calcTime>
+	<allocTime>0.030790</allocTime>
+	<readTime>0.000389</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.609150</calcTime>
+	<allocTime>3.636842</allocTime>
+	<readTime>0.003077</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6931960.00</distance>
+	<calcTime>0.009039</calcTime>
+	<allocTime>0.058487</allocTime>
+	<readTime>0.000494</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249029.00</distance>
+	<calcTime>0.001638</calcTime>
+	<allocTime>0.006697</allocTime>
+	<readTime>0.000245</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>313019.00</distance>
+	<calcTime>0.002606</calcTime>
+	<allocTime>0.011655</allocTime>
+	<readTime>0.000191</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>103016.00</distance>
+	<calcTime>0.008689</calcTime>
+	<allocTime>0.058915</allocTime>
+	<readTime>0.000505</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.206912</calcTime>
+	<allocTime>7.081588</allocTime>
+	<readTime>0.003211</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60296.00</distance>
+	<calcTime>0.000875</calcTime>
+	<allocTime>0.005188</allocTime>
+	<readTime>0.000217</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10055201.00</distance>
+	<calcTime>0.008917</calcTime>
+	<allocTime>0.049433</allocTime>
+	<readTime>0.000524</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111020.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000346</allocTime>
+	<readTime>0.000104</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000669</calcTime>
+	<allocTime>0.005284</allocTime>
+	<readTime>0.000302</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012498</calcTime>
+	<allocTime>0.087072</allocTime>
+	<readTime>0.000709</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003679</calcTime>
+	<allocTime>0.024811</allocTime>
+	<readTime>0.000330</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000032</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000099</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1517.00</distance>
+	<calcTime>0.000023</calcTime>
+	<allocTime>0.000067</allocTime>
+	<readTime>0.000076</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275527.00</distance>
+	<calcTime>0.004612</calcTime>
+	<allocTime>0.030026</allocTime>
+	<readTime>0.000367</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000239</calcTime>
+	<allocTime>0.001405</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357730.00</distance>
+	<calcTime>0.003576</calcTime>
+	<allocTime>0.019578</allocTime>
+	<readTime>0.000287</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.584264</calcTime>
+	<allocTime>4.594285</allocTime>
+	<readTime>0.002789</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.679912</calcTime>
+	<allocTime>4.020251</allocTime>
+	<readTime>0.002371</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162668.00</distance>
+	<calcTime>0.005048</calcTime>
+	<allocTime>0.026384</allocTime>
+	<readTime>0.000411</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.611380</calcTime>
+	<allocTime>3.627389</allocTime>
+	<readTime>0.002767</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6773259.00</distance>
+	<calcTime>0.008975</calcTime>
+	<allocTime>0.060991</allocTime>
+	<readTime>0.000476</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>244271.00</distance>
+	<calcTime>0.001437</calcTime>
+	<allocTime>0.006808</allocTime>
+	<readTime>0.000251</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>75145.00</distance>
+	<calcTime>0.002668</calcTime>
+	<allocTime>0.010990</allocTime>
+	<readTime>0.000184</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113247.00</distance>
+	<calcTime>0.009530</calcTime>
+	<allocTime>0.054360</allocTime>
+	<readTime>0.000513</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.191971</calcTime>
+	<allocTime>7.054880</allocTime>
+	<readTime>0.003269</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61503.00</distance>
+	<calcTime>0.001115</calcTime>
+	<allocTime>0.004977</allocTime>
+	<readTime>0.000226</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047305.00</distance>
+	<calcTime>0.008902</calcTime>
+	<allocTime>0.049330</allocTime>
+	<readTime>0.000552</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000345</allocTime>
+	<readTime>0.000109</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000537</calcTime>
+	<allocTime>0.003606</allocTime>
+	<readTime>0.000154</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.011737</calcTime>
+	<allocTime>0.086829</allocTime>
+	<readTime>0.000556</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.003702</calcTime>
+	<allocTime>0.025193</allocTime>
+	<readTime>0.000334</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000055</allocTime>
+	<readTime>0.000098</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000042</allocTime>
+	<readTime>0.000047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273803.00</distance>
+	<calcTime>0.004363</calcTime>
+	<allocTime>0.029144</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97412.00</distance>
+	<calcTime>0.000241</calcTime>
+	<allocTime>0.001409</allocTime>
+	<readTime>0.000133</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003385</calcTime>
+	<allocTime>0.023025</allocTime>
+	<readTime>0.000306</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588797</calcTime>
+	<allocTime>4.624682</allocTime>
+	<readTime>0.002780</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.675810</calcTime>
+	<allocTime>3.953877</allocTime>
+	<readTime>0.002242</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>177642.00</distance>
+	<calcTime>0.004340</calcTime>
+	<allocTime>0.030587</allocTime>
+	<readTime>0.000548</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.604859</calcTime>
+	<allocTime>3.610030</allocTime>
+	<readTime>0.003156</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6804037.00</distance>
+	<calcTime>0.008947</calcTime>
+	<allocTime>0.059516</allocTime>
+	<readTime>0.000495</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250936.00</distance>
+	<calcTime>0.001446</calcTime>
+	<allocTime>0.006850</allocTime>
+	<readTime>0.000252</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>504755.00</distance>
+	<calcTime>0.002345</calcTime>
+	<allocTime>0.009537</allocTime>
+	<readTime>0.000240</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112068.00</distance>
+	<calcTime>0.008324</calcTime>
+	<allocTime>0.051982</allocTime>
+	<readTime>0.000553</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.193943</calcTime>
+	<allocTime>7.039741</allocTime>
+	<readTime>0.003210</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60078.00</distance>
+	<calcTime>0.001235</calcTime>
+	<allocTime>0.009094</allocTime>
+	<readTime>0.000798</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047001.00</distance>
+	<calcTime>0.008376</calcTime>
+	<allocTime>0.050048</allocTime>
+	<readTime>0.001025</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111463.00</distance>
+	<calcTime>0.000066</calcTime>
+	<allocTime>0.000362</allocTime>
+	<readTime>0.000252</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000581</calcTime>
+	<allocTime>0.005130</allocTime>
+	<readTime>0.000718</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>182907.00</distance>
+	<calcTime>0.012641</calcTime>
+	<allocTime>0.086499</allocTime>
+	<readTime>0.001391</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154816.00</distance>
+	<calcTime>0.003708</calcTime>
+	<allocTime>0.030089</allocTime>
+	<readTime>0.001137</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000094</allocTime>
+	<readTime>0.000209</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1377.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000073</allocTime>
+	<readTime>0.000144</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274273.00</distance>
+	<calcTime>0.004750</calcTime>
+	<allocTime>0.032464</allocTime>
+	<readTime>0.000767</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>104711.00</distance>
+	<calcTime>0.000275</calcTime>
+	<allocTime>0.002083</allocTime>
+	<readTime>0.000322</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358934.00</distance>
+	<calcTime>0.003523</calcTime>
+	<allocTime>0.021382</allocTime>
+	<readTime>0.000548</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.595236</calcTime>
+	<allocTime>4.730384</allocTime>
+	<readTime>0.005098</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.680658</calcTime>
+	<allocTime>3.983810</allocTime>
+	<readTime>0.004780</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>167026.00</distance>
+	<calcTime>0.004307</calcTime>
+	<allocTime>0.038388</allocTime>
+	<readTime>0.001344</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.601087</calcTime>
+	<allocTime>3.660701</allocTime>
+	<readTime>0.005335</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6804037.00</distance>
+	<calcTime>0.009204</calcTime>
+	<allocTime>0.057613</allocTime>
+	<readTime>0.000511</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250832.00</distance>
+	<calcTime>0.001477</calcTime>
+	<allocTime>0.007022</allocTime>
+	<readTime>0.000247</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002607</calcTime>
+	<allocTime>0.009354</allocTime>
+	<readTime>0.000199</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113792.00</distance>
+	<calcTime>0.008242</calcTime>
+	<allocTime>0.052542</allocTime>
+	<readTime>0.000481</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.215611</calcTime>
+	<allocTime>7.069564</allocTime>
+	<readTime>0.003945</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60387.00</distance>
+	<calcTime>0.001648</calcTime>
+	<allocTime>0.010563</allocTime>
+	<readTime>0.001019</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046787.00</distance>
+	<calcTime>0.008124</calcTime>
+	<allocTime>0.057014</allocTime>
+	<readTime>0.001362</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>110880.00</distance>
+	<calcTime>0.000067</calcTime>
+	<allocTime>0.000321</allocTime>
+	<readTime>0.000252</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000730</calcTime>
+	<allocTime>0.006243</allocTime>
+	<readTime>0.000590</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.011928</calcTime>
+	<allocTime>0.087107</allocTime>
+	<readTime>0.001268</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154879.00</distance>
+	<calcTime>0.003839</calcTime>
+	<allocTime>0.030026</allocTime>
+	<readTime>0.001165</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000194</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000015</calcTime>
+	<allocTime>0.000061</allocTime>
+	<readTime>0.000175</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275150.00</distance>
+	<calcTime>0.004862</calcTime>
+	<allocTime>0.027557</allocTime>
+	<readTime>0.000778</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>96790.00</distance>
+	<calcTime>0.000292</calcTime>
+	<allocTime>0.002104</allocTime>
+	<readTime>0.000291</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003370</calcTime>
+	<allocTime>0.026851</allocTime>
+	<readTime>0.000542</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.602263</calcTime>
+	<allocTime>4.627208</allocTime>
+	<readTime>0.004738</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.679813</calcTime>
+	<allocTime>3.996290</allocTime>
+	<readTime>0.005508</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166982.00</distance>
+	<calcTime>0.004764</calcTime>
+	<allocTime>0.036706</allocTime>
+	<readTime>0.001173</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581568278.00</distance>
+	<calcTime>0.610354</calcTime>
+	<allocTime>3.642439</allocTime>
+	<readTime>0.006238</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6810206.00</distance>
+	<calcTime>0.009823</calcTime>
+	<allocTime>0.058712</allocTime>
+	<readTime>0.000566</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249957.00</distance>
+	<calcTime>0.001563</calcTime>
+	<allocTime>0.006591</allocTime>
+	<readTime>0.000246</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>164620.00</distance>
+	<calcTime>0.002565</calcTime>
+	<allocTime>0.010781</allocTime>
+	<readTime>0.000190</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109643.00</distance>
+	<calcTime>0.009801</calcTime>
+	<allocTime>0.051755</allocTime>
+	<readTime>0.000561</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.215565</calcTime>
+	<allocTime>7.023495</allocTime>
+	<readTime>0.003398</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60225.00</distance>
+	<calcTime>0.001187</calcTime>
+	<allocTime>0.008790</allocTime>
+	<readTime>0.000849</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047217.00</distance>
+	<calcTime>0.008835</calcTime>
+	<allocTime>0.052624</allocTime>
+	<readTime>0.001058</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>122531.00</distance>
+	<calcTime>0.000113</calcTime>
+	<allocTime>0.000486</allocTime>
+	<readTime>0.000263</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000548</calcTime>
+	<allocTime>0.004499</allocTime>
+	<readTime>0.000412</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>182907.00</distance>
+	<calcTime>0.011528</calcTime>
+	<allocTime>0.087165</allocTime>
+	<readTime>0.001411</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>155902.00</distance>
+	<calcTime>0.004345</calcTime>
+	<allocTime>0.032500</allocTime>
+	<readTime>0.001287</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000065</allocTime>
+	<readTime>0.000228</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000174</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274273.00</distance>
+	<calcTime>0.005012</calcTime>
+	<allocTime>0.028884</allocTime>
+	<readTime>0.000884</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>96790.00</distance>
+	<calcTime>0.000289</calcTime>
+	<allocTime>0.002065</allocTime>
+	<readTime>0.000283</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357295.00</distance>
+	<calcTime>0.003169</calcTime>
+	<allocTime>0.019514</allocTime>
+	<readTime>0.000712</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588110</calcTime>
+	<allocTime>4.683244</allocTime>
+	<readTime>0.004777</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682915</calcTime>
+	<allocTime>3.982363</allocTime>
+	<readTime>0.004684</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165696.00</distance>
+	<calcTime>0.004535</calcTime>
+	<allocTime>0.034709</allocTime>
+	<readTime>0.001113</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.602569</calcTime>
+	<allocTime>3.635170</allocTime>
+	<readTime>0.004701</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6812087.00</distance>
+	<calcTime>0.009133</calcTime>
+	<allocTime>0.059768</allocTime>
+	<readTime>0.000516</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>252579.00</distance>
+	<calcTime>0.001518</calcTime>
+	<allocTime>0.006623</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>250775.00</distance>
+	<calcTime>0.002747</calcTime>
+	<allocTime>0.009767</allocTime>
+	<readTime>0.000199</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113266.00</distance>
+	<calcTime>0.008332</calcTime>
+	<allocTime>0.052876</allocTime>
+	<readTime>0.000510</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195968</calcTime>
+	<allocTime>7.078651</allocTime>
+	<readTime>0.003280</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60244.00</distance>
+	<calcTime>0.000847</calcTime>
+	<allocTime>0.005228</allocTime>
+	<readTime>0.000227</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047972.00</distance>
+	<calcTime>0.008727</calcTime>
+	<allocTime>0.048516</allocTime>
+	<readTime>0.000440</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111523.00</distance>
+	<calcTime>0.000070</calcTime>
+	<allocTime>0.000373</allocTime>
+	<readTime>0.000118</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000658</calcTime>
+	<allocTime>0.004082</allocTime>
+	<readTime>0.000153</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012406</calcTime>
+	<allocTime>0.086298</allocTime>
+	<readTime>0.000546</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003879</calcTime>
+	<allocTime>0.025230</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000097</allocTime>
+	<readTime>0.000201</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000064</allocTime>
+	<readTime>0.000111</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004672</calcTime>
+	<allocTime>0.029495</allocTime>
+	<readTime>0.000320</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>103361.00</distance>
+	<calcTime>0.000246</calcTime>
+	<allocTime>0.001425</allocTime>
+	<readTime>0.000149</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003550</calcTime>
+	<allocTime>0.021620</allocTime>
+	<readTime>0.000291</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.587987</calcTime>
+	<allocTime>4.598546</allocTime>
+	<readTime>0.002995</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.685462</calcTime>
+	<allocTime>3.988931</allocTime>
+	<readTime>0.002383</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162430.00</distance>
+	<calcTime>0.004306</calcTime>
+	<allocTime>0.028887</allocTime>
+	<readTime>0.000407</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581565779.00</distance>
+	<calcTime>0.614752</calcTime>
+	<allocTime>3.603959</allocTime>
+	<readTime>0.002779</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6811795.00</distance>
+	<calcTime>0.009170</calcTime>
+	<allocTime>0.058362</allocTime>
+	<readTime>0.000523</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250548.00</distance>
+	<calcTime>0.001400</calcTime>
+	<allocTime>0.006862</allocTime>
+	<readTime>0.000237</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002415</calcTime>
+	<allocTime>0.009697</allocTime>
+	<readTime>0.000194</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>103380.00</distance>
+	<calcTime>0.008674</calcTime>
+	<allocTime>0.053065</allocTime>
+	<readTime>0.000491</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.194258</calcTime>
+	<allocTime>7.060521</allocTime>
+	<readTime>0.003322</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>226852.00</distance>
+	<calcTime>0.001659</calcTime>
+	<allocTime>0.009811</allocTime>
+	<readTime>0.000974</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046962.00</distance>
+	<calcTime>0.008249</calcTime>
+	<allocTime>0.052883</allocTime>
+	<readTime>0.001378</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>113283.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000338</allocTime>
+	<readTime>0.000245</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000635</calcTime>
+	<allocTime>0.005270</allocTime>
+	<readTime>0.000542</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>182907.00</distance>
+	<calcTime>0.013232</calcTime>
+	<allocTime>0.090958</allocTime>
+	<readTime>0.001115</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154900.00</distance>
+	<calcTime>0.003817</calcTime>
+	<allocTime>0.030908</allocTime>
+	<readTime>0.001169</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000017</calcTime>
+	<allocTime>0.000085</allocTime>
+	<readTime>0.000222</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000016</calcTime>
+	<allocTime>0.000066</allocTime>
+	<readTime>0.000177</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274255.00</distance>
+	<calcTime>0.004783</calcTime>
+	<allocTime>0.028090</allocTime>
+	<readTime>0.000835</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>96790.00</distance>
+	<calcTime>0.000273</calcTime>
+	<allocTime>0.001926</allocTime>
+	<readTime>0.000262</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003646</calcTime>
+	<allocTime>0.024998</allocTime>
+	<readTime>0.000561</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588134</calcTime>
+	<allocTime>4.646884</allocTime>
+	<readTime>0.004728</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.678142</calcTime>
+	<allocTime>3.978557</allocTime>
+	<readTime>0.004466</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164455.00</distance>
+	<calcTime>0.006042</calcTime>
+	<allocTime>0.033664</allocTime>
+	<readTime>0.001356</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581564072.00</distance>
+	<calcTime>0.620067</calcTime>
+	<allocTime>3.629211</allocTime>
+	<readTime>0.005269</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6809582.00</distance>
+	<calcTime>0.009452</calcTime>
+	<allocTime>0.062893</allocTime>
+	<readTime>0.000486</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>341921.00</distance>
+	<calcTime>0.001666</calcTime>
+	<allocTime>0.010254</allocTime>
+	<readTime>0.000360</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>81185.00</distance>
+	<calcTime>0.002445</calcTime>
+	<allocTime>0.010606</allocTime>
+	<readTime>0.000190</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112357.00</distance>
+	<calcTime>0.009131</calcTime>
+	<allocTime>0.055444</allocTime>
+	<readTime>0.000515</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.469232</calcTime>
+	<allocTime>7.403575</allocTime>
+	<readTime>0.003816</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>140138.00</distance>
+	<calcTime>0.001229</calcTime>
+	<allocTime>0.008960</allocTime>
+	<readTime>0.000749</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046690.00</distance>
+	<calcTime>0.008446</calcTime>
+	<allocTime>0.055599</allocTime>
+	<readTime>0.001517</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>116845.00</distance>
+	<calcTime>0.000096</calcTime>
+	<allocTime>0.000529</allocTime>
+	<readTime>0.000302</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000850</calcTime>
+	<allocTime>0.006990</allocTime>
+	<readTime>0.000533</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.011238</calcTime>
+	<allocTime>0.088925</allocTime>
+	<readTime>0.001640</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154816.00</distance>
+	<calcTime>0.003915</calcTime>
+	<allocTime>0.031031</allocTime>
+	<readTime>0.001090</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000025</calcTime>
+	<allocTime>0.000103</allocTime>
+	<readTime>0.000308</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000024</calcTime>
+	<allocTime>0.000105</allocTime>
+	<readTime>0.000224</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274567.00</distance>
+	<calcTime>0.004835</calcTime>
+	<allocTime>0.037078</allocTime>
+	<readTime>0.000984</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>103183.00</distance>
+	<calcTime>0.000324</calcTime>
+	<allocTime>0.002317</allocTime>
+	<readTime>0.000483</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360652.00</distance>
+	<calcTime>0.003578</calcTime>
+	<allocTime>0.021028</allocTime>
+	<readTime>0.000692</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588192</calcTime>
+	<allocTime>4.596790</allocTime>
+	<readTime>0.005259</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.683046</calcTime>
+	<allocTime>3.965589</allocTime>
+	<readTime>0.005394</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163011.00</distance>
+	<calcTime>0.004434</calcTime>
+	<allocTime>0.036974</allocTime>
+	<readTime>0.001136</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563135.00</distance>
+	<calcTime>0.602075</calcTime>
+	<allocTime>3.614623</allocTime>
+	<readTime>0.006411</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6813656.00</distance>
+	<calcTime>0.009569</calcTime>
+	<allocTime>0.061093</allocTime>
+	<readTime>0.000485</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249257.00</distance>
+	<calcTime>0.001409</calcTime>
+	<allocTime>0.007131</allocTime>
+	<readTime>0.000345</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>109026.00</distance>
+	<calcTime>0.002663</calcTime>
+	<allocTime>0.009436</allocTime>
+	<readTime>0.000180</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>107136.00</distance>
+	<calcTime>0.008384</calcTime>
+	<allocTime>0.052292</allocTime>
+	<readTime>0.000493</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.188747</calcTime>
+	<allocTime>7.069016</allocTime>
+	<readTime>0.003639</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60268.00</distance>
+	<calcTime>0.000845</calcTime>
+	<allocTime>0.005285</allocTime>
+	<readTime>0.000222</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046804.00</distance>
+	<calcTime>0.008561</calcTime>
+	<allocTime>0.048851</allocTime>
+	<readTime>0.000447</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112963.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000347</allocTime>
+	<readTime>0.000105</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000547</calcTime>
+	<allocTime>0.003631</allocTime>
+	<readTime>0.000162</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011491</calcTime>
+	<allocTime>0.086351</allocTime>
+	<readTime>0.000568</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>156698.00</distance>
+	<calcTime>0.004310</calcTime>
+	<allocTime>0.025274</allocTime>
+	<readTime>0.000440</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000105</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000103</allocTime>
+	<readTime>0.000077</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275131.00</distance>
+	<calcTime>0.004329</calcTime>
+	<allocTime>0.031862</allocTime>
+	<readTime>0.000353</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000239</calcTime>
+	<allocTime>0.001355</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357670.00</distance>
+	<calcTime>0.003629</calcTime>
+	<allocTime>0.020408</allocTime>
+	<readTime>0.000399</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.583878</calcTime>
+	<allocTime>4.729684</allocTime>
+	<readTime>0.002934</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.680619</calcTime>
+	<allocTime>3.960379</allocTime>
+	<readTime>0.002319</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162385.00</distance>
+	<calcTime>0.004611</calcTime>
+	<allocTime>0.029021</allocTime>
+	<readTime>0.000408</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563509.00</distance>
+	<calcTime>0.602075</calcTime>
+	<allocTime>3.661097</allocTime>
+	<readTime>0.002772</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6839453.00</distance>
+	<calcTime>0.009026</calcTime>
+	<allocTime>0.059114</allocTime>
+	<readTime>0.000505</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>245836.00</distance>
+	<calcTime>0.001471</calcTime>
+	<allocTime>0.007191</allocTime>
+	<readTime>0.000256</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002343</calcTime>
+	<allocTime>0.010298</allocTime>
+	<readTime>0.000183</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>106537.00</distance>
+	<calcTime>0.009154</calcTime>
+	<allocTime>0.051971</allocTime>
+	<readTime>0.000514</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195112</calcTime>
+	<allocTime>7.052427</allocTime>
+	<readTime>0.003504</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60268.00</distance>
+	<calcTime>0.001097</calcTime>
+	<allocTime>0.005328</allocTime>
+	<readTime>0.000229</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047331.00</distance>
+	<calcTime>0.008717</calcTime>
+	<allocTime>0.049501</allocTime>
+	<readTime>0.000781</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>178343.00</distance>
+	<calcTime>0.000065</calcTime>
+	<allocTime>0.000358</allocTime>
+	<readTime>0.000117</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000620</calcTime>
+	<allocTime>0.003601</allocTime>
+	<readTime>0.000159</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.011947</calcTime>
+	<allocTime>0.086040</allocTime>
+	<readTime>0.000559</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154814.00</distance>
+	<calcTime>0.003724</calcTime>
+	<allocTime>0.025103</allocTime>
+	<readTime>0.000360</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000096</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004405</calcTime>
+	<allocTime>0.029548</allocTime>
+	<readTime>0.000315</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>102689.00</distance>
+	<calcTime>0.000246</calcTime>
+	<allocTime>0.001340</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.004425</calcTime>
+	<allocTime>0.022084</allocTime>
+	<readTime>0.000273</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.584164</calcTime>
+	<allocTime>4.583748</allocTime>
+	<readTime>0.003036</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.680594</calcTime>
+	<allocTime>3.970475</allocTime>
+	<readTime>0.002310</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161648.00</distance>
+	<calcTime>0.005122</calcTime>
+	<allocTime>0.031229</allocTime>
+	<readTime>0.000377</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563518.00</distance>
+	<calcTime>0.600527</calcTime>
+	<allocTime>3.628573</allocTime>
+	<readTime>0.002730</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6776847.00</distance>
+	<calcTime>0.009778</calcTime>
+	<allocTime>0.061394</allocTime>
+	<readTime>0.000541</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>251371.00</distance>
+	<calcTime>0.001667</calcTime>
+	<allocTime>0.006814</allocTime>
+	<readTime>0.000257</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>201862.00</distance>
+	<calcTime>0.002553</calcTime>
+	<allocTime>0.011510</allocTime>
+	<readTime>0.000196</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>108561.00</distance>
+	<calcTime>0.008986</calcTime>
+	<allocTime>0.052028</allocTime>
+	<readTime>0.000516</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.198732</calcTime>
+	<allocTime>7.030222</allocTime>
+	<readTime>0.003427</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60339.00</distance>
+	<calcTime>0.000862</calcTime>
+	<allocTime>0.005195</allocTime>
+	<readTime>0.000251</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10055201.00</distance>
+	<calcTime>0.008712</calcTime>
+	<allocTime>0.050473</allocTime>
+	<readTime>0.000458</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>110995.00</distance>
+	<calcTime>0.000073</calcTime>
+	<allocTime>0.000356</allocTime>
+	<readTime>0.000129</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000672</calcTime>
+	<allocTime>0.004932</allocTime>
+	<readTime>0.000289</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012128</calcTime>
+	<allocTime>0.085874</allocTime>
+	<readTime>0.000679</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154814.00</distance>
+	<calcTime>0.003770</calcTime>
+	<allocTime>0.024909</allocTime>
+	<readTime>0.000322</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000102</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274834.00</distance>
+	<calcTime>0.004618</calcTime>
+	<allocTime>0.027702</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000245</calcTime>
+	<allocTime>0.001340</allocTime>
+	<readTime>0.000116</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360189.00</distance>
+	<calcTime>0.003303</calcTime>
+	<allocTime>0.018243</allocTime>
+	<readTime>0.000274</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.584979</calcTime>
+	<allocTime>4.578009</allocTime>
+	<readTime>0.002931</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.676411</calcTime>
+	<allocTime>3.947269</allocTime>
+	<readTime>0.002226</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163429.00</distance>
+	<calcTime>0.005388</calcTime>
+	<allocTime>0.030961</allocTime>
+	<readTime>0.000388</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.613054</calcTime>
+	<allocTime>3.621503</allocTime>
+	<readTime>0.002754</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6769354.00</distance>
+	<calcTime>0.009064</calcTime>
+	<allocTime>0.058981</allocTime>
+	<readTime>0.000469</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>248008.00</distance>
+	<calcTime>0.001564</calcTime>
+	<allocTime>0.006644</allocTime>
+	<readTime>0.000252</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>104143.00</distance>
+	<calcTime>0.002370</calcTime>
+	<allocTime>0.009860</allocTime>
+	<readTime>0.000326</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>111702.00</distance>
+	<calcTime>0.008738</calcTime>
+	<allocTime>0.054368</allocTime>
+	<readTime>0.000518</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.190717</calcTime>
+	<allocTime>7.033443</allocTime>
+	<readTime>0.003378</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>63029.00</distance>
+	<calcTime>0.000869</calcTime>
+	<allocTime>0.005360</allocTime>
+	<readTime>0.000260</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047608.00</distance>
+	<calcTime>0.008223</calcTime>
+	<allocTime>0.049302</allocTime>
+	<readTime>0.000463</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000335</allocTime>
+	<readTime>0.000100</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000547</calcTime>
+	<allocTime>0.003733</allocTime>
+	<readTime>0.000153</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011415</calcTime>
+	<allocTime>0.087369</allocTime>
+	<readTime>0.000547</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003719</calcTime>
+	<allocTime>0.026328</allocTime>
+	<readTime>0.000348</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000060</allocTime>
+	<readTime>0.000100</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000043</allocTime>
+	<readTime>0.000052</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275527.00</distance>
+	<calcTime>0.004432</calcTime>
+	<allocTime>0.029986</allocTime>
+	<readTime>0.000377</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97275.00</distance>
+	<calcTime>0.000245</calcTime>
+	<allocTime>0.001597</allocTime>
+	<readTime>0.000176</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358714.00</distance>
+	<calcTime>0.003575</calcTime>
+	<allocTime>0.018629</allocTime>
+	<readTime>0.000272</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588098</calcTime>
+	<allocTime>4.595489</allocTime>
+	<readTime>0.002892</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.681514</calcTime>
+	<allocTime>3.946877</allocTime>
+	<readTime>0.002377</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165718.00</distance>
+	<calcTime>0.004474</calcTime>
+	<allocTime>0.030149</allocTime>
+	<readTime>0.000351</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.603918</calcTime>
+	<allocTime>3.635301</allocTime>
+	<readTime>0.003145</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6694265.00</distance>
+	<calcTime>0.009571</calcTime>
+	<allocTime>0.057523</allocTime>
+	<readTime>0.000476</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250210.00</distance>
+	<calcTime>0.001462</calcTime>
+	<allocTime>0.006538</allocTime>
+	<readTime>0.000257</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>251928.00</distance>
+	<calcTime>0.002386</calcTime>
+	<allocTime>0.009666</allocTime>
+	<readTime>0.000207</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>117724.00</distance>
+	<calcTime>0.009341</calcTime>
+	<allocTime>0.051854</allocTime>
+	<readTime>0.000486</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.187189</calcTime>
+	<allocTime>7.513951</allocTime>
+	<readTime>0.003199</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>59930.00</distance>
+	<calcTime>0.000882</calcTime>
+	<allocTime>0.006341</allocTime>
+	<readTime>0.000230</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047797.00</distance>
+	<calcTime>0.008580</calcTime>
+	<allocTime>0.048422</allocTime>
+	<readTime>0.000437</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>126467.00</distance>
+	<calcTime>0.000057</calcTime>
+	<allocTime>0.000327</allocTime>
+	<readTime>0.000110</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000514</calcTime>
+	<allocTime>0.003741</allocTime>
+	<readTime>0.000152</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011498</calcTime>
+	<allocTime>0.087584</allocTime>
+	<readTime>0.000608</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154828.00</distance>
+	<calcTime>0.004228</calcTime>
+	<allocTime>0.026173</allocTime>
+	<readTime>0.000417</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000102</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000046</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004678</calcTime>
+	<allocTime>0.029718</allocTime>
+	<readTime>0.000313</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>98258.00</distance>
+	<calcTime>0.000307</calcTime>
+	<allocTime>0.001430</allocTime>
+	<readTime>0.000152</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358074.00</distance>
+	<calcTime>0.003119</calcTime>
+	<allocTime>0.018395</allocTime>
+	<readTime>0.000303</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.585490</calcTime>
+	<allocTime>4.597569</allocTime>
+	<readTime>0.002996</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.680463</calcTime>
+	<allocTime>3.980639</allocTime>
+	<readTime>0.002492</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166098.00</distance>
+	<calcTime>0.004866</calcTime>
+	<allocTime>0.028755</allocTime>
+	<readTime>0.000575</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581566528.00</distance>
+	<calcTime>0.613309</calcTime>
+	<allocTime>3.614020</allocTime>
+	<readTime>0.003047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6819927.00</distance>
+	<calcTime>0.009095</calcTime>
+	<allocTime>0.057021</allocTime>
+	<readTime>0.000509</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>241337.00</distance>
+	<calcTime>0.001671</calcTime>
+	<allocTime>0.007826</allocTime>
+	<readTime>0.000405</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73240.00</distance>
+	<calcTime>0.002427</calcTime>
+	<allocTime>0.011061</allocTime>
+	<readTime>0.000226</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113280.00</distance>
+	<calcTime>0.008322</calcTime>
+	<allocTime>0.051695</allocTime>
+	<readTime>0.000485</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.192959</calcTime>
+	<allocTime>7.015492</allocTime>
+	<readTime>0.003268</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61384.00</distance>
+	<calcTime>0.001087</calcTime>
+	<allocTime>0.005310</allocTime>
+	<readTime>0.000234</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047606.00</distance>
+	<calcTime>0.008319</calcTime>
+	<allocTime>0.048364</allocTime>
+	<readTime>0.000504</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>124808.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000332</allocTime>
+	<readTime>0.000102</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000508</calcTime>
+	<allocTime>0.003600</allocTime>
+	<readTime>0.000164</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012522</calcTime>
+	<allocTime>0.085659</allocTime>
+	<readTime>0.000506</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.004212</calcTime>
+	<allocTime>0.023193</allocTime>
+	<readTime>0.000333</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000106</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000044</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274334.00</distance>
+	<calcTime>0.004524</calcTime>
+	<allocTime>0.029834</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000240</calcTime>
+	<allocTime>0.001468</allocTime>
+	<readTime>0.000146</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358355.00</distance>
+	<calcTime>0.003395</calcTime>
+	<allocTime>0.018235</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.585691</calcTime>
+	<allocTime>4.620572</allocTime>
+	<readTime>0.002735</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.678549</calcTime>
+	<allocTime>4.032218</allocTime>
+	<readTime>0.002496</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>171556.00</distance>
+	<calcTime>0.004672</calcTime>
+	<allocTime>0.028050</allocTime>
+	<readTime>0.000373</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581564059.00</distance>
+	<calcTime>0.601842</calcTime>
+	<allocTime>3.656208</allocTime>
+	<readTime>0.002840</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6860620.00</distance>
+	<calcTime>0.008938</calcTime>
+	<allocTime>0.057971</allocTime>
+	<readTime>0.000496</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>248724.00</distance>
+	<calcTime>0.001481</calcTime>
+	<allocTime>0.006732</allocTime>
+	<readTime>0.000236</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>72628.00</distance>
+	<calcTime>0.002316</calcTime>
+	<allocTime>0.011077</allocTime>
+	<readTime>0.000194</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112738.00</distance>
+	<calcTime>0.009250</calcTime>
+	<allocTime>0.053082</allocTime>
+	<readTime>0.000479</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.200219</calcTime>
+	<allocTime>7.016152</allocTime>
+	<readTime>0.003220</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>480495.00</distance>
+	<calcTime>0.000853</calcTime>
+	<allocTime>0.005169</allocTime>
+	<readTime>0.000223</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046888.00</distance>
+	<calcTime>0.008331</calcTime>
+	<allocTime>0.048513</allocTime>
+	<readTime>0.000490</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000061</calcTime>
+	<allocTime>0.000343</allocTime>
+	<readTime>0.000113</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000674</calcTime>
+	<allocTime>0.004823</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011390</calcTime>
+	<allocTime>0.087218</allocTime>
+	<readTime>0.000704</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.003666</calcTime>
+	<allocTime>0.025010</allocTime>
+	<readTime>0.000419</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000058</allocTime>
+	<readTime>0.000100</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000050</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004510</calcTime>
+	<allocTime>0.029381</allocTime>
+	<readTime>0.000316</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>101712.00</distance>
+	<calcTime>0.000279</calcTime>
+	<allocTime>0.001561</allocTime>
+	<readTime>0.000138</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358044.00</distance>
+	<calcTime>0.003557</calcTime>
+	<allocTime>0.018538</allocTime>
+	<readTime>0.000316</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.586627</calcTime>
+	<allocTime>4.587088</allocTime>
+	<readTime>0.002725</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.678290</calcTime>
+	<allocTime>3.946798</allocTime>
+	<readTime>0.002388</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165819.00</distance>
+	<calcTime>0.004678</calcTime>
+	<allocTime>0.030458</allocTime>
+	<readTime>0.000387</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.607813</calcTime>
+	<allocTime>3.611904</allocTime>
+	<readTime>0.003014</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6792663.00</distance>
+	<calcTime>0.009395</calcTime>
+	<allocTime>0.059272</allocTime>
+	<readTime>0.000527</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>489632.00</distance>
+	<calcTime>0.001568</calcTime>
+	<allocTime>0.006976</allocTime>
+	<readTime>0.000274</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002482</calcTime>
+	<allocTime>0.009611</allocTime>
+	<readTime>0.000205</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>114814.00</distance>
+	<calcTime>0.008731</calcTime>
+	<allocTime>0.051967</allocTime>
+	<readTime>0.000548</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.188416</calcTime>
+	<allocTime>7.095227</allocTime>
+	<readTime>0.003214</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60225.00</distance>
+	<calcTime>0.000925</calcTime>
+	<allocTime>0.005156</allocTime>
+	<readTime>0.000258</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046212.00</distance>
+	<calcTime>0.008331</calcTime>
+	<allocTime>0.049289</allocTime>
+	<readTime>0.000541</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111529.00</distance>
+	<calcTime>0.000072</calcTime>
+	<allocTime>0.000353</allocTime>
+	<readTime>0.000129</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000780</calcTime>
+	<allocTime>0.003919</allocTime>
+	<readTime>0.000157</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012001</calcTime>
+	<allocTime>0.087123</allocTime>
+	<readTime>0.000593</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.004209</calcTime>
+	<allocTime>0.024885</allocTime>
+	<readTime>0.000364</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000018</calcTime>
+	<allocTime>0.000081</allocTime>
+	<readTime>0.000132</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000048</allocTime>
+	<readTime>0.000066</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274995.00</distance>
+	<calcTime>0.004329</calcTime>
+	<allocTime>0.029460</allocTime>
+	<readTime>0.000347</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>111816.00</distance>
+	<calcTime>0.000240</calcTime>
+	<allocTime>0.001379</allocTime>
+	<readTime>0.000124</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357057.00</distance>
+	<calcTime>0.003139</calcTime>
+	<allocTime>0.018929</allocTime>
+	<readTime>0.000272</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.591660</calcTime>
+	<allocTime>4.591308</allocTime>
+	<readTime>0.002767</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.688866</calcTime>
+	<allocTime>3.949702</allocTime>
+	<readTime>0.002331</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165971.00</distance>
+	<calcTime>0.004696</calcTime>
+	<allocTime>0.030766</allocTime>
+	<readTime>0.000411</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581564306.00</distance>
+	<calcTime>0.625097</calcTime>
+	<allocTime>3.632997</allocTime>
+	<readTime>0.002697</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6715184.00</distance>
+	<calcTime>0.009006</calcTime>
+	<allocTime>0.058046</allocTime>
+	<readTime>0.000731</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>416939.00</distance>
+	<calcTime>0.001668</calcTime>
+	<allocTime>0.006870</allocTime>
+	<readTime>0.000256</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002743</calcTime>
+	<allocTime>0.009783</allocTime>
+	<readTime>0.000242</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109308.00</distance>
+	<calcTime>0.009166</calcTime>
+	<allocTime>0.060434</allocTime>
+	<readTime>0.000649</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.187167</calcTime>
+	<allocTime>7.054853</allocTime>
+	<readTime>0.003564</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>62330.00</distance>
+	<calcTime>0.000857</calcTime>
+	<allocTime>0.005307</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10051085.00</distance>
+	<calcTime>0.008638</calcTime>
+	<allocTime>0.049179</allocTime>
+	<readTime>0.000437</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>114979.00</distance>
+	<calcTime>0.000073</calcTime>
+	<allocTime>0.000351</allocTime>
+	<readTime>0.000113</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000635</calcTime>
+	<allocTime>0.003704</allocTime>
+	<readTime>0.000151</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011505</calcTime>
+	<allocTime>0.087244</allocTime>
+	<readTime>0.000542</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.003972</calcTime>
+	<allocTime>0.025745</allocTime>
+	<readTime>0.000326</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000055</allocTime>
+	<readTime>0.000102</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000043</allocTime>
+	<readTime>0.000047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273977.00</distance>
+	<calcTime>0.004283</calcTime>
+	<allocTime>0.034094</allocTime>
+	<readTime>0.000317</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>99720.00</distance>
+	<calcTime>0.000251</calcTime>
+	<allocTime>0.001347</allocTime>
+	<readTime>0.000136</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003909</calcTime>
+	<allocTime>0.022778</allocTime>
+	<readTime>0.000299</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.587654</calcTime>
+	<allocTime>4.619907</allocTime>
+	<readTime>0.003822</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684352</calcTime>
+	<allocTime>3.961090</allocTime>
+	<readTime>0.002374</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>172134.00</distance>
+	<calcTime>0.004956</calcTime>
+	<allocTime>0.029796</allocTime>
+	<readTime>0.000430</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.608087</calcTime>
+	<allocTime>3.728627</allocTime>
+	<readTime>0.002955</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6863200.00</distance>
+	<calcTime>0.009260</calcTime>
+	<allocTime>0.060379</allocTime>
+	<readTime>0.000831</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249239.00</distance>
+	<calcTime>0.001465</calcTime>
+	<allocTime>0.006776</allocTime>
+	<readTime>0.000254</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>200519.00</distance>
+	<calcTime>0.002225</calcTime>
+	<allocTime>0.010039</allocTime>
+	<readTime>0.000174</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>102964.00</distance>
+	<calcTime>0.008936</calcTime>
+	<allocTime>0.053763</allocTime>
+	<readTime>0.000489</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.203718</calcTime>
+	<allocTime>7.560170</allocTime>
+	<readTime>0.003093</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>67080.00</distance>
+	<calcTime>0.000895</calcTime>
+	<allocTime>0.005183</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047356.00</distance>
+	<calcTime>0.008423</calcTime>
+	<allocTime>0.047835</allocTime>
+	<readTime>0.000439</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>123968.00</distance>
+	<calcTime>0.000058</calcTime>
+	<allocTime>0.000316</allocTime>
+	<readTime>0.000108</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000697</calcTime>
+	<allocTime>0.006760</allocTime>
+	<readTime>0.000300</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012825</calcTime>
+	<allocTime>0.088035</allocTime>
+	<readTime>0.000717</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154814.00</distance>
+	<calcTime>0.004165</calcTime>
+	<allocTime>0.024406</allocTime>
+	<readTime>0.000309</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000053</allocTime>
+	<readTime>0.000090</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000046</allocTime>
+	<readTime>0.000050</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004593</calcTime>
+	<allocTime>0.029416</allocTime>
+	<readTime>0.000461</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>103134.00</distance>
+	<calcTime>0.000273</calcTime>
+	<allocTime>0.001527</allocTime>
+	<readTime>0.000138</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5364967.00</distance>
+	<calcTime>0.003380</calcTime>
+	<allocTime>0.023104</allocTime>
+	<readTime>0.000516</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.587597</calcTime>
+	<allocTime>4.773755</allocTime>
+	<readTime>0.002689</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682253</calcTime>
+	<allocTime>3.991461</allocTime>
+	<readTime>0.002871</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165971.00</distance>
+	<calcTime>0.004341</calcTime>
+	<allocTime>0.030047</allocTime>
+	<readTime>0.000368</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.604426</calcTime>
+	<allocTime>3.624626</allocTime>
+	<readTime>0.002767</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6696338.00</distance>
+	<calcTime>0.009036</calcTime>
+	<allocTime>0.060177</allocTime>
+	<readTime>0.000517</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>489632.00</distance>
+	<calcTime>0.001582</calcTime>
+	<allocTime>0.006828</allocTime>
+	<readTime>0.000241</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002232</calcTime>
+	<allocTime>0.009841</allocTime>
+	<readTime>0.000191</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109611.00</distance>
+	<calcTime>0.009081</calcTime>
+	<allocTime>0.053742</allocTime>
+	<readTime>0.000519</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195785</calcTime>
+	<allocTime>7.051231</allocTime>
+	<readTime>0.003196</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60469.00</distance>
+	<calcTime>0.000892</calcTime>
+	<allocTime>0.005078</allocTime>
+	<readTime>0.000219</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047623.00</distance>
+	<calcTime>0.008928</calcTime>
+	<allocTime>0.048544</allocTime>
+	<readTime>0.000509</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000067</calcTime>
+	<allocTime>0.000389</allocTime>
+	<readTime>0.000098</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000520</calcTime>
+	<allocTime>0.003798</allocTime>
+	<readTime>0.000156</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011964</calcTime>
+	<allocTime>0.086623</allocTime>
+	<readTime>0.000539</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.003858</calcTime>
+	<allocTime>0.025424</allocTime>
+	<readTime>0.000350</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000060</allocTime>
+	<readTime>0.000112</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000044</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004515</calcTime>
+	<allocTime>0.032274</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>101712.00</distance>
+	<calcTime>0.000241</calcTime>
+	<allocTime>0.001421</allocTime>
+	<readTime>0.000125</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003431</calcTime>
+	<allocTime>0.019674</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590357</calcTime>
+	<allocTime>4.584356</allocTime>
+	<readTime>0.002705</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.685562</calcTime>
+	<allocTime>3.963128</allocTime>
+	<readTime>0.002236</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163814.00</distance>
+	<calcTime>0.004395</calcTime>
+	<allocTime>0.028977</allocTime>
+	<readTime>0.000393</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.604676</calcTime>
+	<allocTime>3.841964</allocTime>
+	<readTime>0.002919</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6634527.00</distance>
+	<calcTime>0.009797</calcTime>
+	<allocTime>0.056375</allocTime>
+	<readTime>0.000519</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>248609.00</distance>
+	<calcTime>0.001402</calcTime>
+	<allocTime>0.006646</allocTime>
+	<readTime>0.000265</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002560</calcTime>
+	<allocTime>0.009451</allocTime>
+	<readTime>0.000176</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112690.00</distance>
+	<calcTime>0.009108</calcTime>
+	<allocTime>0.052475</allocTime>
+	<readTime>0.000504</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.207877</calcTime>
+	<allocTime>7.177351</allocTime>
+	<readTime>0.003563</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>112939.00</distance>
+	<calcTime>0.000841</calcTime>
+	<allocTime>0.005190</allocTime>
+	<readTime>0.000267</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047228.00</distance>
+	<calcTime>0.008266</calcTime>
+	<allocTime>0.048607</allocTime>
+	<readTime>0.000450</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>129575.00</distance>
+	<calcTime>0.000064</calcTime>
+	<allocTime>0.000349</allocTime>
+	<readTime>0.000095</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000724</calcTime>
+	<allocTime>0.006866</allocTime>
+	<readTime>0.000301</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012208</calcTime>
+	<allocTime>0.089110</allocTime>
+	<readTime>0.000687</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.004233</calcTime>
+	<allocTime>0.023355</allocTime>
+	<readTime>0.000331</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000056</allocTime>
+	<readTime>0.000094</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000043</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274334.00</distance>
+	<calcTime>0.004369</calcTime>
+	<allocTime>0.029400</allocTime>
+	<readTime>0.000313</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97412.00</distance>
+	<calcTime>0.000242</calcTime>
+	<allocTime>0.001681</allocTime>
+	<readTime>0.000128</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5364377.00</distance>
+	<calcTime>0.003605</calcTime>
+	<allocTime>0.019729</allocTime>
+	<readTime>0.000292</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.620173</calcTime>
+	<allocTime>4.665539</allocTime>
+	<readTime>0.002398</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682718</calcTime>
+	<allocTime>4.001330</allocTime>
+	<readTime>0.002455</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161542.00</distance>
+	<calcTime>0.004443</calcTime>
+	<allocTime>0.027029</allocTime>
+	<readTime>0.000389</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.618401</calcTime>
+	<allocTime>3.647075</allocTime>
+	<readTime>0.003083</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6715184.00</distance>
+	<calcTime>0.009456</calcTime>
+	<allocTime>0.059635</allocTime>
+	<readTime>0.000478</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>253710.00</distance>
+	<calcTime>0.001423</calcTime>
+	<allocTime>0.006943</allocTime>
+	<readTime>0.000263</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>71979.00</distance>
+	<calcTime>0.002365</calcTime>
+	<allocTime>0.012188</allocTime>
+	<readTime>0.000192</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112293.00</distance>
+	<calcTime>0.008286</calcTime>
+	<allocTime>0.054160</allocTime>
+	<readTime>0.000657</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.208264</calcTime>
+	<allocTime>7.087440</allocTime>
+	<readTime>0.003130</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61503.00</distance>
+	<calcTime>0.001014</calcTime>
+	<allocTime>0.005015</allocTime>
+	<readTime>0.000221</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047106.00</distance>
+	<calcTime>0.008454</calcTime>
+	<allocTime>0.050220</allocTime>
+	<readTime>0.000462</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>119736.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000317</allocTime>
+	<readTime>0.000120</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000587</calcTime>
+	<allocTime>0.003643</allocTime>
+	<readTime>0.000153</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012277</calcTime>
+	<allocTime>0.087542</allocTime>
+	<readTime>0.000513</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154814.00</distance>
+	<calcTime>0.003870</calcTime>
+	<allocTime>0.024366</allocTime>
+	<readTime>0.000353</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000060</allocTime>
+	<readTime>0.000098</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000047</allocTime>
+	<readTime>0.000047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004433</calcTime>
+	<allocTime>0.032963</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>99548.00</distance>
+	<calcTime>0.000245</calcTime>
+	<allocTime>0.001342</allocTime>
+	<readTime>0.000123</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003550</calcTime>
+	<allocTime>0.020570</allocTime>
+	<readTime>0.000305</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.593439</calcTime>
+	<allocTime>4.594139</allocTime>
+	<readTime>0.002906</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.686368</calcTime>
+	<allocTime>3.970126</allocTime>
+	<readTime>0.002371</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164300.00</distance>
+	<calcTime>0.004887</calcTime>
+	<allocTime>0.031250</allocTime>
+	<readTime>0.000529</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581567297.00</distance>
+	<calcTime>0.605635</calcTime>
+	<allocTime>3.645250</allocTime>
+	<readTime>0.002733</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6845244.00</distance>
+	<calcTime>0.009039</calcTime>
+	<allocTime>0.058621</allocTime>
+	<readTime>0.000535</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250949.00</distance>
+	<calcTime>0.001634</calcTime>
+	<allocTime>0.007284</allocTime>
+	<readTime>0.000259</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002276</calcTime>
+	<allocTime>0.009457</allocTime>
+	<readTime>0.000217</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>103444.00</distance>
+	<calcTime>0.008375</calcTime>
+	<allocTime>0.053839</allocTime>
+	<readTime>0.000500</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195299</calcTime>
+	<allocTime>7.047599</allocTime>
+	<readTime>0.003234</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61800.00</distance>
+	<calcTime>0.001192</calcTime>
+	<allocTime>0.009075</allocTime>
+	<readTime>0.000804</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047133.00</distance>
+	<calcTime>0.008991</calcTime>
+	<allocTime>0.049438</allocTime>
+	<readTime>0.001228</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111452.00</distance>
+	<calcTime>0.000066</calcTime>
+	<allocTime>0.000372</allocTime>
+	<readTime>0.000210</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000740</calcTime>
+	<allocTime>0.005457</allocTime>
+	<readTime>0.000555</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>182907.00</distance>
+	<calcTime>0.013282</calcTime>
+	<allocTime>0.091630</allocTime>
+	<readTime>0.001415</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154255.00</distance>
+	<calcTime>0.004307</calcTime>
+	<allocTime>0.027989</allocTime>
+	<readTime>0.001058</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000016</calcTime>
+	<allocTime>0.000069</allocTime>
+	<readTime>0.000224</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000162</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274531.00</distance>
+	<calcTime>0.005475</calcTime>
+	<allocTime>0.033448</allocTime>
+	<readTime>0.000949</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>105203.00</distance>
+	<calcTime>0.000404</calcTime>
+	<allocTime>0.003465</allocTime>
+	<readTime>0.000397</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360377.00</distance>
+	<calcTime>0.003851</calcTime>
+	<allocTime>0.024157</allocTime>
+	<readTime>0.000900</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.596850</calcTime>
+	<allocTime>4.580644</allocTime>
+	<readTime>0.005079</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.694202</calcTime>
+	<allocTime>3.944947</allocTime>
+	<readTime>0.005655</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>167030.00</distance>
+	<calcTime>0.004672</calcTime>
+	<allocTime>0.035357</allocTime>
+	<readTime>0.001242</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.606015</calcTime>
+	<allocTime>3.609425</allocTime>
+	<readTime>0.004395</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6679663.00</distance>
+	<calcTime>0.009173</calcTime>
+	<allocTime>0.060893</allocTime>
+	<readTime>0.000582</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249957.00</distance>
+	<calcTime>0.001585</calcTime>
+	<allocTime>0.006728</allocTime>
+	<readTime>0.000280</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002616</calcTime>
+	<allocTime>0.009611</allocTime>
+	<readTime>0.000223</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109219.00</distance>
+	<calcTime>0.009002</calcTime>
+	<allocTime>0.063692</allocTime>
+	<readTime>0.000675</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.532071</calcTime>
+	<allocTime>7.040149</allocTime>
+	<readTime>0.003308</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>59930.00</distance>
+	<calcTime>0.001751</calcTime>
+	<allocTime>0.011951</allocTime>
+	<readTime>0.000951</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046681.00</distance>
+	<calcTime>0.008735</calcTime>
+	<allocTime>0.053715</allocTime>
+	<readTime>0.001393</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>116845.00</distance>
+	<calcTime>0.000076</calcTime>
+	<allocTime>0.000426</allocTime>
+	<readTime>0.000263</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000727</calcTime>
+	<allocTime>0.006518</allocTime>
+	<readTime>0.000542</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>187790.00</distance>
+	<calcTime>0.012512</calcTime>
+	<allocTime>0.090046</allocTime>
+	<readTime>0.001487</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154921.00</distance>
+	<calcTime>0.004261</calcTime>
+	<allocTime>0.044604</allocTime>
+	<readTime>0.001156</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000078</allocTime>
+	<readTime>0.000246</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000023</calcTime>
+	<allocTime>0.000086</allocTime>
+	<readTime>0.000209</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274459.00</distance>
+	<calcTime>0.004327</calcTime>
+	<allocTime>0.034892</allocTime>
+	<readTime>0.000994</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000324</calcTime>
+	<allocTime>0.002438</allocTime>
+	<readTime>0.000515</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360189.00</distance>
+	<calcTime>0.003588</calcTime>
+	<allocTime>0.027382</allocTime>
+	<readTime>0.000981</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.589918</calcTime>
+	<allocTime>4.617780</allocTime>
+	<readTime>0.005150</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684702</calcTime>
+	<allocTime>3.999505</allocTime>
+	<readTime>0.005264</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166351.00</distance>
+	<calcTime>0.004695</calcTime>
+	<allocTime>0.035285</allocTime>
+	<readTime>0.001286</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563664.00</distance>
+	<calcTime>0.604975</calcTime>
+	<allocTime>3.615941</allocTime>
+	<readTime>0.005332</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6640084.00</distance>
+	<calcTime>0.009531</calcTime>
+	<allocTime>0.057635</allocTime>
+	<readTime>0.000509</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>243341.00</distance>
+	<calcTime>0.001552</calcTime>
+	<allocTime>0.007209</allocTime>
+	<readTime>0.000281</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002427</calcTime>
+	<allocTime>0.010590</allocTime>
+	<readTime>0.000196</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>111032.00</distance>
+	<calcTime>0.009152</calcTime>
+	<allocTime>0.052478</allocTime>
+	<readTime>0.000510</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195533</calcTime>
+	<allocTime>7.039242</allocTime>
+	<readTime>0.003129</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60649.00</distance>
+	<calcTime>0.000977</calcTime>
+	<allocTime>0.005126</allocTime>
+	<readTime>0.000288</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046574.00</distance>
+	<calcTime>0.008991</calcTime>
+	<allocTime>0.048301</allocTime>
+	<readTime>0.000455</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000082</calcTime>
+	<allocTime>0.000322</allocTime>
+	<readTime>0.000119</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000700</calcTime>
+	<allocTime>0.004024</allocTime>
+	<readTime>0.000157</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012083</calcTime>
+	<allocTime>0.087144</allocTime>
+	<readTime>0.000540</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154677.00</distance>
+	<calcTime>0.003887</calcTime>
+	<allocTime>0.025262</allocTime>
+	<readTime>0.000375</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000053</allocTime>
+	<readTime>0.000107</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000042</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274886.00</distance>
+	<calcTime>0.004735</calcTime>
+	<allocTime>0.027256</allocTime>
+	<readTime>0.000328</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000240</calcTime>
+	<allocTime>0.001391</allocTime>
+	<readTime>0.000208</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360189.00</distance>
+	<calcTime>0.003178</calcTime>
+	<allocTime>0.019045</allocTime>
+	<readTime>0.000278</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590656</calcTime>
+	<allocTime>4.676820</allocTime>
+	<readTime>0.002565</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.690438</calcTime>
+	<allocTime>3.965651</allocTime>
+	<readTime>0.002344</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163364.00</distance>
+	<calcTime>0.004285</calcTime>
+	<allocTime>0.030905</allocTime>
+	<readTime>0.000522</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581562627.00</distance>
+	<calcTime>0.605499</calcTime>
+	<allocTime>3.656617</allocTime>
+	<readTime>0.003900</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6749764.00</distance>
+	<calcTime>0.009161</calcTime>
+	<allocTime>0.056711</allocTime>
+	<readTime>0.000604</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>391562.00</distance>
+	<calcTime>0.001684</calcTime>
+	<allocTime>0.006894</allocTime>
+	<readTime>0.000260</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002373</calcTime>
+	<allocTime>0.009401</allocTime>
+	<readTime>0.000197</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>115187.00</distance>
+	<calcTime>0.008669</calcTime>
+	<allocTime>0.053609</allocTime>
+	<readTime>0.000499</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.196821</calcTime>
+	<allocTime>7.031519</allocTime>
+	<readTime>0.003456</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>66654.00</distance>
+	<calcTime>0.001068</calcTime>
+	<allocTime>0.005102</allocTime>
+	<readTime>0.000249</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10050205.00</distance>
+	<calcTime>0.008275</calcTime>
+	<allocTime>0.048972</allocTime>
+	<readTime>0.000517</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>126103.00</distance>
+	<calcTime>0.000064</calcTime>
+	<allocTime>0.000381</allocTime>
+	<readTime>0.000136</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000510</calcTime>
+	<allocTime>0.004449</allocTime>
+	<readTime>0.000204</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.011919</calcTime>
+	<allocTime>0.085463</allocTime>
+	<readTime>0.000511</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154814.00</distance>
+	<calcTime>0.003684</calcTime>
+	<allocTime>0.025457</allocTime>
+	<readTime>0.000363</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000116</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000044</allocTime>
+	<readTime>0.000050</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004614</calcTime>
+	<allocTime>0.030130</allocTime>
+	<readTime>0.000393</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000241</calcTime>
+	<allocTime>0.001379</allocTime>
+	<readTime>0.000151</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360189.00</distance>
+	<calcTime>0.003439</calcTime>
+	<allocTime>0.019150</allocTime>
+	<readTime>0.000274</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588879</calcTime>
+	<allocTime>4.624790</allocTime>
+	<readTime>0.002785</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.688982</calcTime>
+	<allocTime>3.969419</allocTime>
+	<readTime>0.002685</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162125.00</distance>
+	<calcTime>0.005053</calcTime>
+	<allocTime>0.027265</allocTime>
+	<readTime>0.000403</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.611722</calcTime>
+	<allocTime>3.624308</allocTime>
+	<readTime>0.003125</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6809809.00</distance>
+	<calcTime>0.009938</calcTime>
+	<allocTime>0.059446</allocTime>
+	<readTime>0.000546</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>337407.00</distance>
+	<calcTime>0.001575</calcTime>
+	<allocTime>0.006638</allocTime>
+	<readTime>0.000230</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002355</calcTime>
+	<allocTime>0.009779</allocTime>
+	<readTime>0.000199</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>107959.00</distance>
+	<calcTime>0.008977</calcTime>
+	<allocTime>0.052511</allocTime>
+	<readTime>0.000511</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.207469</calcTime>
+	<allocTime>7.050642</allocTime>
+	<readTime>0.003433</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60331.00</distance>
+	<calcTime>0.000883</calcTime>
+	<allocTime>0.005022</allocTime>
+	<readTime>0.000254</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046941.00</distance>
+	<calcTime>0.008396</calcTime>
+	<allocTime>0.047611</allocTime>
+	<readTime>0.000440</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>115727.00</distance>
+	<calcTime>0.000058</calcTime>
+	<allocTime>0.000319</allocTime>
+	<readTime>0.000106</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000580</calcTime>
+	<allocTime>0.003847</allocTime>
+	<readTime>0.000267</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011922</calcTime>
+	<allocTime>0.093966</allocTime>
+	<readTime>0.000615</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154255.00</distance>
+	<calcTime>0.003777</calcTime>
+	<allocTime>0.025803</allocTime>
+	<readTime>0.000343</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000061</allocTime>
+	<readTime>0.000091</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000051</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274531.00</distance>
+	<calcTime>0.004821</calcTime>
+	<allocTime>0.031011</allocTime>
+	<readTime>0.000455</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>105203.00</distance>
+	<calcTime>0.000293</calcTime>
+	<allocTime>0.001687</allocTime>
+	<readTime>0.000142</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5359304.00</distance>
+	<calcTime>0.003618</calcTime>
+	<allocTime>0.019535</allocTime>
+	<readTime>0.000330</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590562</calcTime>
+	<allocTime>4.594121</allocTime>
+	<readTime>0.003743</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.686664</calcTime>
+	<allocTime>3.968726</allocTime>
+	<readTime>0.002625</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163817.00</distance>
+	<calcTime>0.005113</calcTime>
+	<allocTime>0.029712</allocTime>
+	<readTime>0.000405</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.608978</calcTime>
+	<allocTime>3.611899</allocTime>
+	<readTime>0.002771</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6773328.00</distance>
+	<calcTime>0.009718</calcTime>
+	<allocTime>0.058861</allocTime>
+	<readTime>0.000535</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>245794.00</distance>
+	<calcTime>0.001520</calcTime>
+	<allocTime>0.006592</allocTime>
+	<readTime>0.000251</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>179160.00</distance>
+	<calcTime>0.002642</calcTime>
+	<allocTime>0.011554</allocTime>
+	<readTime>0.000260</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>104894.00</distance>
+	<calcTime>0.008355</calcTime>
+	<allocTime>0.052691</allocTime>
+	<readTime>0.000550</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.238183</calcTime>
+	<allocTime>7.040691</allocTime>
+	<readTime>0.003256</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61181.00</distance>
+	<calcTime>0.000961</calcTime>
+	<allocTime>0.005781</allocTime>
+	<readTime>0.000377</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047389.00</distance>
+	<calcTime>0.008338</calcTime>
+	<allocTime>0.048277</allocTime>
+	<readTime>0.000450</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111710.00</distance>
+	<calcTime>0.000066</calcTime>
+	<allocTime>0.000358</allocTime>
+	<readTime>0.000126</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000727</calcTime>
+	<allocTime>0.003676</allocTime>
+	<readTime>0.000152</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011594</calcTime>
+	<allocTime>0.087312</allocTime>
+	<readTime>0.000562</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.004275</calcTime>
+	<allocTime>0.027609</allocTime>
+	<readTime>0.000395</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000015</calcTime>
+	<allocTime>0.000101</allocTime>
+	<readTime>0.000111</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000052</allocTime>
+	<readTime>0.000065</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274995.00</distance>
+	<calcTime>0.004344</calcTime>
+	<allocTime>0.032598</allocTime>
+	<readTime>0.000363</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000312</calcTime>
+	<allocTime>0.001339</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357730.00</distance>
+	<calcTime>0.003610</calcTime>
+	<allocTime>0.021468</allocTime>
+	<readTime>0.000336</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.605263</calcTime>
+	<allocTime>4.607768</allocTime>
+	<readTime>0.002754</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.698498</calcTime>
+	<allocTime>3.956145</allocTime>
+	<readTime>0.002480</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165971.00</distance>
+	<calcTime>0.004778</calcTime>
+	<allocTime>0.030593</allocTime>
+	<readTime>0.000386</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581565151.00</distance>
+	<calcTime>0.606648</calcTime>
+	<allocTime>3.628457</allocTime>
+	<readTime>0.002808</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6812087.00</distance>
+	<calcTime>0.009229</calcTime>
+	<allocTime>0.058574</allocTime>
+	<readTime>0.000542</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>252579.00</distance>
+	<calcTime>0.001428</calcTime>
+	<allocTime>0.006769</allocTime>
+	<readTime>0.000239</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>74012.00</distance>
+	<calcTime>0.002641</calcTime>
+	<allocTime>0.009429</allocTime>
+	<readTime>0.000295</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>107425.00</distance>
+	<calcTime>0.008222</calcTime>
+	<allocTime>0.052645</allocTime>
+	<readTime>0.000499</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.210585</calcTime>
+	<allocTime>7.113832</allocTime>
+	<readTime>0.003240</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60098.00</distance>
+	<calcTime>0.000971</calcTime>
+	<allocTime>0.005319</allocTime>
+	<readTime>0.000255</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046995.00</distance>
+	<calcTime>0.008312</calcTime>
+	<allocTime>0.053089</allocTime>
+	<readTime>0.000501</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112650.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000323</allocTime>
+	<readTime>0.000120</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000592</calcTime>
+	<allocTime>0.003844</allocTime>
+	<readTime>0.000154</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012339</calcTime>
+	<allocTime>0.087099</allocTime>
+	<readTime>0.000532</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>157101.00</distance>
+	<calcTime>0.003879</calcTime>
+	<allocTime>0.024419</allocTime>
+	<readTime>0.000355</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000053</allocTime>
+	<readTime>0.000098</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000047</allocTime>
+	<readTime>0.000050</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004403</calcTime>
+	<allocTime>0.029807</allocTime>
+	<readTime>0.000346</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>104196.00</distance>
+	<calcTime>0.000287</calcTime>
+	<allocTime>0.001361</allocTime>
+	<readTime>0.000142</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003282</calcTime>
+	<allocTime>0.019587</allocTime>
+	<readTime>0.000303</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.591088</calcTime>
+	<allocTime>4.638118</allocTime>
+	<readTime>0.002874</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.681513</calcTime>
+	<allocTime>3.969151</allocTime>
+	<readTime>0.002464</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161801.00</distance>
+	<calcTime>0.004764</calcTime>
+	<allocTime>0.027742</allocTime>
+	<readTime>0.000404</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.607631</calcTime>
+	<allocTime>3.622857</allocTime>
+	<readTime>0.002723</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6931960.00</distance>
+	<calcTime>0.009035</calcTime>
+	<allocTime>0.060753</allocTime>
+	<readTime>0.000550</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249029.00</distance>
+	<calcTime>0.001533</calcTime>
+	<allocTime>0.006553</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>81318.00</distance>
+	<calcTime>0.002451</calcTime>
+	<allocTime>0.011709</allocTime>
+	<readTime>0.000191</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>111510.00</distance>
+	<calcTime>0.008611</calcTime>
+	<allocTime>0.053644</allocTime>
+	<readTime>0.000513</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.196553</calcTime>
+	<allocTime>7.034359</allocTime>
+	<readTime>0.003403</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60078.00</distance>
+	<calcTime>0.000933</calcTime>
+	<allocTime>0.005264</allocTime>
+	<readTime>0.000258</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047929.00</distance>
+	<calcTime>0.008350</calcTime>
+	<allocTime>0.047629</allocTime>
+	<readTime>0.000457</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000322</allocTime>
+	<readTime>0.000121</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000565</calcTime>
+	<allocTime>0.004032</allocTime>
+	<readTime>0.000202</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012053</calcTime>
+	<allocTime>0.087221</allocTime>
+	<readTime>0.000546</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.004262</calcTime>
+	<allocTime>0.025360</allocTime>
+	<readTime>0.000457</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000055</allocTime>
+	<readTime>0.000098</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000046</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275302.00</distance>
+	<calcTime>0.004857</calcTime>
+	<allocTime>0.034884</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000323</calcTime>
+	<allocTime>0.001536</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357730.00</distance>
+	<calcTime>0.003566</calcTime>
+	<allocTime>0.019977</allocTime>
+	<readTime>0.000373</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590705</calcTime>
+	<allocTime>4.599778</allocTime>
+	<readTime>0.002981</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.687465</calcTime>
+	<allocTime>3.962356</allocTime>
+	<readTime>0.002895</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165835.00</distance>
+	<calcTime>0.004951</calcTime>
+	<allocTime>0.030326</allocTime>
+	<readTime>0.000434</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581569944.00</distance>
+	<calcTime>0.610513</calcTime>
+	<allocTime>3.647322</allocTime>
+	<readTime>0.002725</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6776847.00</distance>
+	<calcTime>0.009442</calcTime>
+	<allocTime>0.058636</allocTime>
+	<readTime>0.000500</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>302567.00</distance>
+	<calcTime>0.001573</calcTime>
+	<allocTime>0.007024</allocTime>
+	<readTime>0.000257</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>81179.00</distance>
+	<calcTime>0.002875</calcTime>
+	<allocTime>0.009603</allocTime>
+	<readTime>0.000205</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112738.00</distance>
+	<calcTime>0.008300</calcTime>
+	<allocTime>0.055650</allocTime>
+	<readTime>0.000501</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.202453</calcTime>
+	<allocTime>7.058231</allocTime>
+	<readTime>0.003196</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60453.00</distance>
+	<calcTime>0.000841</calcTime>
+	<allocTime>0.005061</allocTime>
+	<readTime>0.000237</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046722.00</distance>
+	<calcTime>0.008835</calcTime>
+	<allocTime>0.048345</allocTime>
+	<readTime>0.000458</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>110880.00</distance>
+	<calcTime>0.000066</calcTime>
+	<allocTime>0.000353</allocTime>
+	<readTime>0.000128</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000588</calcTime>
+	<allocTime>0.004107</allocTime>
+	<readTime>0.000182</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>187790.00</distance>
+	<calcTime>0.011919</calcTime>
+	<allocTime>0.086908</allocTime>
+	<readTime>0.000594</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.004435</calcTime>
+	<allocTime>0.027520</allocTime>
+	<readTime>0.000344</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000106</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000043</allocTime>
+	<readTime>0.000047</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004829</calcTime>
+	<allocTime>0.029777</allocTime>
+	<readTime>0.000312</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>98514.00</distance>
+	<calcTime>0.000240</calcTime>
+	<allocTime>0.001402</allocTime>
+	<readTime>0.000131</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003882</calcTime>
+	<allocTime>0.023658</allocTime>
+	<readTime>0.000289</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.591526</calcTime>
+	<allocTime>4.609499</allocTime>
+	<readTime>0.002695</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.687233</calcTime>
+	<allocTime>3.976952</allocTime>
+	<readTime>0.002278</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164101.00</distance>
+	<calcTime>0.004445</calcTime>
+	<allocTime>0.031949</allocTime>
+	<readTime>0.000377</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563212.00</distance>
+	<calcTime>0.610504</calcTime>
+	<allocTime>3.633048</allocTime>
+	<readTime>0.002805</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6796956.00</distance>
+	<calcTime>0.009135</calcTime>
+	<allocTime>0.061468</allocTime>
+	<readTime>0.000549</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>451566.00</distance>
+	<calcTime>0.001408</calcTime>
+	<allocTime>0.006895</allocTime>
+	<readTime>0.000288</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>155912.00</distance>
+	<calcTime>0.002559</calcTime>
+	<allocTime>0.010734</allocTime>
+	<readTime>0.000199</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>106857.00</distance>
+	<calcTime>0.009352</calcTime>
+	<allocTime>0.054164</allocTime>
+	<readTime>0.000499</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.206458</calcTime>
+	<allocTime>7.074757</allocTime>
+	<readTime>0.003250</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>76930.00</distance>
+	<calcTime>0.000841</calcTime>
+	<allocTime>0.005058</allocTime>
+	<readTime>0.000299</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046517.00</distance>
+	<calcTime>0.008224</calcTime>
+	<allocTime>0.047655</allocTime>
+	<readTime>0.000433</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112844.00</distance>
+	<calcTime>0.000061</calcTime>
+	<allocTime>0.000330</allocTime>
+	<readTime>0.000122</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000815</calcTime>
+	<allocTime>0.003757</allocTime>
+	<readTime>0.000154</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012214</calcTime>
+	<allocTime>0.087608</allocTime>
+	<readTime>0.000558</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.003837</calcTime>
+	<allocTime>0.025416</allocTime>
+	<readTime>0.000341</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000058</allocTime>
+	<readTime>0.000102</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000053</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004657</calcTime>
+	<allocTime>0.029900</allocTime>
+	<readTime>0.000422</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>102689.00</distance>
+	<calcTime>0.000275</calcTime>
+	<allocTime>0.001469</allocTime>
+	<readTime>0.000129</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357730.00</distance>
+	<calcTime>0.003355</calcTime>
+	<allocTime>0.019176</allocTime>
+	<readTime>0.000283</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.591013</calcTime>
+	<allocTime>4.592304</allocTime>
+	<readTime>0.002738</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.689818</calcTime>
+	<allocTime>3.975961</allocTime>
+	<readTime>0.002411</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>170826.00</distance>
+	<calcTime>0.004487</calcTime>
+	<allocTime>0.027104</allocTime>
+	<readTime>0.000449</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.639789</calcTime>
+	<allocTime>3.622791</allocTime>
+	<readTime>0.002842</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6760885.00</distance>
+	<calcTime>0.009654</calcTime>
+	<allocTime>0.062446</allocTime>
+	<readTime>0.000652</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250210.00</distance>
+	<calcTime>0.001397</calcTime>
+	<allocTime>0.007606</allocTime>
+	<readTime>0.000324</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002274</calcTime>
+	<allocTime>0.009669</allocTime>
+	<readTime>0.000185</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>111979.00</distance>
+	<calcTime>0.008574</calcTime>
+	<allocTime>0.054816</allocTime>
+	<readTime>0.000501</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.192653</calcTime>
+	<allocTime>7.083015</allocTime>
+	<readTime>0.003651</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60355.00</distance>
+	<calcTime>0.000996</calcTime>
+	<allocTime>0.005094</allocTime>
+	<readTime>0.000251</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046775.00</distance>
+	<calcTime>0.008903</calcTime>
+	<allocTime>0.049184</allocTime>
+	<readTime>0.000441</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>399397.00</distance>
+	<calcTime>0.000060</calcTime>
+	<allocTime>0.000370</allocTime>
+	<readTime>0.000133</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000550</calcTime>
+	<allocTime>0.003771</allocTime>
+	<readTime>0.000153</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012059</calcTime>
+	<allocTime>0.087725</allocTime>
+	<readTime>0.000544</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.003861</calcTime>
+	<allocTime>0.025836</allocTime>
+	<readTime>0.000359</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000104</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000012</calcTime>
+	<allocTime>0.000045</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275302.00</distance>
+	<calcTime>0.004290</calcTime>
+	<allocTime>0.030693</allocTime>
+	<readTime>0.000315</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97250.00</distance>
+	<calcTime>0.000246</calcTime>
+	<allocTime>0.001376</allocTime>
+	<readTime>0.000149</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358714.00</distance>
+	<calcTime>0.003478</calcTime>
+	<allocTime>0.018842</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.592074</calcTime>
+	<allocTime>4.643519</allocTime>
+	<readTime>0.002928</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.686233</calcTime>
+	<allocTime>4.005709</allocTime>
+	<readTime>0.002869</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161335.00</distance>
+	<calcTime>0.004857</calcTime>
+	<allocTime>0.034266</allocTime>
+	<readTime>0.000422</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581567498.00</distance>
+	<calcTime>0.612297</calcTime>
+	<allocTime>3.619945</allocTime>
+	<readTime>0.003099</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6784576.00</distance>
+	<calcTime>0.009245</calcTime>
+	<allocTime>0.060167</allocTime>
+	<readTime>0.000601</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>251371.00</distance>
+	<calcTime>0.001439</calcTime>
+	<allocTime>0.006951</allocTime>
+	<readTime>0.000307</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>75145.00</distance>
+	<calcTime>0.002283</calcTime>
+	<allocTime>0.010833</allocTime>
+	<readTime>0.000195</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109135.00</distance>
+	<calcTime>0.008317</calcTime>
+	<allocTime>0.052433</allocTime>
+	<readTime>0.000504</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.197932</calcTime>
+	<allocTime>7.078881</allocTime>
+	<readTime>0.003404</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60432.00</distance>
+	<calcTime>0.000946</calcTime>
+	<allocTime>0.005170</allocTime>
+	<readTime>0.000250</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046757.00</distance>
+	<calcTime>0.008462</calcTime>
+	<allocTime>0.047745</allocTime>
+	<readTime>0.000549</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112963.00</distance>
+	<calcTime>0.000072</calcTime>
+	<allocTime>0.000351</allocTime>
+	<readTime>0.000120</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000527</calcTime>
+	<allocTime>0.003679</allocTime>
+	<readTime>0.000155</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012984</calcTime>
+	<allocTime>0.087158</allocTime>
+	<readTime>0.000540</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.004232</calcTime>
+	<allocTime>0.022891</allocTime>
+	<readTime>0.000490</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000015</calcTime>
+	<allocTime>0.000068</allocTime>
+	<readTime>0.000103</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000049</allocTime>
+	<readTime>0.000053</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275059.00</distance>
+	<calcTime>0.004585</calcTime>
+	<allocTime>0.029782</allocTime>
+	<readTime>0.000344</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000240</calcTime>
+	<allocTime>0.001340</allocTime>
+	<readTime>0.000137</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5363022.00</distance>
+	<calcTime>0.003418</calcTime>
+	<allocTime>0.019151</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.593612</calcTime>
+	<allocTime>4.597241</allocTime>
+	<readTime>0.002751</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682030</calcTime>
+	<allocTime>3.993314</allocTime>
+	<readTime>0.002291</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165687.00</distance>
+	<calcTime>0.004569</calcTime>
+	<allocTime>0.031360</allocTime>
+	<readTime>0.000547</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581568341.00</distance>
+	<calcTime>0.609686</calcTime>
+	<allocTime>3.622411</allocTime>
+	<readTime>0.002955</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6775779.00</distance>
+	<calcTime>0.009524</calcTime>
+	<allocTime>0.057296</allocTime>
+	<readTime>0.000521</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>334052.00</distance>
+	<calcTime>0.001492</calcTime>
+	<allocTime>0.008583</allocTime>
+	<readTime>0.000254</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>72236.00</distance>
+	<calcTime>0.002439</calcTime>
+	<allocTime>0.010003</allocTime>
+	<readTime>0.000188</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113280.00</distance>
+	<calcTime>0.008348</calcTime>
+	<allocTime>0.051699</allocTime>
+	<readTime>0.000509</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.201233</calcTime>
+	<allocTime>7.039703</allocTime>
+	<readTime>0.003502</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60225.00</distance>
+	<calcTime>0.001197</calcTime>
+	<allocTime>0.009266</allocTime>
+	<readTime>0.000777</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047396.00</distance>
+	<calcTime>0.008309</calcTime>
+	<allocTime>0.055504</allocTime>
+	<readTime>0.001213</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>124848.00</distance>
+	<calcTime>0.000113</calcTime>
+	<allocTime>0.000595</allocTime>
+	<readTime>0.000250</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000625</calcTime>
+	<allocTime>0.005285</allocTime>
+	<readTime>0.000568</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.013360</calcTime>
+	<allocTime>0.089153</allocTime>
+	<readTime>0.001341</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154900.00</distance>
+	<calcTime>0.003987</calcTime>
+	<allocTime>0.029548</allocTime>
+	<readTime>0.001054</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000015</calcTime>
+	<allocTime>0.000065</allocTime>
+	<readTime>0.000233</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000058</allocTime>
+	<readTime>0.000160</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274429.00</distance>
+	<calcTime>0.005009</calcTime>
+	<allocTime>0.029937</allocTime>
+	<readTime>0.000790</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>104711.00</distance>
+	<calcTime>0.000276</calcTime>
+	<allocTime>0.001534</allocTime>
+	<readTime>0.000295</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358934.00</distance>
+	<calcTime>0.003147</calcTime>
+	<allocTime>0.021085</allocTime>
+	<readTime>0.000804</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590770</calcTime>
+	<allocTime>4.590743</allocTime>
+	<readTime>0.004508</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682662</calcTime>
+	<allocTime>3.980642</allocTime>
+	<readTime>0.005379</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166475.00</distance>
+	<calcTime>0.004320</calcTime>
+	<allocTime>0.032107</allocTime>
+	<readTime>0.001310</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581565675.00</distance>
+	<calcTime>0.615407</calcTime>
+	<allocTime>3.645500</allocTime>
+	<readTime>0.005135</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6849311.00</distance>
+	<calcTime>0.009027</calcTime>
+	<allocTime>0.060761</allocTime>
+	<readTime>0.000497</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>484553.00</distance>
+	<calcTime>0.001403</calcTime>
+	<allocTime>0.006918</allocTime>
+	<readTime>0.000235</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002268</calcTime>
+	<allocTime>0.009578</allocTime>
+	<readTime>0.000194</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>104638.00</distance>
+	<calcTime>0.008994</calcTime>
+	<allocTime>0.053949</allocTime>
+	<readTime>0.000541</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.216480</calcTime>
+	<allocTime>7.058457</allocTime>
+	<readTime>0.003239</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60275.00</distance>
+	<calcTime>0.001215</calcTime>
+	<allocTime>0.009123</allocTime>
+	<readTime>0.000845</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046255.00</distance>
+	<calcTime>0.008702</calcTime>
+	<allocTime>0.048939</allocTime>
+	<readTime>0.001158</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000077</calcTime>
+	<allocTime>0.000433</allocTime>
+	<readTime>0.000242</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000986</calcTime>
+	<allocTime>0.007065</allocTime>
+	<readTime>0.000575</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>187790.00</distance>
+	<calcTime>0.012174</calcTime>
+	<allocTime>0.092429</allocTime>
+	<readTime>0.001577</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.003766</calcTime>
+	<allocTime>0.030401</allocTime>
+	<readTime>0.001067</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000015</calcTime>
+	<allocTime>0.000072</allocTime>
+	<readTime>0.000245</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000021</calcTime>
+	<allocTime>0.000090</allocTime>
+	<readTime>0.000197</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275527.00</distance>
+	<calcTime>0.004850</calcTime>
+	<allocTime>0.029288</allocTime>
+	<readTime>0.000979</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000286</calcTime>
+	<allocTime>0.002138</allocTime>
+	<readTime>0.000346</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5364153.00</distance>
+	<calcTime>0.003459</calcTime>
+	<allocTime>0.020775</allocTime>
+	<readTime>0.000674</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588243</calcTime>
+	<allocTime>4.601303</allocTime>
+	<readTime>0.004375</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682009</calcTime>
+	<allocTime>3.953537</allocTime>
+	<readTime>0.005465</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165024.00</distance>
+	<calcTime>0.004846</calcTime>
+	<allocTime>0.032930</allocTime>
+	<readTime>0.001344</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581566618.00</distance>
+	<calcTime>0.608762</calcTime>
+	<allocTime>3.598451</allocTime>
+	<readTime>0.005186</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6677991.00</distance>
+	<calcTime>0.009649</calcTime>
+	<allocTime>0.059209</allocTime>
+	<readTime>0.000547</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249957.00</distance>
+	<calcTime>0.001408</calcTime>
+	<allocTime>0.006496</allocTime>
+	<readTime>0.000301</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>123274.00</distance>
+	<calcTime>0.002648</calcTime>
+	<allocTime>0.012593</allocTime>
+	<readTime>0.000188</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>105926.00</distance>
+	<calcTime>0.008661</calcTime>
+	<allocTime>0.052239</allocTime>
+	<readTime>0.000503</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.192927</calcTime>
+	<allocTime>7.044061</allocTime>
+	<readTime>0.003437</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60489.00</distance>
+	<calcTime>0.000866</calcTime>
+	<allocTime>0.005668</allocTime>
+	<readTime>0.000258</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10055201.00</distance>
+	<calcTime>0.008365</calcTime>
+	<allocTime>0.050169</allocTime>
+	<readTime>0.000510</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000058</calcTime>
+	<allocTime>0.000349</allocTime>
+	<readTime>0.000118</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000559</calcTime>
+	<allocTime>0.004121</allocTime>
+	<readTime>0.000201</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012116</calcTime>
+	<allocTime>0.086655</allocTime>
+	<readTime>0.000588</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>159190.00</distance>
+	<calcTime>0.003829</calcTime>
+	<allocTime>0.026755</allocTime>
+	<readTime>0.000433</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000055</allocTime>
+	<readTime>0.000100</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000011</calcTime>
+	<allocTime>0.000042</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274579.00</distance>
+	<calcTime>0.004193</calcTime>
+	<allocTime>0.026751</allocTime>
+	<readTime>0.000317</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000242</calcTime>
+	<allocTime>0.001340</allocTime>
+	<readTime>0.000129</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360189.00</distance>
+	<calcTime>0.003287</calcTime>
+	<allocTime>0.018256</allocTime>
+	<readTime>0.000272</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.604610</calcTime>
+	<allocTime>4.578353</allocTime>
+	<readTime>0.003012</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.692281</calcTime>
+	<allocTime>3.948263</allocTime>
+	<readTime>0.002373</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162321.00</distance>
+	<calcTime>0.004401</calcTime>
+	<allocTime>0.029413</allocTime>
+	<readTime>0.000374</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563084.00</distance>
+	<calcTime>0.605995</calcTime>
+	<allocTime>3.596596</allocTime>
+	<readTime>0.002766</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6705172.00</distance>
+	<calcTime>0.009417</calcTime>
+	<allocTime>0.060283</allocTime>
+	<readTime>0.000645</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>320875.00</distance>
+	<calcTime>0.001643</calcTime>
+	<allocTime>0.006692</allocTime>
+	<readTime>0.000260</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002322</calcTime>
+	<allocTime>0.009519</allocTime>
+	<readTime>0.000192</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>116807.00</distance>
+	<calcTime>0.008375</calcTime>
+	<allocTime>0.052818</allocTime>
+	<readTime>0.000498</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.195904</calcTime>
+	<allocTime>7.006410</allocTime>
+	<readTime>0.003127</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60487.00</distance>
+	<calcTime>0.000924</calcTime>
+	<allocTime>0.005045</allocTime>
+	<readTime>0.000250</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10048194.00</distance>
+	<calcTime>0.008511</calcTime>
+	<allocTime>0.047581</allocTime>
+	<readTime>0.000496</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>112119.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000317</allocTime>
+	<readTime>0.000110</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000548</calcTime>
+	<allocTime>0.003705</allocTime>
+	<readTime>0.000179</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012179</calcTime>
+	<allocTime>0.086858</allocTime>
+	<readTime>0.000619</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154255.00</distance>
+	<calcTime>0.004067</calcTime>
+	<allocTime>0.026548</allocTime>
+	<readTime>0.000370</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000062</allocTime>
+	<readTime>0.000100</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000052</allocTime>
+	<readTime>0.000049</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273977.00</distance>
+	<calcTime>0.004431</calcTime>
+	<allocTime>0.027143</allocTime>
+	<readTime>0.000313</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97553.00</distance>
+	<calcTime>0.000244</calcTime>
+	<allocTime>0.001385</allocTime>
+	<readTime>0.000136</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5356851.00</distance>
+	<calcTime>0.003329</calcTime>
+	<allocTime>0.022146</allocTime>
+	<readTime>0.000272</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588995</calcTime>
+	<allocTime>4.624570</allocTime>
+	<readTime>0.002723</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.686669</calcTime>
+	<allocTime>3.959574</allocTime>
+	<readTime>0.002484</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165452.00</distance>
+	<calcTime>0.004461</calcTime>
+	<allocTime>0.028221</allocTime>
+	<readTime>0.000375</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563962.00</distance>
+	<calcTime>0.610472</calcTime>
+	<allocTime>3.622132</allocTime>
+	<readTime>0.002898</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6835013.00</distance>
+	<calcTime>0.009616</calcTime>
+	<allocTime>0.060535</allocTime>
+	<readTime>0.000649</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>465511.00</distance>
+	<calcTime>0.001940</calcTime>
+	<allocTime>0.006941</allocTime>
+	<readTime>0.000377</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002605</calcTime>
+	<allocTime>0.009313</allocTime>
+	<readTime>0.000192</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>111756.00</distance>
+	<calcTime>0.008375</calcTime>
+	<allocTime>0.053473</allocTime>
+	<readTime>0.000509</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.193573</calcTime>
+	<allocTime>7.031280</allocTime>
+	<readTime>0.003506</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>61250.00</distance>
+	<calcTime>0.001693</calcTime>
+	<allocTime>0.009567</allocTime>
+	<readTime>0.000826</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10051594.00</distance>
+	<calcTime>0.008884</calcTime>
+	<allocTime>0.056958</allocTime>
+	<readTime>0.001718</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111576.00</distance>
+	<calcTime>0.000080</calcTime>
+	<allocTime>0.000437</allocTime>
+	<readTime>0.000315</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000671</calcTime>
+	<allocTime>0.005108</allocTime>
+	<readTime>0.000516</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.013270</calcTime>
+	<allocTime>0.086375</allocTime>
+	<readTime>0.001035</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>155909.00</distance>
+	<calcTime>0.004267</calcTime>
+	<allocTime>0.029493</allocTime>
+	<readTime>0.001164</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000267</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000050</allocTime>
+	<readTime>0.000168</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.005354</calcTime>
+	<allocTime>0.030592</allocTime>
+	<readTime>0.000955</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97144.00</distance>
+	<calcTime>0.000273</calcTime>
+	<allocTime>0.001539</allocTime>
+	<readTime>0.000232</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358647.00</distance>
+	<calcTime>0.003621</calcTime>
+	<allocTime>0.018901</allocTime>
+	<readTime>0.000581</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.599001</calcTime>
+	<allocTime>4.601773</allocTime>
+	<readTime>0.004704</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684069</calcTime>
+	<allocTime>3.977470</allocTime>
+	<readTime>0.006135</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>161683.00</distance>
+	<calcTime>0.008643</calcTime>
+	<allocTime>0.044457</allocTime>
+	<readTime>0.001142</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.607006</calcTime>
+	<allocTime>3.613611</allocTime>
+	<readTime>0.006461</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6813656.00</distance>
+	<calcTime>0.009649</calcTime>
+	<allocTime>0.057413</allocTime>
+	<readTime>0.000539</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>251810.00</distance>
+	<calcTime>0.001482</calcTime>
+	<allocTime>0.006602</allocTime>
+	<readTime>0.000292</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>98929.00</distance>
+	<calcTime>0.002889</calcTime>
+	<allocTime>0.012104</allocTime>
+	<readTime>0.000218</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>108764.00</distance>
+	<calcTime>0.009311</calcTime>
+	<allocTime>0.053721</allocTime>
+	<readTime>0.000502</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.193467</calcTime>
+	<allocTime>7.033578</allocTime>
+	<readTime>0.003325</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>59930.00</distance>
+	<calcTime>0.001334</calcTime>
+	<allocTime>0.005631</allocTime>
+	<readTime>0.000246</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047134.00</distance>
+	<calcTime>0.009810</calcTime>
+	<allocTime>0.050500</allocTime>
+	<readTime>0.000454</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>111951.00</distance>
+	<calcTime>0.000090</calcTime>
+	<allocTime>0.000456</allocTime>
+	<readTime>0.000182</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000524</calcTime>
+	<allocTime>0.003603</allocTime>
+	<readTime>0.000151</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012067</calcTime>
+	<allocTime>0.086574</allocTime>
+	<readTime>0.000592</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>160374.00</distance>
+	<calcTime>0.004187</calcTime>
+	<allocTime>0.025156</allocTime>
+	<readTime>0.000559</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000019</calcTime>
+	<allocTime>0.000110</allocTime>
+	<readTime>0.000133</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000018</calcTime>
+	<allocTime>0.000063</allocTime>
+	<readTime>0.000073</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274684.00</distance>
+	<calcTime>0.004630</calcTime>
+	<allocTime>0.029592</allocTime>
+	<readTime>0.000413</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>100964.00</distance>
+	<calcTime>0.000245</calcTime>
+	<allocTime>0.001351</allocTime>
+	<readTime>0.000141</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5360756.00</distance>
+	<calcTime>0.003228</calcTime>
+	<allocTime>0.018752</allocTime>
+	<readTime>0.000308</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.594633</calcTime>
+	<allocTime>4.665162</allocTime>
+	<readTime>0.002730</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.683722</calcTime>
+	<allocTime>3.997583</allocTime>
+	<readTime>0.002285</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164164.00</distance>
+	<calcTime>0.004493</calcTime>
+	<allocTime>0.026736</allocTime>
+	<readTime>0.000413</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.608942</calcTime>
+	<allocTime>3.627890</allocTime>
+	<readTime>0.002767</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6931960.00</distance>
+	<calcTime>0.009735</calcTime>
+	<allocTime>0.060910</allocTime>
+	<readTime>0.000556</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>249014.00</distance>
+	<calcTime>0.001378</calcTime>
+	<allocTime>0.006808</allocTime>
+	<readTime>0.000349</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002557</calcTime>
+	<allocTime>0.009405</allocTime>
+	<readTime>0.000231</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>105218.00</distance>
+	<calcTime>0.008814</calcTime>
+	<allocTime>0.052626</allocTime>
+	<readTime>0.000505</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.206978</calcTime>
+	<allocTime>7.028763</allocTime>
+	<readTime>0.003303</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60799.00</distance>
+	<calcTime>0.000864</calcTime>
+	<allocTime>0.005273</allocTime>
+	<readTime>0.000261</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10227327.00</distance>
+	<calcTime>0.008727</calcTime>
+	<allocTime>0.048078</allocTime>
+	<readTime>0.000460</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>120151.00</distance>
+	<calcTime>0.000065</calcTime>
+	<allocTime>0.000353</allocTime>
+	<readTime>0.000118</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000518</calcTime>
+	<allocTime>0.004466</allocTime>
+	<readTime>0.000199</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.011916</calcTime>
+	<allocTime>0.087270</allocTime>
+	<readTime>0.000550</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154818.00</distance>
+	<calcTime>0.004258</calcTime>
+	<allocTime>0.024701</allocTime>
+	<readTime>0.000333</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000063</allocTime>
+	<readTime>0.000135</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000049</allocTime>
+	<readTime>0.000086</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004260</calcTime>
+	<allocTime>0.029502</allocTime>
+	<readTime>0.000346</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>98785.00</distance>
+	<calcTime>0.000246</calcTime>
+	<allocTime>0.001651</allocTime>
+	<readTime>0.000146</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5357670.00</distance>
+	<calcTime>0.003359</calcTime>
+	<allocTime>0.018504</allocTime>
+	<readTime>0.000272</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.588049</calcTime>
+	<allocTime>4.596272</allocTime>
+	<readTime>0.002681</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.686657</calcTime>
+	<allocTime>3.953674</allocTime>
+	<readTime>0.002406</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>164222.00</distance>
+	<calcTime>0.004359</calcTime>
+	<allocTime>0.027925</allocTime>
+	<readTime>0.000432</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581562710.00</distance>
+	<calcTime>0.618262</calcTime>
+	<allocTime>3.611006</allocTime>
+	<readTime>0.002997</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6825336.00</distance>
+	<calcTime>0.008799</calcTime>
+	<allocTime>0.056657</allocTime>
+	<readTime>0.000543</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>252579.00</distance>
+	<calcTime>0.001411</calcTime>
+	<allocTime>0.006881</allocTime>
+	<readTime>0.000389</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>75159.00</distance>
+	<calcTime>0.002319</calcTime>
+	<allocTime>0.010479</allocTime>
+	<readTime>0.000201</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>244452.00</distance>
+	<calcTime>0.008805</calcTime>
+	<allocTime>0.052439</allocTime>
+	<readTime>0.000604</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.194143</calcTime>
+	<allocTime>7.031711</allocTime>
+	<readTime>0.003714</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>62758.00</distance>
+	<calcTime>0.000922</calcTime>
+	<allocTime>0.005016</allocTime>
+	<readTime>0.000239</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046167.00</distance>
+	<calcTime>0.008983</calcTime>
+	<allocTime>0.049685</allocTime>
+	<readTime>0.000453</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>116845.00</distance>
+	<calcTime>0.000071</calcTime>
+	<allocTime>0.000405</allocTime>
+	<readTime>0.000148</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000510</calcTime>
+	<allocTime>0.004246</allocTime>
+	<readTime>0.000209</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012990</calcTime>
+	<allocTime>0.086383</allocTime>
+	<readTime>0.000541</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>161028.00</distance>
+	<calcTime>0.004065</calcTime>
+	<allocTime>0.025837</allocTime>
+	<readTime>0.000331</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000054</allocTime>
+	<readTime>0.000095</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000047</allocTime>
+	<readTime>0.000048</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3273675.00</distance>
+	<calcTime>0.004585</calcTime>
+	<allocTime>0.029582</allocTime>
+	<readTime>0.000314</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97250.00</distance>
+	<calcTime>0.000244</calcTime>
+	<allocTime>0.001364</allocTime>
+	<readTime>0.000132</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358714.00</distance>
+	<calcTime>0.004055</calcTime>
+	<allocTime>0.018681</allocTime>
+	<readTime>0.000271</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.591674</calcTime>
+	<allocTime>4.584473</allocTime>
+	<readTime>0.003246</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.694479</calcTime>
+	<allocTime>3.961253</allocTime>
+	<readTime>0.002388</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>162085.00</distance>
+	<calcTime>0.005282</calcTime>
+	<allocTime>0.030979</allocTime>
+	<readTime>0.000420</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563798.00</distance>
+	<calcTime>0.606416</calcTime>
+	<allocTime>3.692619</allocTime>
+	<readTime>0.003563</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6797887.00</distance>
+	<calcTime>0.009486</calcTime>
+	<allocTime>0.057586</allocTime>
+	<readTime>0.000553</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>250210.00</distance>
+	<calcTime>0.001534</calcTime>
+	<allocTime>0.006486</allocTime>
+	<readTime>0.000251</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002215</calcTime>
+	<allocTime>0.009565</allocTime>
+	<readTime>0.000178</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>104389.00</distance>
+	<calcTime>0.008875</calcTime>
+	<allocTime>0.052842</allocTime>
+	<readTime>0.000515</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.194738</calcTime>
+	<allocTime>7.044222</allocTime>
+	<readTime>0.003163</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60623.00</distance>
+	<calcTime>0.001607</calcTime>
+	<allocTime>0.009739</allocTime>
+	<readTime>0.000791</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10048583.00</distance>
+	<calcTime>0.008764</calcTime>
+	<allocTime>0.053737</allocTime>
+	<readTime>0.001428</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>116307.00</distance>
+	<calcTime>0.000058</calcTime>
+	<allocTime>0.000396</allocTime>
+	<readTime>0.000226</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000706</calcTime>
+	<allocTime>0.006446</allocTime>
+	<readTime>0.000565</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>185455.00</distance>
+	<calcTime>0.012070</calcTime>
+	<allocTime>0.086589</allocTime>
+	<readTime>0.001304</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>154255.00</distance>
+	<calcTime>0.004432</calcTime>
+	<allocTime>0.028643</allocTime>
+	<readTime>0.000881</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000013</calcTime>
+	<allocTime>0.000060</allocTime>
+	<readTime>0.000242</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000014</calcTime>
+	<allocTime>0.000067</allocTime>
+	<readTime>0.000205</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274334.00</distance>
+	<calcTime>0.004853</calcTime>
+	<allocTime>0.029909</allocTime>
+	<readTime>0.000821</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>97144.00</distance>
+	<calcTime>0.000275</calcTime>
+	<allocTime>0.001738</allocTime>
+	<readTime>0.000292</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358934.00</distance>
+	<calcTime>0.003389</calcTime>
+	<allocTime>0.022317</allocTime>
+	<readTime>0.000563</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.586897</calcTime>
+	<allocTime>4.610883</allocTime>
+	<readTime>0.004785</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684638</calcTime>
+	<allocTime>4.018773</allocTime>
+	<readTime>0.005449</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>163018.00</distance>
+	<calcTime>0.004863</calcTime>
+	<allocTime>0.031990</allocTime>
+	<readTime>0.001179</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563493.00</distance>
+	<calcTime>0.612844</calcTime>
+	<allocTime>3.623144</allocTime>
+	<readTime>0.005806</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6931960.00</distance>
+	<calcTime>0.009297</calcTime>
+	<allocTime>0.063213</allocTime>
+	<readTime>0.000549</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>248030.00</distance>
+	<calcTime>0.001538</calcTime>
+	<allocTime>0.008318</allocTime>
+	<readTime>0.000270</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002312</calcTime>
+	<allocTime>0.010455</allocTime>
+	<readTime>0.000205</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>113324.00</distance>
+	<calcTime>0.008267</calcTime>
+	<allocTime>0.052842</allocTime>
+	<readTime>0.000570</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.193039</calcTime>
+	<allocTime>7.018261</allocTime>
+	<readTime>0.003494</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60225.00</distance>
+	<calcTime>0.001164</calcTime>
+	<allocTime>0.008944</allocTime>
+	<readTime>0.000842</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10047122.00</distance>
+	<calcTime>0.008988</calcTime>
+	<allocTime>0.050225</allocTime>
+	<readTime>0.001086</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>124848.00</distance>
+	<calcTime>0.000113</calcTime>
+	<allocTime>0.000500</allocTime>
+	<readTime>0.000257</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000672</calcTime>
+	<allocTime>0.005293</allocTime>
+	<readTime>0.000521</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>182907.00</distance>
+	<calcTime>0.013185</calcTime>
+	<allocTime>0.089207</allocTime>
+	<readTime>0.001518</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>155902.00</distance>
+	<calcTime>0.003870</calcTime>
+	<allocTime>0.029371</allocTime>
+	<readTime>0.001099</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000017</calcTime>
+	<allocTime>0.000078</allocTime>
+	<readTime>0.000230</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1222.00</distance>
+	<calcTime>0.000017</calcTime>
+	<allocTime>0.000087</allocTime>
+	<readTime>0.000179</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3275220.00</distance>
+	<calcTime>0.004980</calcTime>
+	<allocTime>0.029279</allocTime>
+	<readTime>0.001037</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>104711.00</distance>
+	<calcTime>0.000274</calcTime>
+	<allocTime>0.001547</allocTime>
+	<readTime>0.000222</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5358934.00</distance>
+	<calcTime>0.003631</calcTime>
+	<allocTime>0.019388</allocTime>
+	<readTime>0.000566</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.727575</calcTime>
+	<allocTime>4.725196</allocTime>
+	<readTime>0.004367</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.682102</calcTime>
+	<allocTime>4.038202</allocTime>
+	<readTime>0.004978</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>166318.00</distance>
+	<calcTime>0.005090</calcTime>
+	<allocTime>0.039760</allocTime>
+	<readTime>0.001192</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581563781.00</distance>
+	<calcTime>0.607958</calcTime>
+	<allocTime>3.588913</allocTime>
+	<readTime>0.005419</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6665899.00</distance>
+	<calcTime>0.009770</calcTime>
+	<allocTime>0.057222</allocTime>
+	<readTime>0.000490</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>432442.00</distance>
+	<calcTime>0.001577</calcTime>
+	<allocTime>0.006834</allocTime>
+	<readTime>0.000276</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>73773.00</distance>
+	<calcTime>0.002543</calcTime>
+	<allocTime>0.009382</allocTime>
+	<readTime>0.000201</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>109956.00</distance>
+	<calcTime>0.008273</calcTime>
+	<allocTime>0.053353</allocTime>
+	<readTime>0.000502</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.215187</calcTime>
+	<allocTime>7.034584</allocTime>
+	<readTime>0.003378</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>72636.00</distance>
+	<calcTime>0.001703</calcTime>
+	<allocTime>0.009773</allocTime>
+	<readTime>0.000828</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10048215.00</distance>
+	<calcTime>0.008772</calcTime>
+	<allocTime>0.054837</allocTime>
+	<readTime>0.001518</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>113379.00</distance>
+	<calcTime>0.000077</calcTime>
+	<allocTime>0.000423</allocTime>
+	<readTime>0.000244</readTime>
+</instance>
+<instance>
+<name>instances1/pr439.tsp</name>
+	<distance>347061.00</distance>
+	<calcTime>0.000763</calcTime>
+	<allocTime>0.005842</allocTime>
+	<readTime>0.000517</readTime>
+</instance>
+<instance>
+<name>instances1/d2103.tsp</name>
+	<distance>180623.00</distance>
+	<calcTime>0.012537</calcTime>
+	<allocTime>0.098372</allocTime>
+	<readTime>0.001434</readTime>
+</instance>
+<instance>
+<name>instances1/pcb1173.tsp</name>
+	<distance>155302.00</distance>
+	<calcTime>0.003860</calcTime>
+	<allocTime>0.027723</allocTime>
+	<readTime>0.001131</readTime>
+</instance>
+<instance>
+<name>instances1/berlin52.tsp</name>
+	<distance>20697.00</distance>
+	<calcTime>0.000017</calcTime>
+	<allocTime>0.000077</allocTime>
+	<readTime>0.000308</readTime>
+</instance>
+<instance>
+<name>instances1/eil51.tsp</name>
+	<distance>1547.00</distance>
+	<calcTime>0.000016</calcTime>
+	<allocTime>0.000059</allocTime>
+	<readTime>0.000187</readTime>
+</instance>
+<instance>
+<name>instances1/rl1304.tsp</name>
+	<distance>3274355.00</distance>
+	<calcTime>0.005204</calcTime>
+	<allocTime>0.033655</allocTime>
+	<readTime>0.000962</readTime>
+</instance>
+<instance>
+<name>instances1/pr299.tsp</name>
+	<distance>104711.00</distance>
+	<calcTime>0.000302</calcTime>
+	<allocTime>0.001592</allocTime>
+	<readTime>0.000320</readTime>
+</instance>
+<instance>
+<name>instances1/vm1084.tsp</name>
+	<distance>5364277.00</distance>
+	<calcTime>0.003114</calcTime>
+	<allocTime>0.018662</allocTime>
+	<readTime>0.000631</readTime>
+</instance>
+<instance>
+<name>instances1/d15112.tsp</name>
+	<distance>112300675.00</distance>
+	<calcTime>0.590948</calcTime>
+	<allocTime>4.588467</allocTime>
+	<readTime>0.004618</readTime>
+</instance>
+<instance>
+<name>instances1/brd14051.tsp</name>
+	<distance>23405273.00</distance>
+	<calcTime>0.684243</calcTime>
+	<allocTime>3.973917</allocTime>
+	<readTime>0.005576</readTime>
+</instance>
+<instance>
+<name>instances1/d1291.tsp</name>
+	<distance>165816.00</distance>
+	<calcTime>0.005386</calcTime>
+	<allocTime>0.041018</allocTime>
+	<readTime>0.001241</readTime>
+</instance>
+<instance>
+<name>instances1/usa13509.tsp</name>
+	<distance>1581561988.00</distance>
+	<calcTime>0.604716</calcTime>
+	<allocTime>3.645550</allocTime>
+	<readTime>0.005501</readTime>
+</instance>
+<instance>
+<name>instances1/rl1889.tsp</name>
+	<distance>6767428.00</distance>
+	<calcTime>0.009100</calcTime>
+	<allocTime>0.058590</allocTime>
+	<readTime>0.000552</readTime>
+</instance>
+<instance>
+<name>instances1/d657.tsp</name>
+	<distance>252579.00</distance>
+	<calcTime>0.001721</calcTime>
+	<allocTime>0.007201</allocTime>
+	<readTime>0.000259</readTime>
+</instance>
+<instance>
+<name>instances1/rat783.tsp</name>
+	<distance>80382.00</distance>
+	<calcTime>0.002384</calcTime>
+	<allocTime>0.009898</allocTime>
+	<readTime>0.000257</readTime>
+</instance>
+<instance>
+<name>instances1/u1817.tsp</name>
+	<distance>112278.00</distance>
+	<calcTime>0.009144</calcTime>
+	<allocTime>0.052005</allocTime>
+	<readTime>0.000502</readTime>
+</instance>
+<instance>
+<name>instances1/d18512.tsp</name>
+	<distance>29473851.00</distance>
+	<calcTime>1.213541</calcTime>
+	<allocTime>7.006480</allocTime>
+	<readTime>0.003175</readTime>
+</instance>
+<instance>
+<name>instances1/u574.tsp</name>
+	<distance>60366.00</distance>
+	<calcTime>0.001027</calcTime>
+	<allocTime>0.005054</allocTime>
+	<readTime>0.000248</readTime>
+</instance>
+<instance>
+<name>instances1/vm1748.tsp</name>
+	<distance>10046878.00</distance>
+	<calcTime>0.008586</calcTime>
+	<allocTime>0.048188</allocTime>
+	<readTime>0.000505</readTime>
+</instance>
+<instance>
+<name>instances1/pr144.tsp</name>
+	<distance>213939.00</distance>
+	<calcTime>0.000059</calcTime>
+	<allocTime>0.000325</allocTime>
+	<readTime>0.000114</readTime>
+</instance>

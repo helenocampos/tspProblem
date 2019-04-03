@@ -10,16 +10,18 @@
  *
  * Created on 28 de Março de 2019, 09:32
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <time.h>
+#include <dirent.h> 
 /*
  * 
  */
 
 #define BIG_DISTANCE 999999
+#define INSTANCES_FOLDER "instances/"
 
 struct TSPLibData {
     int citiesAmount;
@@ -66,6 +68,12 @@ int isValidEuclidian2Dfile(char *filePath) {
                         fclose(fp);
                         return 1;
                     }
+                } else if (strcmp(ptr, "EDGE_WEIGHT_TYPE:") == 0) {
+                    ptr = strtok(NULL, delim);
+                    if (strcmp(ptr, "EUC_2D\n") == 0) {
+                        fclose(fp);
+                        return 1;
+                    }
                 }
                 ptr = strtok(NULL, delim);
             }
@@ -75,26 +83,26 @@ int isValidEuclidian2Dfile(char *filePath) {
     return 0;
 }
 
-void allocateTSPInstanceEuclidian2D(struct TSPLibData *data, struct TSPInstance *instance) {
-    instance->citiesAmount = data->citiesAmount;
-    instance->graphMatrix = malloc(instance->citiesAmount * sizeof (double*));
-    for (int i = 0; i < instance->citiesAmount; i++) {
-        instance->graphMatrix[i] = malloc(instance->citiesAmount * sizeof (double));
-    }
+struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
+    struct TSPInstance *instance = malloc(sizeof *instance);
+    if (instance) {
+        instance->citiesAmount = data->citiesAmount;
+        instance->graphMatrix = malloc(sizeof *(instance->graphMatrix) * instance->citiesAmount);
 
-    //    for (int i = 0; i < instance->citiesAmount; i++) {
-    //        free(instance->graphMatrix[i]);
-    //    }
-    //    free(instance->graphMatrix);
-    for (int i = 0; i < instance->citiesAmount; i++) {
-        for (int j = 0; j < instance->citiesAmount; j++) {
-            instance->graphMatrix[i][j] = getEuclidianDistance(i, j, data);
+        for (int i = 0; i < instance->citiesAmount; i++) {
+            instance->graphMatrix[i] = malloc(sizeof *(instance->graphMatrix) * instance->citiesAmount);
+        }
+        for (int i = 0; i < instance->citiesAmount; i++) {
+            for (int j = 0; j < instance->citiesAmount; j++) {
+                instance->graphMatrix[i][j] = getEuclidianDistance(i, j, data);
+            }
         }
     }
-
+    return instance;
 }
 
-void parseTSPLibFileEuclidian2D(char *filePath, struct TSPLibData *data, struct TSPInstance *instance) { //only valid for Euclidian2D instances
+struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for Euclidian2D instances
+    struct TSPLibData *data;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp;
         char * line = NULL;
@@ -104,39 +112,67 @@ void parseTSPLibFileEuclidian2D(char *filePath, struct TSPLibData *data, struct 
         int vertexAmount = 0;
         int vertexCounter = 0;
         fp = fopen(filePath, "r");
+
         if (fp) {
             while ((read = getline(&line, &len, fp)) != -1) {
-                //printf("Retrieved line of length %zu:\n", read);
-                //printf("\n %s tokens: ", line);
+                //                printf("Retrieved line of length %ld:\n", read);
+                //                printf("\n %s tokens: ", line);
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
                         char *ptr = strtok(line, delim);
-                        
                         if (strcmp(ptr, "DIMENSION") == 0) {
                             ptr = strtok(NULL, delim);
-                            if(strcmp(ptr, ":")==0){
+                            if (strcmp(ptr, ":") == 0) {
                                 ptr = strtok(NULL, delim);
                             }
                             vertexAmount = atoi(ptr);
+                            //                            printf("\n%d allocating %d for data", vertexAmount, sizeof *data);
+                            //                            getchar();
+                            //                            
+                            data = malloc(sizeof *data);
+                            if (data) {
+                                data->x = malloc(sizeof *(data->x) * vertexAmount);
+                                data->y = malloc(sizeof *(data->y) * vertexAmount);
+                            }
+
                             data->citiesAmount = vertexAmount;
-//                            printf("%d",data->citiesAmount);
-                            data->x = malloc(vertexAmount * sizeof *data->x);
-                            data->y = malloc(vertexAmount * sizeof *data->y);
+
+                            //                            printf("%d",data->citiesAmount);
+                            //                            data->x = malloc(vertexAmount * sizeof *data->x);
+                            //                            data->y = malloc(vertexAmount * sizeof *data->y);
+                        } else if (strcmp(ptr, "DIMENSION:") == 0) {
+                            ptr = strtok(NULL, delim);
+                            vertexAmount = atoi(ptr);
+                            //                            printf("\nallocating %d for data", sizeof *data);
+                            //                            getchar();
+                            data = malloc(sizeof (*data));
+
+                            if (data) {
+                                long arraySize = sizeof *(data->x) * vertexAmount;
+                                data->x = malloc(sizeof *(data->x) * vertexAmount);
+                                arraySize = sizeof *(data->x) * vertexAmount;
+                                data->y = malloc(sizeof *(data->y) * vertexAmount);
+                            }
+                            data->citiesAmount = vertexAmount;
+                            //                            printf("%d",data->citiesAmount);
+                            //                            data->x = malloc(vertexAmount * sizeof *data->x);
+                            //                            data->y = malloc(vertexAmount * sizeof *data->y);
                         }
                     }
                     if (strcmp(line, "NODE_COORD_SECTION\n") == 0) {
                         dataSection = 1;
                     }
                 } else {
-                    if (strcmp(line, "EOF\n") != 0) {
+                    if (vertexCounter < vertexAmount) {
+
                         char delim[] = " ";
                         char *ptr = strtok(line, delim);
                         ptr = strtok(NULL, delim);
                         float x = strtod(ptr, NULL);
                         ptr = strtok(NULL, delim);
                         float y = strtod(ptr, NULL);
-//                        printf("\nvertexCounter: %d, cities: %d", vertexCounter, data->citiesAmount);
+                        //                        printf("\nvertexCounter: %d, cities: %d", vertexCounter, data->citiesAmount);
                         data->x[vertexCounter] = x;
                         data->y[vertexCounter] = y;
                         vertexCounter++;
@@ -150,7 +186,7 @@ void parseTSPLibFileEuclidian2D(char *filePath, struct TSPLibData *data, struct 
 
         }
     }
-
+    return data;
 }
 
 void printTSPLibData(struct TSPLibData *data) {
@@ -173,10 +209,10 @@ void printInstanceData(struct TSPInstance *instance) {
 }
 
 void printRoute(int route[], int routeSize, double length) {
-    printf("Route: ");
-    for (int i = 0; i < routeSize; i++) {
-        printf(" %d ", route[i]);
-    }
+    //    printf("Route: ");
+    //    for (int i = 0; i < routeSize; i++) {
+    //        printf(" %d ", route[i]);
+    //    }
     printf("\nTotal length: %f", length);
 }
 
@@ -184,7 +220,7 @@ int getNearestVertexNotVisited(double distances[], int vertexAmount, int origin,
     double minDistance = BIG_DISTANCE;
     int minDistanceVertex = -1;
     for (int j = 0; j < vertexAmount; j++) {
-//        printf("\n %d to %d = %f. visited: %d", origin, j, distances[j], visitedVertexes[j]);
+        //        printf("\n %d to %d = %f. visited: %d", origin, j, distances[j], visitedVertexes[j]);
         if (distances[j] < minDistance && visitedVertexes[j] == 0 && origin != j) {
             minDistance = distances[j];
             minDistanceVertex = j;
@@ -199,12 +235,12 @@ void initializeArray(int array[], int size, int value) {
     }
 }
 
-void symetricGreedyTSP(int startingNode, struct TSPInstance *instance) { //using a greedy approach 
-
+double symmetricGreedyTSP(int startingNode, struct TSPInstance *instance) { //using a greedy approach 
+    double totalDistance = 0;
     if (startingNode < instance->citiesAmount) {
         int visitedVertexes[instance->citiesAmount]; //if value is 1 then the vertex was already visited
         initializeArray(visitedVertexes, instance->citiesAmount, 0);
-        double totalDistance = 0;
+
         int routeOrder[instance->citiesAmount + 1];
         routeOrder[0] = startingNode;
         visitedVertexes[startingNode] = 1;
@@ -217,28 +253,99 @@ void symetricGreedyTSP(int startingNode, struct TSPInstance *instance) { //using
             visitedVertexes[nearestNotVisited] = 1;
             totalDistance += instance->graphMatrix[lastVisited][nearestNotVisited];
             routeOrder[visitNumber + 1] = nearestNotVisited;
-//            printf("\n nearest: %d visitnumber: %d", nearestNotVisited, visitNumber);
+            //            printf("\n nearest: %d visitnumber: %d", nearestNotVisited, visitNumber);
 
             lastVisited = nearestNotVisited;
         }
-        printRoute(routeOrder, instance->citiesAmount, totalDistance);
+        //        printRoute(routeOrder, instance->citiesAmount, totalDistance);
+    }
+    return totalDistance;
+}
+
+void freeInstancesMemory(struct TSPLibData *tspLibData,
+        struct TSPInstance *tspInstance) {
+    if (tspInstance) {
+        for (int i = 0; i < tspInstance->citiesAmount; i++) {
+            free(tspInstance->graphMatrix[i]);
+        }
+        free(tspInstance);
+    }
+    if (tspLibData) {
+        free(tspLibData);
     }
 }
 
+char* concat(const char *s1, const char *s2) {
+    char *result = malloc(strlen(s1) + strlen(s2) + 1);
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
+}
+
+void executeTSP(char* file) {
+    //    printf("\nExecuting TSP for %s instance \n", file);
+    struct TSPLibData *tspLibData;
+
+    struct TSPInstance *tspInstance;
+
+    clock_t start, end;
+    double calculationTime, readTime, allocationTime;
+    double distance;
+    start = clock();
+    tspLibData = parseTSPLibFileEuclidian2D(file);
+    end = clock();
+    readTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+    start = clock();
+    tspInstance = allocateTSPInstanceEuclidian2D(tspLibData);
+    end = clock();
+
+    allocationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+    start = clock();
+    distance = symmetricGreedyTSP(1, tspInstance);
+    end = clock();
+    calculationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("<instance>\n");
+    printf("<name>%s</name>\n", file);
+    printf("\t<distance>%.2f</distance>\n", distance);
+    printf("\t<calcTime>%f</calcTime>\n", calculationTime);
+    printf("\t<allocTime>%f</allocTime>\n", allocationTime);
+    printf("\t<readTime>%f</readTime>\n", readTime);
+    printf("</instance>\n");
+    //    printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
+    //            "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
+    freeInstancesMemory(tspLibData, tspInstance);
+}
+
+void executeTSPDir(char* path) {
+    struct dirent *de; // Pointer for directory entry 
+    DIR *dr = opendir(path);
+    if (dr == NULL) {
+        printf("Could not open current directory");
+    }
+
+    while ((de = readdir(dr)) != NULL)
+        if (strcmp(de->d_name, ".") != 0
+                && strcmp(de->d_name, "..") != 0
+                && strcmp(de->d_name, ".DS_Store") != 0) {
+            char *filePath = concat(concat(path, "/"), de->d_name);
+            executeTSP(filePath);
+            //                        printf("%s\n",de->d_name);
+        }
+    closedir(dr);
+}
+
 int main(int argc, char** argv) {
-
-    struct TSPLibData tspLibData;
-    struct TSPInstance tspInstance;
-
-    //printf("Initializing\n\n");
-    //printf("%d", isValidEuclidian2Dfile("instances/a280.tsp.txt"));
-//    parseTSPLibFileEuclidian2D("instances/a280.tsp.txt", &tspLibData, &tspInstance);
-    parseTSPLibFileEuclidian2D("instances/d18512.tsp", &tspLibData, &tspInstance);
-//    printTSPLibData(&tspLibData);
-
-    allocateTSPInstanceEuclidian2D(&tspLibData, &tspInstance);
-    //    printInstanceData(&tspInstance);
-    symetricGreedyTSP(1, &tspInstance);
+    if (argc == 3) {
+        char* mode = argv[1];
+        char* file = argv[2];
+        if (strcmp(mode, "folder") == 0) {
+            executeTSPDir(file);
+        } else if (strcmp(mode, "file") == 0) {
+            executeTSP(file);
+        }
+    } else {
+        printf("Usage: \n argument1: mode. Accepted values: folder or file \n argument2: path");
+    }
     return (EXIT_SUCCESS);
 }
 
