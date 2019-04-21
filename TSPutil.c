@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 typedef struct NeighborDistance{
-    int originVertex;
+    int target;
     double distanceFromOrigin;
 } neighbor_distance;
 
@@ -21,7 +21,6 @@ int distance_comparator(const void *v1, const void *v2)
     else
         return 0;
 }
-
 
 struct NeighborDistance** sortNeighborsByDistance(struct NeighborDistance *neighbors, int amount){
     qsort(neighbors, amount,  sizeof (struct NeighborDistance), distance_comparator);

@@ -11,7 +11,7 @@
  * Created on 12 de Abril de 2019, 12:30
  */
 typedef struct NeighborDistance{
-    int originVertex;
+    int target;
     double distanceFromOrigin;
 } neighbor_distance;
 extern struct NeighborDistance* sortNeighborsByDistance(struct NeighborDistance *neighbors, int amount);

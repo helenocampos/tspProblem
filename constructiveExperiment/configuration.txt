@@ -1,0 +1,21 @@
+Commands: 
+./tspProblem all 10 folder instances/large 10 20 > logLarge.xml
+./tspProblem all 10 folder instances/medium 10 20 > logMedium.xml
+./tspProblem all 10 folder instances/small 10 20 > logSmall.xml
+
+10 executions of each method, with alpha varying between 10 and 20 (2 step increase)
+
+
+Analyses:
+
+Table with min, avg, median, max, % of optimal of each technique x instance
+
+Plots
+ N x time (all instances)
+ Alpha x time (all instances) (type of instances)
+ Alpha x % of optimal (all instances)
+ N x % of optimal (all instances)
+
+ Boxplots for small, medium and large
+
+ Alpha x total distance for each instance
