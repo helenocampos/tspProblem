@@ -23,7 +23,7 @@
  */
 
 #define BIG_DISTANCE 999999
-#define SOLVING_APPROACHES_AMOUNT 4
+#define CONSTRUCTIVE_APPROACHES_AMOUNT 4
 #define RANDOM_SEED 2
 
 struct TSPLibData {
@@ -36,18 +36,26 @@ struct TSPLibData {
 struct TSPInstance {
     int citiesAmount;
     char* instanceName;
-    double** graphMatrix;
+    int** graphMatrix;
+};
+
+struct solution {
+    int* route;
+    double distance;
 };
 
 struct Config {
-    char* method;
-    int methodIndex;
+    char* constructiveMethod;
+    int constructiveMethodIndex;
+    char* localSearchMethod;
+    int localSearchMethodIndex;
     int repeatTimes;
     char* mode;
     char* path;
     int alpha;
     int alphaUB;
     int testAlpha;
+    char* logName;
 };
 
 struct Config config;
@@ -57,12 +65,13 @@ struct TSPInstance *tspInstance = 0;
 char previousInstance[4096] = "";
 int originalAlpha = 0;
 int originalUBAlpha = 0;
-int originalMethodIndex = 0;
+int originalConstructiveMethodIndex = 0;
+int originalLocalSearchMethodIndex = 0;
 int randomSeed = RANDOM_SEED;
-
+FILE *resultsFile;
 MTRand r;
 
-int nint(int x) {
+int nint(double x) {
     return (int) (x + 0.5);
 }
 
@@ -72,6 +81,15 @@ int getRandomInt(int lb, int ub) {
     return generatedInt;
 }
 
+double getRouteDistance(int route[], int routeSize) {
+    double distance = 0;
+    for (int i = 1; i < routeSize; i++) {
+        //        printf("\nroute[%d]=%d -> route[%d]=%d", i - 1, route[i - 1], i, route[i]);
+        distance += tspInstance->graphMatrix[route[i - 1]][route[i]];
+    }
+    return distance;
+}
+
 void printNd(struct NeighborDistance *nd, int size) {
     for (int i = 0; i < size; i++) {
         printf("\n to %d: %f",
@@ -79,6 +97,16 @@ void printNd(struct NeighborDistance *nd, int size) {
                 nd[i].distanceFromOrigin);
     }
 }
+
+//void verifyCanonicalDistance(){
+//    double distance = 0;
+//    for(int i=1; i<442; i++){
+//        printf("\ndistance(%f)+=graphMatrix[%d][%d] (%d)", distance, i-1, i, tspInstance->graphMatrix[i-1][i]);
+//        distance+=tspInstance->graphMatrix[i-1][i];
+//    }
+//    distance+=tspInstance->graphMatrix[441][0];
+//    printf("\nCanonical distance: %f",distance);
+//}
 
 int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
     if (i < dat->citiesAmount && j < dat->citiesAmount) {
@@ -91,6 +119,7 @@ int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
 }
 
 //returns 1 if valid, 0 otherwise
+
 int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
     char * line = NULL;
@@ -218,7 +247,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
 void printTSPLibData(struct TSPLibData *data) {
     printf("\nVertex amount: %d", data->citiesAmount);
     for (int i = 0; i < data->citiesAmount; i++) {
-        printf("\n %f %f", data->x[i], data->y[i]);
+        printf("\nvertex %d: %f %f", i, data->x[i], data->y[i]);
     }
 }
 
@@ -228,7 +257,7 @@ void printInstanceData(struct TSPInstance *instance) {
             if (j == instance->citiesAmount) {
                 printf("\n");
             }
-            printf("\nmatrix[%d][%d]=%.2f", i, j, instance->graphMatrix[i][j]);
+            printf("\nmatrix[%d][%d]=%d", i, j, instance->graphMatrix[i][j]);
 
         }
     }
@@ -239,10 +268,10 @@ void printRoute(int route[], int routeSize, double length) {
     for (int i = 0; i < routeSize; i++) {
         printf(" %d ", route[i]);
     }
-    printf("\nTotal length: %f, total cities: %d", length, routeSize - 1);
+    printf("\nTotal length (provided): %f, total length (calculated): %f, total cities: %d", length, getRouteDistance(route, routeSize), routeSize - 1);
 }
 
-int getNearestVertexNotVisited(double distances[], int vertexAmount, int origin, int visitedVertexes[]) {
+int getNearestVertexNotVisited(int distances[], int vertexAmount, int origin, int visitedVertexes[]) {
     double minDistance = BIG_DISTANCE;
     int minDistanceVertex = -1;
     for (int j = 0; j < vertexAmount; j++) {
@@ -262,15 +291,163 @@ void initializeArray(int array[], int size, int value) {
     }
 }
 
-int* getNNearestVertexNotVisited(double distances[], int vertexAmount, int origin, int visitedVertexes[], int N) {
-    struct NeighborDistance *nd = calloc(vertexAmount, sizeof (*nd));
+int * twoOptSwap(int* route, int routeSize, int i, int j) {
+    //    printf("\n Swapping %d and %d, index %d, %d", route[i], route[j], i, j);
+    if (i > j) {
+        int aux = i;
+        i = j;
+        j = aux;
+    }
+    int* newRoute = malloc(routeSize * sizeof (int));
+    memcpy(newRoute, route, routeSize * sizeof (int));
+    if (j < routeSize && i >= 0) {
+        for (int x = j, y = i; x >= i; x--, y++) {
+            newRoute[y] = route[x];
+            //            printf("\nnewRoute[%d] = %d", y, route[x]);
+        }
+    }
+    return newRoute;
+}
 
+double calculateNewDistance(double oldDistance, int swappedPosition1, int swappedPosition2, int* oldRoute, int* newRoute) {
+    int pair1_old_x = oldRoute[swappedPosition1 - 1];
+    int pair1_old_y = oldRoute[swappedPosition1];
+    int pair2_old_x = oldRoute[swappedPosition2];
+    int pair2_old_y = oldRoute[swappedPosition2 + 1];
+
+    int pair1_new_x = newRoute[swappedPosition1 - 1];
+    int pair1_new_y = newRoute[swappedPosition1];
+    int pair2_new_x = newRoute[swappedPosition2];
+    int pair2_new_y = newRoute[swappedPosition2 + 1];
+
+    double subtract1 = tspInstance->graphMatrix[pair1_old_x][pair1_old_y];
+    double subtract2 = tspInstance->graphMatrix[pair2_old_x][pair2_old_y];
+    double add1 = tspInstance->graphMatrix[pair1_new_x][pair1_new_y];
+    double add2 = tspInstance->graphMatrix[pair2_new_x][pair2_new_y];
+    //    printf("\n neighborDistance = oldDistance - d(%d,%d) - d(%d,%d) + d(%d,%d) + d(%d,%d)", pair1_old_x, pair1_old_y, pair2_old_x, pair2_old_y, pair1_new_x, pair1_new_y,
+    //            pair2_new_x, pair2_new_y);
+    double newDistance = oldDistance - subtract1 - subtract2 + add1 + add2;
+    //    printf("\n %f = %f - %f - %f + %f + %f", newDistance, oldDistance, subtract1, subtract2, add1, add2);
+    return newDistance;
+}
+
+int searchFirstImprovementNeighbor(int solutionSize, struct solution* currentSolution) {
+    for (int i = 1; i < solutionSize - 1; i++) {
+        for (int j = i + 1; j < solutionSize - 1; j++) {
+            int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
+            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route, neighbor);
+            //            printf("\n Neighbor: ");
+            //            printRoute(neighbor, solutionSize, neighborDistance);
+            if (neighborDistance < currentSolution->distance) {
+                currentSolution->distance = neighborDistance;
+                memcpy(currentSolution->route, neighbor, solutionSize * sizeof (int));
+                free(neighbor);
+                return 1;
+            }
+            free(neighbor);
+        }
+    }
+    return 0;
+}
+
+int searchBestImprovementNeighbor(int solutionSize, struct solution* currentSolution) {
+    int improvementFound = 0;
+    struct solution* bestKnownSolution = malloc(sizeof *(bestKnownSolution));
+    bestKnownSolution->route = calloc(solutionSize, sizeof (int));
+    memcpy(bestKnownSolution->route, currentSolution->route, solutionSize * sizeof (int));
+    bestKnownSolution->distance = currentSolution->distance;
+    //    printf("\nStarting best improvement neighbor search. Current solution:");
+    //    printRoute(bestKnownSolution->route, solutionSize, bestKnownSolution->distance);
+    for (int i = 1; i < solutionSize - 1; i++) {
+        for (int j = i + 1; j < solutionSize - 1; j++) {
+            int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
+            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route, neighbor);
+            //            printf("\n Neighbor: ");
+            //            printRoute(neighbor, solutionSize, neighborDistance);
+            if (neighborDistance < bestKnownSolution->distance) {
+                bestKnownSolution->distance = neighborDistance;
+                memcpy(bestKnownSolution->route, neighbor, solutionSize * sizeof (int));
+                //                bestKnownSolution->route = neighbor;
+            }
+            free(neighbor);
+            //            getchar();
+        }
+    }
+    //    printf("\n Best neighbor:");
+    //    printRoute(bestKnownSolution->route, solutionSize, bestKnownSolution->distance);
+    if (bestKnownSolution->distance < currentSolution->distance) {
+        currentSolution->distance = bestKnownSolution->distance;
+        memcpy(currentSolution->route, bestKnownSolution->route, solutionSize * sizeof (int));
+        improvementFound = 1;
+    }
+    free(bestKnownSolution->route);
+    free(bestKnownSolution);
+    return improvementFound;
+}
+
+//void testRoute(){
+//    int route[52] = {1 , 22 , 8 , 26 , 31 , 28 , 3 , 36 , 35 , 20 , 2 , 29 , 21 , 16 , 50 , 34 , 30 
+//            , 9 , 49 , 10 , 39 , 33 , 45 , 15 , 44 , 42 , 40 , 19 , 41 , 13 , 25 , 14 , 24 , 43 , 7 , 
+//    23 , 48 , 6 , 27 , 51 , 46 , 12 , 47 , 18 , 4 , 17 , 37 , 5 , 38 , 11 , 32, 1};
+//    int routeSize = 52;
+//    
+//    for(int i=0; i<routeSize; i++){
+//        route[i]=route[i]-1;
+////        printf("\n %d", route[i]);
+//        
+//    }
+//    printf("\n Test route eil51");
+//    printRoute(route, routeSize, 426);
+//}
+
+struct solution* localSearch(struct solution* constructiveSolution, int constructiveSolutionSize) {
+    struct solution* currentSolution = malloc(sizeof *(currentSolution));
+    currentSolution->distance = constructiveSolution->distance;
+    currentSolution->route = constructiveSolution->route;
+    //    printf("\n Constructive solution: ");
+    //    printRoute(constructiveSolution->route, constructiveSolutionSize, constructiveSolution->distance);
+    int keepSearching = 1;
+    do {
+        //                    printf("\n Current solution: ");
+        //                    printRoute(currentSolution->route, constructiveSolutionSize, currentSolution->distance);
+        int newSolution = 0;
+        switch (config.localSearchMethodIndex) {
+            case 1:
+                newSolution = searchFirstImprovementNeighbor(constructiveSolutionSize, currentSolution);
+                break;
+            case 2:
+                newSolution = searchBestImprovementNeighbor(constructiveSolutionSize, currentSolution);
+                break;
+        }
+        if (newSolution == 0) {
+            //                            printf("\nLocal optimum found. Stopping.");
+            keepSearching = 0;
+        } else {
+            //                            printf("\n Improvement found. Moving to neighbor.");
+            //                            printf("\n Current solution: ");
+            //                            printRoute(currentSolution->route, constructiveSolutionSize, currentSolution->distance);
+        }
+        //            printf("\n\n\n");
+        //        getchar();
+    } while (keepSearching == 1);
+//    printRoute(currentSolution->route, constructiveSolutionSize, currentSolution->distance);
+    //    testRoute();
+    return currentSolution;
+}
+
+int* getNNearestVertexNotVisited(int distances[], int vertexAmount, int origin, int visitedVertexes[], int N) {
+    struct NeighborDistance *nd = calloc(vertexAmount, sizeof (*nd));
+    //TODO usar memcpy aqui
     for (int i = 0; i < vertexAmount; i++) {
         nd[i].distanceFromOrigin = distances[i];
         nd[i].target = i;
     }
     sortNeighborsByDistance(nd, vertexAmount);
-    //        printNd(nd, vertexAmount);
+//    printNd(nd, vertexAmount);
+    
+//    for (int i = 0; i < vertexAmount; i++) {
+////        printf("\ndistance to %d=%d",i,distances[i]);
+//    }
     int* NNearestNotVisited = (int*) calloc(N, sizeof (int));
     initializeArray(NNearestNotVisited, N, -1);
     int notVisitedIndex = 0;
@@ -284,10 +461,10 @@ int* getNNearestVertexNotVisited(double distances[], int vertexAmount, int origi
             break;
         }
     }
-    //        printf("\nN nearest not yet visited: ");
-    //        for (int i = 0; i < notVisitedIndex; i++) {
-    //            printf("\n %d", NNearestNotVisited[i]);
-    //        }
+//            printf("\nN nearest not yet visited: ");
+            for (int i = 0; i < notVisitedIndex; i++) {
+//                printf("\n %d", NNearestNotVisited[i]);
+            }
 
     if (nd) {
         free(nd);
@@ -296,13 +473,14 @@ int* getNNearestVertexNotVisited(double distances[], int vertexAmount, int origi
     return NNearestNotVisited;
 }
 
-double finishCycle(int startingNode, int lastNode, double totalDistance, int* route, int lastRouteIndex) {
-    route[lastRouteIndex] = startingNode;
-    totalDistance += tspInstance->graphMatrix[lastNode][startingNode];
+double finishCycle(int startingNode, double totalDistance, int* route, int routeSize) {
+//    printf("\nFinishing cycle by connecting %d and %d with distance of %d", route[routeSize - 2], startingNode, tspInstance->graphMatrix[route[routeSize - 2]][startingNode]);
+    route[routeSize - 1] = startingNode;
+    totalDistance += tspInstance->graphMatrix[route[routeSize - 2]][startingNode];
     return totalDistance;
 }
 
-double symmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {  
+struct solution* symmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
     double totalDistance = 0;
     if (startingNode < instance->citiesAmount) {
         int visitedVertexes[instance->citiesAmount]; //if value is 1 then the vertex was already visited
@@ -326,11 +504,16 @@ double symmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
                 lastVisited = nearestNotVisited;
             }
         }
-        totalDistance = finishCycle(startingNode, lastVisited, totalDistance, routeOrder, visitNumber);
+        totalDistance = finishCycle(startingNode, totalDistance, routeOrder, instance->citiesAmount + 1);
+        struct solution* solution = malloc(sizeof *(solution));
+        solution->route = calloc(instance->citiesAmount + 1, sizeof (int));
+        solution->distance = totalDistance;
+        memcpy(solution->route, routeOrder, (instance->citiesAmount + 1) * sizeof (int));
 //                printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
-
+        //        testRoute();
+        return solution;
     }
-    return totalDistance;
+    return NULL;
 }
 
 int getCandidatesSetSize(int neighborsAmount) {
@@ -341,7 +524,7 @@ int getCandidatesSetSize(int neighborsAmount) {
     return ceil(sizeD);
 }
 
-int getRandomNearestNotVisited(double distances[], int vertexAmount, int origin,
+int getRandomNearestNotVisited(int distances[], int vertexAmount, int origin,
         int visitedVertexes[], int candidateSetSize) {
     clock_t start = 0, end = 0;
     double functionTime = 0;
@@ -350,11 +533,11 @@ int getRandomNearestNotVisited(double distances[], int vertexAmount, int origin,
     if (candidateSetSize != 0) {
         int* NNearestNotVisited = getNNearestVertexNotVisited(distances,
                 vertexAmount, origin, visitedVertexes, candidateSetSize);
-        //                printf("\n origin: %d", origin);
-        //                printf("\nN nearest not yet visited: ");
-        //                for (int i = 0; i < candidateSetSize; i++) {
-        //                    printf("\n %d", NNearestNotVisited[i]);
-        //                }
+//        printf("\n origin: %d", origin);
+//        printf("\nN nearest not yet visited: ");
+        for (int i = 0; i < candidateSetSize; i++) {
+//            printf("\n %d", NNearestNotVisited[i]);
+        }
         int randomIndex = -1;
         do {
             randomIndex = getRandomInt(0, candidateSetSize - 1);
@@ -370,11 +553,11 @@ int getRandomNearestNotVisited(double distances[], int vertexAmount, int origin,
     }
     end = clock();
     functionTime = ((double) (end - start)) / CLOCKS_PER_SEC;
-//    printf("\ngetRandomNearestNotVisited: %f seconds", functionTime);
+    //    printf("\ngetRandomNearestNotVisited: %f seconds", functionTime);
     return randomNearestNotVisited;
 }
 
-double randomSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) { 
+struct solution* randomSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
     double totalDistance = 0;
     if (startingNode < instance->citiesAmount) {
         int visitedVertexes[instance->citiesAmount]; //if value is 1 then the vertex was already visited
@@ -384,84 +567,98 @@ double randomSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) 
         visitedVertexes[startingNode] = 1;
         int lastVisited = startingNode;
         int candidateSetSize = getCandidatesSetSize(instance->citiesAmount - 1);
-//        printf("\n candidateSetSize: %d\n", candidateSetSize);
+        //        printf("\n candidateSetSize: %d\n", candidateSetSize);
         int visitNumber = 1;
         for (; visitNumber < instance->citiesAmount; visitNumber++) {
             int randomNearestNotVisited = getRandomNearestNotVisited(instance->graphMatrix[lastVisited],
                     instance->citiesAmount, lastVisited, visitedVertexes, candidateSetSize);
-//            printf("\n%d", randomNearestNotVisited);
+            //            printf("\n%d", randomNearestNotVisited);
             if (randomNearestNotVisited != -1) {
                 visitedVertexes[randomNearestNotVisited] = 1;
                 totalDistance += instance->graphMatrix[lastVisited][randomNearestNotVisited];
                 routeOrder[visitNumber] = randomNearestNotVisited;
-//                printf("\n random nearest: %d  totalDistance: %f visitnumber: %d", randomNearestNotVisited, totalDistance, visitNumber);
+                //                printf("\n random nearest: %d  totalDistance: %f visitnumber: %d", randomNearestNotVisited, totalDistance, visitNumber);
                 lastVisited = randomNearestNotVisited;
             }
         }
-        totalDistance = finishCycle(startingNode, lastVisited, totalDistance, routeOrder, visitNumber);
-//        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        totalDistance = finishCycle(startingNode, totalDistance, routeOrder, instance->citiesAmount + 1);
+//                        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        struct solution* solution = malloc(sizeof *(solution));
+        solution->route = calloc(instance->citiesAmount + 1, sizeof (int));
+        solution->distance = totalDistance;
+        memcpy(solution->route, routeOrder, (instance->citiesAmount + 1) * sizeof (int));
+        return solution;
     }
-    return totalDistance;
+    return NULL;
 }
 
-double randomDoubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
+struct solution* randomDoubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
     double totalDistance = 0;
 
     if (startingNode < instance->citiesAmount) {
         int visitedVertexes[instance->citiesAmount]; //if value is 1 then the vertex was already visited
         initializeArray(visitedVertexes, instance->citiesAmount, 0);
         int routeOrder[instance->citiesAmount + 1];
-
-        int head1 = startingNode;
-        int head2 = startingNode;
 
         routeOrder[0] = startingNode;
         visitedVertexes[startingNode] = 1;
         int candidateSetSize = getCandidatesSetSize(instance->citiesAmount - 1);
         int visitNumber = 1;
+        int head1VisitNumber = 1;
+        int head2VisitNumber = instance->citiesAmount - 1;
         int lastVisitedNode = startingNode;
         int lastVisitedDistance = 0;
+        int head1 = lastVisitedNode;
+        int head2 = lastVisitedNode;
         for (; visitNumber < instance->citiesAmount; visitNumber++) {
             //            printf("\nHead1: %d   || Head2: %d", head1, head2);
-
-
             int randomNearestNotVisitedHead1 = getRandomNearestNotVisited(instance->graphMatrix[head1],
                     instance->citiesAmount, head1, visitedVertexes, candidateSetSize);
-
             int randomNearestNotVisitedHead2 = getRandomNearestNotVisited(instance->graphMatrix[head2],
                     instance->citiesAmount, head2, visitedVertexes, candidateSetSize);
-
-
-
             if (randomNearestNotVisitedHead1 != -1 && randomNearestNotVisitedHead2 != -1) {
                 double nearestNotVisitedHead1Distance = instance->graphMatrix[head1][randomNearestNotVisitedHead1];
                 double nearestNotVisitedHead2Distance = instance->graphMatrix[head2][randomNearestNotVisitedHead2];
-                //                printf("\n nearestHead1: %d distance: %f || nearestHead2: %d distance: %f",
-                //                        nearestNotVisitedHead1, nearestNotVisitedHead1Distance, nearestNotVisitedHead2, nearestNotVisitedHead2Distance);
+                //                printf("\n nearestHead1 (%d to %d): distance: %f || nearestHead2 (%d to %d): distance: %f",
+                //                        head1, randomNearestNotVisitedHead1, nearestNotVisitedHead1Distance, head2,
+                //                        randomNearestNotVisitedHead2, nearestNotVisitedHead2Distance);
                 if (nearestNotVisitedHead1Distance <= nearestNotVisitedHead2Distance) {
                     head1 = randomNearestNotVisitedHead1;
                     lastVisitedNode = head1;
                     lastVisitedDistance = nearestNotVisitedHead1Distance;
-                    //                    printf("\n Visitei Head1");
+                    //                    printf("\n Andei com Head1. Move para %d adiciona na posicao %d da rota", head1, head1VisitNumber);
+                    routeOrder[head1VisitNumber++] = lastVisitedNode;
                 } else {
                     head2 = randomNearestNotVisitedHead2;
                     lastVisitedNode = head2;
                     lastVisitedDistance = nearestNotVisitedHead2Distance;
-                    //                    printf("\n Visitei Head2");
+                    //                    printf("\n Andei com Head2. Move para %d adiciona na posicao %d da rota", head2, head2VisitNumber);
+                    routeOrder[head2VisitNumber--] = lastVisitedNode;
                 }
+                //                printf("\n head1VisitNumber = %d  head2VisitNumber = %d", head1VisitNumber, head2VisitNumber);
                 visitedVertexes[lastVisitedNode] = 1;
+                //                printf("\nDistance = %f + %d = %f", totalDistance, lastVisitedDistance, totalDistance + lastVisitedDistance);
                 totalDistance += lastVisitedDistance;
-                routeOrder[visitNumber] = lastVisitedNode;
+                if (head1VisitNumber > head2VisitNumber) {
+                    totalDistance += instance->graphMatrix[head1][head2];
+                    //                    printf("\n Connecting head1(%d) with head2(%d). Distance = %d", head1, head2, instance->graphMatrix[head1][head2]);
+                    routeOrder[instance->citiesAmount] = startingNode;
+                }
             }
         }
-        totalDistance = finishCycle(startingNode, lastVisitedNode, totalDistance, routeOrder, visitNumber);
         //        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        struct solution* solution = malloc(sizeof *(solution));
+        solution->route = calloc(instance->citiesAmount + 1, sizeof (int));
+        solution->distance = totalDistance;
+        memcpy(solution->route, routeOrder, (instance->citiesAmount + 1) * sizeof (int));
+//        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        //        testRoute();
+        return solution;
     }
-
-    return totalDistance;
+    return NULL;
 }
 
-double doubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
+struct solution* doubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInstance *instance) {
     double totalDistance = 0;
 
     if (startingNode < instance->citiesAmount) {
@@ -469,47 +666,62 @@ double doubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInstance *insta
         initializeArray(visitedVertexes, instance->citiesAmount, 0);
         int routeOrder[instance->citiesAmount + 1];
 
-        int head1 = startingNode;
-        int head2 = startingNode;
-        int lastVisitedNode = startingNode;
-        double lastVisitedNodeDistance = 0;
         routeOrder[0] = startingNode;
         visitedVertexes[startingNode] = 1;
         int visitNumber = 1;
+        int head1VisitNumber = 1;
+        int head2VisitNumber = instance->citiesAmount - 1;
+        int lastVisitedNode = startingNode;
+        int lastVisitedDistance = 0;
+        int head1 = lastVisitedNode;
+        int head2 = lastVisitedNode;
         for (; visitNumber < instance->citiesAmount; visitNumber++) {
             //            printf("\nHead1: %d   || Head2: %d", head1, head2);
             int nearestNotVisitedHead1 = getNearestVertexNotVisited(instance->graphMatrix[head1],
                     instance->citiesAmount, head1, visitedVertexes);
-
             int nearestNotVisitedHead2 = getNearestVertexNotVisited(instance->graphMatrix[head2],
                     instance->citiesAmount, head2, visitedVertexes);
             if (nearestNotVisitedHead1 != -1 && nearestNotVisitedHead2 != -1) {
                 double nearestNotVisitedHead1Distance = instance->graphMatrix[head1][nearestNotVisitedHead1];
                 double nearestNotVisitedHead2Distance = instance->graphMatrix[head2][nearestNotVisitedHead2];
-                //                printf("\n nearestHead1: %d distance: %f || nearestHead2: %d distance: %f",
-                //                        nearestNotVisitedHead1, nearestNotVisitedHead1Distance, nearestNotVisitedHead2, nearestNotVisitedHead2Distance);
+                //                printf("\n nearestHead1 (%d to %d): distance: %f || nearestHead2 (%d to %d): distance: %f",
+                //                        head1, randomNearestNotVisitedHead1, nearestNotVisitedHead1Distance, head2,
+                //                        randomNearestNotVisitedHead2, nearestNotVisitedHead2Distance);
                 if (nearestNotVisitedHead1Distance <= nearestNotVisitedHead2Distance) {
                     head1 = nearestNotVisitedHead1;
                     lastVisitedNode = head1;
-                    lastVisitedNodeDistance = nearestNotVisitedHead1Distance;
-                    //                    printf("\n Visitei Head1");
+                    lastVisitedDistance = nearestNotVisitedHead1Distance;
+                    //                    printf("\n Andei com Head1. Move para %d adiciona na posicao %d da rota", head1, head1VisitNumber);
+                    routeOrder[head1VisitNumber++] = lastVisitedNode;
                 } else {
                     head2 = nearestNotVisitedHead2;
                     lastVisitedNode = head2;
-                    lastVisitedNodeDistance = nearestNotVisitedHead2Distance;
-                    //                    printf("\n Visitei Head2");
+                    lastVisitedDistance = nearestNotVisitedHead2Distance;
+                    //                    printf("\n Andei com Head2. Move para %d adiciona na posicao %d da rota", head2, head2VisitNumber);
+                    routeOrder[head2VisitNumber--] = lastVisitedNode;
                 }
+                //                printf("\n head1VisitNumber = %d  head2VisitNumber = %d", head1VisitNumber, head2VisitNumber);
                 visitedVertexes[lastVisitedNode] = 1;
-                totalDistance += lastVisitedNodeDistance;
-                routeOrder[visitNumber] = lastVisitedNode;
-
+                //                printf("\nDistance = %f + %d = %f", totalDistance, lastVisitedDistance, totalDistance + lastVisitedDistance);
+                totalDistance += lastVisitedDistance;
+                if (head1VisitNumber > head2VisitNumber) {
+                    totalDistance += instance->graphMatrix[head1][head2];
+                    //                    printf("\n Connecting head1(%d) with head2(%d). Distance = %d", head1, head2, instance->graphMatrix[head1][head2]);
+                    routeOrder[instance->citiesAmount] = startingNode;
+                }
             }
         }
-        totalDistance = finishCycle(startingNode, lastVisitedNode, totalDistance, routeOrder, visitNumber);
         //        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        struct solution* solution = malloc(sizeof *(solution));
+        solution->route = calloc(instance->citiesAmount + 1, sizeof (int));
+        solution->distance = totalDistance;
+        memcpy(solution->route, routeOrder, (instance->citiesAmount + 1) * sizeof (int));
+//        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        //        testRoute();
+        return solution;
     }
 
-    return totalDistance;
+    return NULL;
 }
 
 void freeInstancesMemory(struct TSPLibData *tspLibData,
@@ -543,7 +755,7 @@ char* concat(const char *s1, const char *s2) {
     return result;
 }
 
-char* getMethodName(int methodIndex) { //index 0 = NN
+char* getConstructiveMethodName(int methodIndex) { //index 0 = NN
     switch (methodIndex) {
         default: return "Nearest neighbor (NN)";
         case 1: return "Double-sided nearest neighbor (DSNN)";
@@ -552,11 +764,58 @@ char* getMethodName(int methodIndex) { //index 0 = NN
     }
 }
 
+char* getLocalSearchMethodName(int methodIndex) {
+    switch (methodIndex) {
+        default: return "None";
+        case 1: return "1st improv 2opt";
+        case 2: return "Best improv 2opt";
+    }
+}
+
+void writeResultToFile(char* result) {
+    fputs(result, resultsFile);
+}
+
+void printHeader() {
+    writeResultToFile("name,n,constructive method, constructive distance, constructive calc time, local search "
+            "method, localsearch distance, localsearch time, alpha, random seed");
+}
+
+void printLine(char* file, struct solution* constructiveSolution, struct solution* localSearchSolution,
+        double constructiveCalculationTime, double localSearchCalculationTime) {
+    char* line = (char*) malloc(256 * sizeof (char));
+    char* lineChunk = (char*) malloc(50 * sizeof (char));
+    sprintf(lineChunk, "\n");
+    strcpy(line, lineChunk);
+    sprintf(lineChunk, "%s,", file);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", tspInstance->citiesAmount);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%s,", getConstructiveMethodName(config.constructiveMethodIndex));
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%.2f,", constructiveSolution->distance);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%f,", constructiveCalculationTime);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%s,", getLocalSearchMethodName(config.localSearchMethodIndex));
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%.2f,", localSearchSolution->distance);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%f,", localSearchCalculationTime);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", config.alpha);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d", randomSeed);
+    strcat(line, lineChunk);
+    writeResultToFile(line);
+    free(lineChunk);
+    free(line);
+}
+
 void executeMethod(char* file) {
     //    printf("\nExecuting TSP for %s instance \n", file);
     clock_t start = 0, end = 0;
-    double calculationTime = 0, readTime = 0, allocationTime = 0;
-    double distance = 0;
+    double constructiveCalculationTime = 0, readTime = 0, allocationTime = 0, localSearchCalculationTime = 0;
     if (tspLibData != 0) {
         //        printf("\nInstance name: %s   file: %s", tspLibData->instanceName, file);
         if (strcmp(previousInstance, file) != 0) {
@@ -593,67 +852,116 @@ void executeMethod(char* file) {
             end = clock();
         }
         allocationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+        struct solution* constructiveSolution = NULL;
+        struct solution* localSearchSolution = NULL;
         if (tspInstance) {
             start = clock();
-            switch (config.methodIndex) {
+            switch (config.constructiveMethodIndex) {
                 default:
                     //                    config.alpha = 0;
-                    distance = symmetricGreedyTSP(1, tspInstance);
+                    constructiveSolution = symmetricGreedyTSP(0, tspInstance);
                     break;
                 case 1:
                     //                    config.alpha = 0;
-                    distance = doubleSidedSymmetricGreedyTSP(1, tspInstance);
+                    constructiveSolution = doubleSidedSymmetricGreedyTSP(0, tspInstance);
                     break;
                 case 2:
-                    distance = randomSymmetricGreedyTSP(1, tspInstance);
+                    constructiveSolution = randomSymmetricGreedyTSP(0, tspInstance);
                     break;
                 case 3:
-                    distance = randomDoubleSidedSymmetricGreedyTSP(1, tspInstance);
+                    constructiveSolution = randomDoubleSidedSymmetricGreedyTSP(0, tspInstance);
                     break;
             }
             end = clock();
-            calculationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
-            printf("\n<instance>\n");
-            printf("\t<name>%s</name>\n", file);
-            printf("\t<method>%s</method>\n", getMethodName(config.methodIndex));
-            printf("\t<distance>%.2f</distance>\n", distance);
-            printf("\t<calcTime>%f</calcTime>\n", calculationTime);
-            printf("\t<allocTime>%f</allocTime>\n", allocationTime);
-            printf("\t<readTime>%f</readTime>\n", readTime);
-            printf("\t<alpha>%d</alpha>\n", config.alpha);
-            printf("\t<randomSeed>%d</randomSeed>\n", randomSeed);
-            printf("</instance>");
+            constructiveCalculationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+            start = clock();
+            if (config.localSearchMethodIndex == 0) {
+                localSearchSolution = malloc(sizeof *(localSearchSolution));
+                localSearchSolution->distance = 0;
+                localSearchCalculationTime = 0;
+            } else {
+                if (constructiveSolution != NULL) {
+                    //                        printRoute(constructiveSolution->route, tspInstance->citiesAmount + 1, constructiveSolution->distance);
+                    localSearchSolution = localSearch(constructiveSolution, tspInstance->citiesAmount + 1);
+                }
+            }
+            end = clock();
+            localSearchCalculationTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+            printLine(file, constructiveSolution, localSearchSolution, constructiveCalculationTime, localSearchCalculationTime);
+            //            printf("\n<instance>\n");
+            //            printf("\t<name>%s</name>\n", file);
+            //            printf("\t<N>%d</N>", tspInstance->citiesAmount);
+            //            printf("\t<ConstructiveMethod>%s</ConstructiveMethod>\n", getConstructiveMethodName(config.constructiveMethodIndex));
+            //            printf("\t<ConstructiveDistance>%.2f</ConstructiveDistance>\n", constructiveSolution->distance);
+            //            printf("\t<ConstructiveCalcTime>%f</ConstructiveCalcTime>\n", constructiveCalculationTime);
+            //            printf("\t<LocalSearchMethod>%s</LocalSearchMethod>\n", getLocalSearchMethodName(config.localSearchMethodIndex));
+            //            printf("\t<LocalSearchDistance>%.2f</LocalSearchDistance>\n", localSearchSolution->distance);
+            //            printf("\t<LocalSearchCalcTime>%f</LocalSearchCalcTime>\n", localSearchCalculationTime);
+            //            printf("\t<alpha>%d</alpha>\n", config.alpha);
+            //            printf("\t<randomSeed>%d</randomSeed>\n", randomSeed);
+            //            printf("</instance>");
+            //            printTSPLibData(tspLibData);
+            //            printInstanceData(tspInstance);
+            //            verifyCanonicalDistance();
             //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
             //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
+            if (localSearchSolution != NULL) {
+                //                if (localSearchSolution->distance != 0) {
+                //                    free(localSearchSolution->route);
+                //                }
+                free(localSearchSolution);
+            }
+            if (constructiveSolution != NULL) {
+                if (constructiveSolution->route != NULL) {
+                    free(constructiveSolution->route);
+                }
+                free(constructiveSolution);
+            }
         }
+
     }
     strcpy(previousInstance, file);
+
     //    freeInstancesMemory(tspLibData, tspInstance);
+}
+
+void localSearchArguments(char *file, int localSearchIndex) {
+    if (localSearchIndex == 3) {
+        config.localSearchMethodIndex = 1;
+        executeMethod(file);
+        config.localSearchMethodIndex = 2;
+        executeMethod(file);
+    } else {
+        executeMethod(file);
+    }
+}
+
+void constructiveMethodArguments(char *file, int constructiveIndex, int localSearchIndex) {
+    if (constructiveIndex == 4) {
+        for (int x = 0; x < CONSTRUCTIVE_APPROACHES_AMOUNT; x++) {
+            config.constructiveMethodIndex = x;
+            //                        printConfigs();
+            localSearchArguments(file, localSearchIndex);
+        }
+    } else {
+        localSearchArguments(file, localSearchIndex);
+    }
 }
 
 void execute(char *file) {
     int alpha = originalAlpha;
     int alphaUB = originalUBAlpha;
-    int methodIndex = originalMethodIndex;
-
+    int constructiveMethodIndex = originalConstructiveMethodIndex;
+    int localSearchMethodIndex = originalLocalSearchMethodIndex;
     if (config.testAlpha == 1) {
         alphaUB = config.alphaUB;
     }
     for (int i = 0; i < config.repeatTimes; i++, randomSeed++) {
         r = seedRand(randomSeed);
-        for (int j = alpha; j <= alphaUB; j = j + 2) {
+        for (int j = alpha; j <= alphaUB; j = j + 10) {
             config.alpha = j;
-            if (methodIndex == 4) {
-                for (int x = 0; x < SOLVING_APPROACHES_AMOUNT; x++) {
-                    config.methodIndex = x;
-                    //                        printConfigs();
-                    executeMethod(file);
-                }
-            } else {
-                executeMethod(file);
-            }
+            constructiveMethodArguments(file, constructiveMethodIndex, localSearchMethodIndex);
         }
-
     }
 }
 
@@ -682,16 +990,28 @@ void printArguments(int argc, char** argv) {
     }
 }
 
-int getMethodIndex() { //index 0 = NN
+int getConstructiveMethodIndex() { //index 0 = NN
     int index = 0; //NN
-    if (strcmp(config.method, "DSNN") == 0) {
+    if (strcmp(config.constructiveMethod, "DSNN") == 0) {
         index = 1;
-    } else if (strcmp(config.method, "RNN") == 0) {
+    } else if (strcmp(config.constructiveMethod, "RNN") == 0) {
         index = 2;
-    } else if (strcmp(config.method, "RDSNN") == 0) {
+    } else if (strcmp(config.constructiveMethod, "RDSNN") == 0) {
         index = 3;
-    } else if (strcmp(config.method, "all") == 0) {
+    } else if (strcmp(config.constructiveMethod, "all") == 0) {
         index = 4;
+    }
+    return index;
+}
+
+int getLocalSearchMethodIndex() {
+    int index = 0;
+    if (strcmp(config.localSearchMethod, "first") == 0) {
+        index = 1;
+    } else if (strcmp(config.localSearchMethod, "best") == 0) {
+        index = 2;
+    } else if (strcmp(config.localSearchMethod, "both") == 0) {
+        index = 3;
     }
     return index;
 }
@@ -705,43 +1025,52 @@ void invokeExecution() {
 }
 
 void printHelp() {
-    printf("Usage: \n argument1: method (Accepted values: NN, DSNN, RNN, RDSNN, all) \n"
-            "argument2: times to repeat \n"
-            "argument3: mode. Accepted values: folder or file \n "
-            "argument4: path \n"
-            "[argument 5: alpha value *optional*] \n "
-            "[argument 6: alpha value upper bound *optional* (if provided, argument 5 will be treated as the lower bound and all values will be tested]");
+    printf("Usage: \n "
+            "argument1: log file name"
+            "argument2: constructive method (Accepted values: NN, DSNN, RNN, RDSNN, all) \n"
+            "argument3 local search method (Accepted values: best, first, none) \n"
+            "argument4: times to repeat \n"
+            "argument5: mode. Accepted values: folder or file \n "
+            "argument6: path \n"
+            "[argument 7: alpha value *optional*] \n "
+            "[argument 8: alpha value upper bound *optional* (if provided, argument 5 will be treated as the lower bound and all values will be tested]");
 
     printf("\n Note that if you choose a method that is random-based (RNN, RDSNN, all),"
             " you MUST provide the alpha value.");
-    printf("\n Example: ./tspProblem DSNN 10 folder instances");
-    printf("\n Example 2: ./tspProblem RDSNN 5 file instances/a280.tsp 20");
-    printf("\n Example 3: ./tspProblem all 5 file instances/a280.tsp 10 \n");
+    printf("\n Example: ./tspProblem execution1 DSNN first 10 folder instances");
+    printf("\n Example 2: ./tspProblem execution1 RDSNN none 5 file instances/a280.tsp 20");
+    printf("\n Example 3: ./tspProblem myexecution all first 5 file instances/a280.tsp 10 \n");
 }
 
 void printConfigs() {
-    printf("\nmethod: %s", config.method);
+    printf("\nlog name: %s", config.logName);
+    printf("\nconstructive method: %s", config.constructiveMethod);
+    printf("\nlocal search method: %s", config.localSearchMethod);
     printf("\nmode: %s", config.mode);
     printf("\npath: %s", config.path);
-    printf("\nmethodIndex: %d", config.methodIndex);
+    printf("\nconstructive methodIndex: %d", config.constructiveMethodIndex);
+    printf("\nlocal search methodIndex: %d", config.localSearchMethodIndex);
     printf("\nrepeatTimes: %d", config.repeatTimes);
     printf("\nalpha: %d", config.alpha);
     printf("\nalphaUB: %d", config.alphaUB);
-    printf("\ntestAlpha: %d", config.testAlpha);
+    printf("\ntestAlpha: %d\n", config.testAlpha);
 }
 
 int main(int argc, char** argv) {
     //        printArguments(argc, argv);
-    if (argc >= 5) {
-        config.method = argv[1];
-        config.methodIndex = getMethodIndex();
-        config.repeatTimes = atoi(argv[2]);
-        config.mode = argv[3];
-        config.path = argv[4];
-        if (argc >= 6) {
-            config.alpha = atoi(argv[5]);
-            if (argc >= 7) {
-                config.alphaUB = atoi(argv[6]);
+    if (argc >= 7) {
+        config.logName = argv[1];
+        config.constructiveMethod = argv[2];
+        config.localSearchMethod = argv[3];
+        config.constructiveMethodIndex = getConstructiveMethodIndex();
+        config.localSearchMethodIndex = getLocalSearchMethodIndex();
+        config.repeatTimes = atoi(argv[4]);
+        config.mode = argv[5];
+        config.path = argv[6];
+        if (argc >= 8) {
+            config.alpha = atoi(argv[7]);
+            if (argc >= 9) {
+                config.alphaUB = atoi(argv[8]);
                 config.testAlpha = 1;
             }
         } else {
@@ -750,12 +1079,18 @@ int main(int argc, char** argv) {
 
         originalAlpha = config.alpha;
         originalUBAlpha = config.alpha;
-        originalMethodIndex = config.methodIndex;
-
+        originalConstructiveMethodIndex = config.constructiveMethodIndex;
+        originalLocalSearchMethodIndex = config.localSearchMethodIndex;
+        //        printConfigs();
         //        printf("\n alpha = %d  alphaUB = %d \n", alpha, alphaUB);
-        printf("<instances>");
+        //        printf("<instances>");
+        strcat(config.logName, ".csv");
+
+        printf("\nSaving results to file %s\n", config.logName);
+        resultsFile = fopen(config.logName, "w+");
+        printHeader();
         invokeExecution();
-        printf("\n</instances>\n");
+        fclose(resultsFile);
     } else {
         printHelp();
     }

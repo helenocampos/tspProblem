@@ -5,24 +5,30 @@
  */
 #include <stdlib.h>
 
-typedef struct NeighborDistance{
+typedef struct NeighborDistance {
     int target;
     double distanceFromOrigin;
 } neighbor_distance;
 
-int distance_comparator(const void *v1, const void *v2)
-{
-    struct NeighborDistance *p1 = (struct NeighborDistance *)v1;
-    struct NeighborDistance *p2 = (struct NeighborDistance *)v2;
+int distance_comparator(const void *v1, const void *v2) {
+    struct NeighborDistance *p1 = (struct NeighborDistance *) v1;
+    struct NeighborDistance *p2 = (struct NeighborDistance *) v2;
     if (p1->distanceFromOrigin < p2->distanceFromOrigin)
         return -1;
     else if (p1->distanceFromOrigin > p2->distanceFromOrigin)
         return +1;
-    else
-        return 0;
+    else {
+        if (p1->target < p2->target) {
+            return -1;
+        } else if (p1->target > p2->target) {
+            return +1;
+        } else {
+            return 0;
+        }
+    }
 }
 
-struct NeighborDistance** sortNeighborsByDistance(struct NeighborDistance *neighbors, int amount){
-    qsort(neighbors, amount,  sizeof (struct NeighborDistance), distance_comparator);
+struct NeighborDistance* sortNeighborsByDistance(struct NeighborDistance *neighbors, int amount) {
+    qsort(neighbors, amount, sizeof (struct NeighborDistance), distance_comparator);
     return neighbors;
 }
