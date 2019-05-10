@@ -310,16 +310,16 @@ int * twoOptSwap(int* route, int routeSize, int i, int j) {
     return newRoute;
 }
 
-double calculateNewDistance(double oldDistance, int swappedPosition1, int swappedPosition2, int* oldRoute, int* newRoute) {
+double calculateNewDistance(double oldDistance, int swappedPosition1, int swappedPosition2, int* oldRoute) {
     int pair1_old_x = oldRoute[swappedPosition1 - 1];
     int pair1_old_y = oldRoute[swappedPosition1];
     int pair2_old_x = oldRoute[swappedPosition2];
     int pair2_old_y = oldRoute[swappedPosition2 + 1];
 
-    int pair1_new_x = newRoute[swappedPosition1 - 1];
-    int pair1_new_y = newRoute[swappedPosition1];
-    int pair2_new_x = newRoute[swappedPosition2];
-    int pair2_new_y = newRoute[swappedPosition2 + 1];
+    int pair1_new_x = oldRoute[swappedPosition1 - 1];
+    int pair1_new_y = oldRoute[swappedPosition2];
+    int pair2_new_x = oldRoute[swappedPosition1];
+    int pair2_new_y = oldRoute[swappedPosition2 + 1];
 
     double subtract1 = tspInstance->graphMatrix[pair1_old_x][pair1_old_y];
     double subtract2 = tspInstance->graphMatrix[pair2_old_x][pair2_old_y];
@@ -335,17 +335,16 @@ double calculateNewDistance(double oldDistance, int swappedPosition1, int swappe
 int searchFirstImprovementNeighbor(int solutionSize, struct solution* currentSolution) {
     for (int i = 1; i < solutionSize - 1; i++) {
         for (int j = i + 1; j < solutionSize - 1; j++) {
-            int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
-            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route, neighbor);
+            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route);
             //            printf("\n Neighbor: ");
             //            printRoute(neighbor, solutionSize, neighborDistance);
             if (neighborDistance < currentSolution->distance) {
+                int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
                 currentSolution->distance = neighborDistance;
                 memcpy(currentSolution->route, neighbor, solutionSize * sizeof (int));
                 free(neighbor);
                 return 1;
             }
-            free(neighbor);
         }
     }
     return 0;
@@ -361,16 +360,17 @@ int searchBestImprovementNeighbor(int solutionSize, struct solution* currentSolu
     //    printRoute(bestKnownSolution->route, solutionSize, bestKnownSolution->distance);
     for (int i = 1; i < solutionSize - 1; i++) {
         for (int j = i + 1; j < solutionSize - 1; j++) {
-            int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
-            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route, neighbor);
+            double neighborDistance = calculateNewDistance(currentSolution->distance, i, j, currentSolution->route);
             //            printf("\n Neighbor: ");
             //            printRoute(neighbor, solutionSize, neighborDistance);
             if (neighborDistance < bestKnownSolution->distance) {
+                int* neighbor = twoOptSwap(currentSolution->route, solutionSize, i, j);
                 bestKnownSolution->distance = neighborDistance;
                 memcpy(bestKnownSolution->route, neighbor, solutionSize * sizeof (int));
+                free(neighbor);
                 //                bestKnownSolution->route = neighbor;
             }
-            free(neighbor);
+            
             //            getchar();
         }
     }
