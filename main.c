@@ -125,7 +125,7 @@ int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
     char * line = NULL;
     size_t len = 0;
-    ssize_t read = 0;
+    int read = 0;
     fp = fopen(filePath, "r");
     if (fp) {
         while ((read = getline(&line, &len, fp)) != -1) {
@@ -180,7 +180,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         FILE * fp = NULL;
         char * line = NULL;
         size_t len = 0;
-        ssize_t read = 0;
+        int read = 0;
         int dataSection = 0;
         int vertexAmount = 0;
         int vertexCounter = 0;
