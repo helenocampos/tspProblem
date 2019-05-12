@@ -1,0 +1,21 @@
+Implementation of a modified local search, trying to minimize execution time.
+Compare complete 2opt with modified 2opt (first and best improvement) in terms of time and distance
+Since the modified version is randomized, execute it 1000 times for each instance, using NN and DSNN as constructive methods. Also, vary alpha from 0 to 100.
+Script:
+./tspProblem smallNN_first_2 NN first_2 1000 folder instances/small 0 0 100
+./tspProblem mediumNN_first_2 NN first_2 1000 folder instances/medium 0 0 100
+./tspProblem largeNN_first_2 NN first_2 1000 folder instances/large 0 0 100
+
+./tspProblem smallNN_best_2 NN best_2 1000 folder instances/small 0 0 100
+./tspProblem mediumNN_best_2 NN best_2 1000 folder instances/medium 0 0 100
+./tspProblem largeNN_best_2 NN best_2 1000 folder instances/large 0 0 100
+
+./tspProblem smallDSNN_first_2 DSNN first_2 1000 folder instances/small 0 0 100
+./tspProblem mediumDSNN_first_2 DSNN first_2 1000 folder instances/medium 0 0 100
+./tspProblem largeDSNN_first_2 DSNN first_2 1000 folder instances/large 0 0 100
+
+./tspProblem smallDSNN_best_2 DSNN best_2 1000 folder instances/small 0 0 100
+./tspProblem mediumDSNN_best_2 DSNN best_2 1000 folder instances/medium 0 0 100
+./tspProblem largeDSNN_best_2 DSNN best_2 1000 folder instances/large 0 0 100
+
+The modified version execute alpha/problem size times invoking 2opt with random pairs, instead of testing each pair.
