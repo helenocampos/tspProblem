@@ -54,3 +54,7 @@ dkms.conf
 /dist/
 /nbproject/
 /instances/
+
+# OS files
+Thumbs.db
+.DS_Store
