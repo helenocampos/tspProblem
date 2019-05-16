@@ -1,0 +1,14 @@
+histogram_alpha_quality_modified_localsearch
+set terminal png; set title 'Alpha x Quality'; set xlabel "Alpha(%)"; set ylabel "Quality(%)"; set xrange[0:100]; set grid; set xtics 10; set output 'histogram_alpha_quality_modified_localsearch.png'; plot "alpha_quality_modified_localsearch.txt" using 2:1 with points title ""; 
+
+average_alpha_quality_modified_localsearch
+set terminal png; set title 'Alpha x Average Quality'; set xlabel "Alpha(%)"; set ylabel "Average Quality(%)"; set grid; set xtics 10; set output 'average_alpha_quality_modified_localsearch.png'; plot "average_alpha_quality_modified_localsearch" using 2:1 with lines title ""; 
+
+average_small_alpha_time
+set terminal png; set title 'Time x Alpha - small instances'; set xlabel "Alpha(%)"; set ylabel "Time (s)"; set grid; set xtics 10; set xrange[0:100]; set output 'average_small_alpha_modified_localsearch.png'; plot "average_small_first_time_ls_alpha.txt" using 2:1 with lines title "First improv" , "average_small_best_time_ls_alpha.txt" using 2:1 with lines title "Best improv"
+
+average_medium_alpha_time
+set terminal png; set title 'Time x Alpha - medium instances'; set xlabel "Alpha(%)"; set ylabel "Time (s)"; set grid; set xtics 10; set xrange[0:100]; set output 'average_medium_alpha_modified_localsearch.png'; plot "average_medium_first_time_ls_alpha.txt" using 2:1 with lines title "First improv" , "average_medium_best_time_ls_alpha.txt" using 2:1 with lines title "Best improv"
+
+average_large_alpha_time
+set terminal png; set title 'Time x Alpha - large instances'; set xlabel "Alpha(%)"; set ylabel "Time (s)"; set grid; set xtics 10; set xrange[0:100]; set output 'average_large_alpha_modified_localsearch.png'; plot "average_large_first_time_ls_alpha.txt" using 2:1 with lines title "First improv" , "average_large_best_time_ls_alpha.txt" using 2:1 with lines title "Best improv"

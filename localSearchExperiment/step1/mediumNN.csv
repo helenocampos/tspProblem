@@ -1,0 +1,17 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed
+instances/medium/pcb1173.tsp,1173,Nearest neighbor (NN),71978.00,0.002990,1st improv 2opt,61368.00,1.804244,0,2
+instances/medium/pcb1173.tsp,1173,Nearest neighbor (NN),71978.00,0.002970,Best improv 2opt,60421.00,1.816830,0,2
+instances/medium/d2103.tsp,2103,Nearest neighbor (NN),86653.00,0.009248,1st improv 2opt,82857.00,2.992015,0,3
+instances/medium/d2103.tsp,2103,Nearest neighbor (NN),86653.00,0.009204,Best improv 2opt,82194.00,2.938476,0,3
+instances/medium/rl1304.tsp,1304,Nearest neighbor (NN),335779.00,0.003503,1st improv 2opt,279155.00,2.042555,0,4
+instances/medium/rl1304.tsp,1304,Nearest neighbor (NN),335779.00,0.003460,Best improv 2opt,272037.00,1.773780,0,4
+instances/medium/rl1889.tsp,1889,Nearest neighbor (NN),389270.00,0.007269,1st improv 2opt,337164.00,5.924020,0,5
+instances/medium/rl1889.tsp,1889,Nearest neighbor (NN),389270.00,0.007209,Best improv 2opt,337698.00,5.696899,0,5
+instances/medium/vm1084.tsp,1084,Nearest neighbor (NN),301477.00,0.002429,1st improv 2opt,258101.00,1.090715,0,6
+instances/medium/vm1084.tsp,1084,Nearest neighbor (NN),301477.00,0.002378,Best improv 2opt,254490.00,1.035596,0,6
+instances/medium/vm1748.tsp,1748,Nearest neighbor (NN),408102.00,0.006253,1st improv 2opt,358597.00,2.754123,0,7
+instances/medium/vm1748.tsp,1748,Nearest neighbor (NN),408102.00,0.006183,Best improv 2opt,353710.00,4.987915,0,7
+instances/medium/u1817.tsp,1817,Nearest neighbor (NN),72030.00,0.006816,1st improv 2opt,61251.00,4.510955,0,8
+instances/medium/u1817.tsp,1817,Nearest neighbor (NN),72030.00,0.006774,Best improv 2opt,60833.00,3.711688,0,8
+instances/medium/d1291.tsp,1291,Nearest neighbor (NN),60214.00,0.003533,1st improv 2opt,55755.00,1.048202,0,9
+instances/medium/d1291.tsp,1291,Nearest neighbor (NN),60214.00,0.003492,Best improv 2opt,52963.00,1.155565,0,9

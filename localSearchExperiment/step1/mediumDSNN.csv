@@ -1,0 +1,17 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed
+instances/medium/pcb1173.tsp,1173,Double-sided nearest neighbor (DSNN),71620.00,0.005651,1st improv 2opt,61345.00,1.870315,0,2
+instances/medium/pcb1173.tsp,1173,Double-sided nearest neighbor (DSNN),71620.00,0.005585,Best improv 2opt,60421.00,1.810868,0,2
+instances/medium/d2103.tsp,2103,Double-sided nearest neighbor (DSNN),86457.00,0.017528,1st improv 2opt,82547.00,3.205495,0,3
+instances/medium/d2103.tsp,2103,Double-sided nearest neighbor (DSNN),86457.00,0.017541,Best improv 2opt,82533.00,2.774038,0,3
+instances/medium/rl1304.tsp,1304,Double-sided nearest neighbor (DSNN),309959.00,0.007045,1st improv 2opt,277856.00,1.326648,0,4
+instances/medium/rl1304.tsp,1304,Double-sided nearest neighbor (DSNN),309959.00,0.007098,Best improv 2opt,273315.00,1.468616,0,4
+instances/medium/rl1889.tsp,1889,Double-sided nearest neighbor (DSNN),400819.00,0.015827,1st improv 2opt,341383.00,7.180400,0,5
+instances/medium/rl1889.tsp,1889,Double-sided nearest neighbor (DSNN),400819.00,0.015785,Best improv 2opt,330059.00,5.693249,0,5
+instances/medium/vm1084.tsp,1084,Double-sided nearest neighbor (DSNN),313570.00,0.005205,1st improv 2opt,258359.00,1.267334,0,6
+instances/medium/vm1084.tsp,1084,Double-sided nearest neighbor (DSNN),313570.00,0.005156,Best improv 2opt,254700.00,1.192337,0,6
+instances/medium/vm1748.tsp,1748,Double-sided nearest neighbor (DSNN),410532.00,0.013146,1st improv 2opt,356966.00,3.951429,0,7
+instances/medium/vm1748.tsp,1748,Double-sided nearest neighbor (DSNN),410532.00,0.013166,Best improv 2opt,353289.00,5.153763,0,7
+instances/medium/u1817.tsp,1817,Double-sided nearest neighbor (DSNN),71902.00,0.013114,1st improv 2opt,62579.00,4.254984,0,8
+instances/medium/u1817.tsp,1817,Double-sided nearest neighbor (DSNN),71902.00,0.013059,Best improv 2opt,60433.00,4.532089,0,8
+instances/medium/d1291.tsp,1291,Double-sided nearest neighbor (DSNN),60214.00,0.006734,1st improv 2opt,55755.00,1.046764,0,9
+instances/medium/d1291.tsp,1291,Double-sided nearest neighbor (DSNN),60214.00,0.006740,Best improv 2opt,52963.00,1.155552,0,9

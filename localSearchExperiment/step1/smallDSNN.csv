@@ -1,0 +1,17 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed
+instances/small/berlin52.tsp,52,Double-sided nearest neighbor (DSNN),8790.00,0.000020,1st improv 2opt,8056.00,0.000126,0,2
+instances/small/berlin52.tsp,52,Double-sided nearest neighbor (DSNN),8790.00,0.000018,Best improv 2opt,8056.00,0.000199,0,2
+instances/small/pr144.tsp,144,Double-sided nearest neighbor (DSNN),63243.00,0.000094,1st improv 2opt,59967.00,0.001119,0,3
+instances/small/pr144.tsp,144,Double-sided nearest neighbor (DSNN),63243.00,0.000090,Best improv 2opt,58862.00,0.001606,0,3
+instances/small/d657.tsp,657,Double-sided nearest neighbor (DSNN),61627.00,0.002767,1st improv 2opt,51671.00,0.294731,0,4
+instances/small/d657.tsp,657,Double-sided nearest neighbor (DSNN),61627.00,0.001815,Best improv 2opt,51176.00,0.303451,0,4
+instances/small/pr439.tsp,439,Double-sided nearest neighbor (DSNN),133087.00,0.000840,1st improv 2opt,114191.00,0.092362,0,5
+instances/small/pr439.tsp,439,Double-sided nearest neighbor (DSNN),133087.00,0.000841,Best improv 2opt,112127.00,0.082256,0,5
+instances/small/rat783.tsp,783,Double-sided nearest neighbor (DSNN),11428.00,0.002944,1st improv 2opt,9320.00,0.588826,0,6
+instances/small/rat783.tsp,783,Double-sided nearest neighbor (DSNN),11428.00,0.002945,Best improv 2opt,9250.00,0.541452,0,6
+instances/small/u574.tsp,574,Double-sided nearest neighbor (DSNN),47724.00,0.001317,1st improv 2opt,39402.00,0.306538,0,7
+instances/small/u574.tsp,574,Double-sided nearest neighbor (DSNN),47724.00,0.001316,Best improv 2opt,38916.00,0.249246,0,7
+instances/small/pr299.tsp,299,Double-sided nearest neighbor (DSNN),65220.00,0.000393,1st improv 2opt,50529.00,0.026185,0,8
+instances/small/pr299.tsp,299,Double-sided nearest neighbor (DSNN),65220.00,0.000393,Best improv 2opt,49613.00,0.029637,0,8
+instances/small/eil51.tsp,51,Double-sided nearest neighbor (DSNN),555.00,0.000017,1st improv 2opt,440.00,0.000156,0,9
+instances/small/eil51.tsp,51,Double-sided nearest neighbor (DSNN),555.00,0.000016,Best improv 2opt,433.00,0.000228,0,9

@@ -1,0 +1,9 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed
+instances/large/d15112.tsp,15112,Double-sided nearest neighbor (DSNN),1953179.00,0.947785,1st improv 2opt,1675715.00,7805.938123,0,2
+instances/large/d15112.tsp,15112,Double-sided nearest neighbor (DSNN),1953179.00,0.947000,Best improv 2opt,1660531.00,6791.477087,0,2
+instances/large/usa13509.tsp,13509,Double-sided nearest neighbor (DSNN),25145561.00,0.859986,1st improv 2opt,21399493.00,4715.715168,0,3
+instances/large/usa13509.tsp,13509,Double-sided nearest neighbor (DSNN),25145561.00,0.859897,Best improv 2opt,21122928.00,4776.553340,0,3
+instances/large/brd14051.tsp,14051,Double-sided nearest neighbor (DSNN),580352.00,0.932954,1st improv 2opt,499388.00,5825.791961,0,4
+instances/large/brd14051.tsp,14051,Double-sided nearest neighbor (DSNN),580352.00,0.933638,Best improv 2opt,494408.00,4788.773973,0,4
+instances/large/d18512.tsp,18512,Double-sided nearest neighbor (DSNN),793132.00,1.663291,1st improv 2opt,684129.00,12988.528488,0,5
+instances/large/d18512.tsp,18512,Double-sided nearest neighbor (DSNN),793132.00,1.663193,Best improv 2opt,676867.00,10925.403652,0,5

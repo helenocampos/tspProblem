@@ -1,0 +1,19 @@
+Execute for all instances sizes:
+Constructive: NN  Localsearch: both
+Constructive: DSNN Localsearch: both
+
+./tspProblem smallNN NN both 1 folder instances/small 
+./tspProblem mediumNN NN both 1 folder instances/medium 
+./tspProblem largeNN both 1 folder instances/large
+
+./tspProblem smallDSNN both 1 folder instances/small
+./tspProblem mediumDSNN both 1 folder instances/medium
+./tspProblem largeDSNN both 1 folder instances/large
+
+
+Analysis:
+
+Table with distance and time for each type
+
+
+
