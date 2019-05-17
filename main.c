@@ -34,20 +34,20 @@ struct TSPLibData {
     double *y;
 };
 
-struct Node {
-    struct ReachableNode* head;
-    int id;
-    int maxD;
-    int minD;
-    int maxDid;
-    int minDid;
-};
-
-struct ReachableNode {
-    int id;
-    struct ReachableNode* next;
-    int distance;
-};
+//struct Node {
+//    struct ReachableNode* head;
+//    int id;
+//    int maxD;
+//    int minD;
+//    int maxDid;
+//    int minDid;
+//};
+//
+//struct ReachableNode {
+//    int id;
+//    struct ReachableNode* next;
+//    int distance;
+//};
 
 struct TSPInstance {
     int citiesAmount;
@@ -125,83 +125,83 @@ void printNd(struct NeighborDistance *nd, int size) {
     }
 }
 
-void sortedInsert(struct ReachableNode** head_ref, struct ReachableNode* new_node) {
-    struct ReachableNode* current;
-    if (*head_ref == NULL || (*head_ref)->distance > new_node->distance) {
-        new_node->next = *head_ref;
-        *head_ref = new_node;
-    } else {
-        current = *head_ref;
-        while (current->next != NULL &&
-                current->next->distance <= new_node->distance) {
-            current = current->next;
-        }
-        new_node->next = current->next;
-        current->next = new_node;
-    }
-}
-
-struct Node* createNode(int id) {
-    struct Node* node = malloc(sizeof *(node));
-    node->id = id;
-    node->maxD = 0;
-    node->minD = INT_MAX;
-    node->head = NULL;
-    node->maxDid = -1;
-    node->minDid = -1;
-    return node;
-}
-
-void addVertex(struct Node* node, struct ReachableNode* reachableNode) {
-    if (node != NULL) {
-        if (reachableNode != NULL) {
-            if (reachableNode->distance > node->maxD
-                    && reachableNode->id != node->id) {
-                node->maxD = reachableNode->distance;
-                node->maxDid = reachableNode->id;
-            }
-            if (reachableNode->distance < node->minD
-                    && reachableNode->id != node->id) {
-                node->minD = reachableNode->distance;
-                node->minDid = reachableNode->id;
-            }
-            sortedInsert(&node->head, reachableNode);
-        }
-    }
-}
-
-int getDistance(int from, int to, struct Node* nodes[]) {
-    struct ReachableNode* tmp = nodes[from]->head;
-    while (tmp != NULL) {
-        if (tmp->id == to) {
-            return tmp->distance;
-        }
-        tmp = tmp->next;
-    }
-    return -1;
-}
-
-void printInstance(struct Node* instance) {
-    printf("\n Biggest distance: %d      Node: %d", instance->maxD, instance->maxDid);
-    printf("\n Smallest distance: %d      Node: %d\n", instance->minD, instance->minDid);
-    struct ReachableNode* head = instance->head;
-    while (head != NULL) {
-        printf("From %d to %d Distance: %d \n", instance->id, head->id, head->distance);
-        head = head->next;
-    }
-}
-
-void freeList(struct ReachableNode* head) {
-    struct ReachableNode* tmp;
-
-    while (head != NULL) {
-        tmp = head;
-        head = head->next;
-        //        printf("\nFreeing %d", tmp->id);
-        free(tmp);
-    }
-
-}
+//void sortedInsert(struct ReachableNode** head_ref, struct ReachableNode* new_node) {
+//    struct ReachableNode* current;
+//    if (*head_ref == NULL || (*head_ref)->distance > new_node->distance) {
+//        new_node->next = *head_ref;
+//        *head_ref = new_node;
+//    } else {
+//        current = *head_ref;
+//        while (current->next != NULL &&
+//                current->next->distance <= new_node->distance) {
+//            current = current->next;
+//        }
+//        new_node->next = current->next;
+//        current->next = new_node;
+//    }
+//}
+//
+//struct Node* createNode(int id) {
+//    struct Node* node = malloc(sizeof *(node));
+//    node->id = id;
+//    node->maxD = 0;
+//    node->minD = INT_MAX;
+//    node->head = NULL;
+//    node->maxDid = -1;
+//    node->minDid = -1;
+//    return node;
+//}
+//
+//void addVertex(struct Node* node, struct ReachableNode* reachableNode) {
+//    if (node != NULL) {
+//        if (reachableNode != NULL) {
+//            if (reachableNode->distance > node->maxD
+//                    && reachableNode->id != node->id) {
+//                node->maxD = reachableNode->distance;
+//                node->maxDid = reachableNode->id;
+//            }
+//            if (reachableNode->distance < node->minD
+//                    && reachableNode->id != node->id) {
+//                node->minD = reachableNode->distance;
+//                node->minDid = reachableNode->id;
+//            }
+//            sortedInsert(&node->head, reachableNode);
+//        }
+//    }
+//}
+//
+//int getDistance(int from, int to, struct Node* nodes[]) {
+//    struct ReachableNode* tmp = nodes[from]->head;
+//    while (tmp != NULL) {
+//        if (tmp->id == to) {
+//            return tmp->distance;
+//        }
+//        tmp = tmp->next;
+//    }
+//    return -1;
+//}
+//
+//void printInstance(struct Node* instance) {
+//    printf("\n Biggest distance: %d      Node: %d", instance->maxD, instance->maxDid);
+//    printf("\n Smallest distance: %d      Node: %d\n", instance->minD, instance->minDid);
+//    struct ReachableNode* head = instance->head;
+//    while (head != NULL) {
+//        printf("From %d to %d Distance: %d \n", instance->id, head->id, head->distance);
+//        head = head->next;
+//    }
+//}
+//
+//void freeList(struct ReachableNode* head) {
+//    struct ReachableNode* tmp;
+//
+//    while (head != NULL) {
+//        tmp = head;
+//        head = head->next;
+//        //        printf("\nFreeing %d", tmp->id);
+//        free(tmp);
+//    }
+//
+//}
 
 
 
@@ -267,19 +267,19 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
             instance->citiesAmount = data->citiesAmount;
             instance->graphMatrix = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
             instance->instanceName = data->instanceName;
-            instance->nodes = calloc(instance->citiesAmount, sizeof *(instance->nodes));
+//            instance->nodes = calloc(instance->citiesAmount, sizeof *(instance->nodes));
             for (int i = 0; i < instance->citiesAmount; i++) {
                 instance->graphMatrix[i] = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
-                instance->nodes[i] = createNode(i);
+//                instance->nodes[i] = createNode(i);
             }
             for (int i = 0; i < instance->citiesAmount; i++) {
                 for (int j = 0; j < instance->citiesAmount; j++) {
                     instance->graphMatrix[i][j] = getEuclidianDistance(i, j, data);
-                    struct ReachableNode* newNode = malloc(sizeof *(newNode));
-                    newNode->distance = getEuclidianDistance(i, j, data);
-                    newNode->id = j;
-                    newNode->next = NULL;
-                    addVertex(instance->nodes[i], newNode);
+//                    struct ReachableNode* newNode = malloc(sizeof *(newNode));
+//                    newNode->distance = getEuclidianDistance(i, j, data);
+//                    newNode->id = j;
+//                    newNode->next = NULL;
+//                    addVertex(instance->nodes[i], newNode);
                 }
             }
         }
@@ -375,9 +375,9 @@ void printInstanceData(struct TSPInstance *instance) {
 
         }
     }
-    for (int i = 0; i < instance->citiesAmount; i++) {
-        printInstance(instance->nodes[i]);
-    }
+//    for (int i = 0; i < instance->citiesAmount; i++) {
+//        printInstance(instance->nodes[i]);
+//    }
 }
 
 void printRoute(int route[], int routeSize, double length) {
@@ -618,71 +618,71 @@ struct solution* localSearch(struct solution* constructiveSolution, int construc
     return currentSolution;
 }
 
-//int* getNNearestVertexNotVisited(int distances[], int vertexAmount, int origin, int visitedVertexes[], int N) {
-//    struct NeighborDistance *nd = calloc(vertexAmount, sizeof (*nd));
-//    int notVisitedNds = 0;
-//    //    struct neighbor* notVisitedNeighbors = NULL;
-//    //    struct neighbor* newNeighbor = NULL;
-//    for (int i = 0; i < vertexAmount; i++) {
-//        //        printf("\norigin: %d  i: %d", origin, i);
-//        if (visitedVertexes[i] == 0 && i != origin) {
-//            nd[notVisitedNds].distanceFromOrigin = distances[i];
-//            nd[notVisitedNds].target = i;
-//            notVisitedNds++;
-//        }
-//    }
-//    sortNeighborsByDistance(nd, notVisitedNds);
-//        printNd(nd, notVisitedNds);
-//    //    printf("\n\n");
-//    //    printList(notVisitedNeighbors);
-//    int* NNearestNotVisited = (int*) calloc(N, sizeof (int));
-//    initializeArray(NNearestNotVisited, N, -1);
-//    //    newNeighbor = notVisitedNeighbors;
-//    //    int notVisitedAmount = 0;
-//    //    for (int i = 0; i < neighborsAmount && i < N; i++, notVisitedAmount++) {
-//    //        NNearestNotVisited[i] = newNeighbor->target;
-//    //        newNeighbor = newNeighbor->next;
-//    //    }
-//    //    for (int i = 0; i < notVisitedNds; i++) {
-//    //        printf("\ndistance to %d=%d", nd[i].target, nd[i].distanceFromOrigin);
-//    //    }
-//
-//    int notVisitedIndex = 0;
-//    for (int j = 0; j < notVisitedNds; j++) {
-//        int current = nd[j].target;
-//        if (notVisitedIndex < N) {
-//            NNearestNotVisited[notVisitedIndex++] = current;
-//        }
-//        if (notVisitedIndex >= N) {
-//            break;
-//        }
-//    }
-//    //    printf("\nN nearest not yet visited: ");
-//    //    for (int i = 0; i < notVisitedAmount; i++) {
-//    //        printf("\n %d", NNearestNotVisited[i]);
-//    //    }
-//
-//    if (nd) {
-//        free(nd);
-//    }
-//
-//    return NNearestNotVisited;
-//}
-
 int* getNNearestVertexNotVisited(int origin, int visitedVertexes[], int N) {
+    struct NeighborDistance *nd = calloc(tspInstance->citiesAmount, sizeof (*nd));
+    int notVisitedNds = 0;
+    //    struct neighbor* notVisitedNeighbors = NULL;
+    //    struct neighbor* newNeighbor = NULL;
+    for (int i = 0; i < tspInstance->citiesAmount; i++) {
+        //        printf("\norigin: %d  i: %d", origin, i);
+        if (visitedVertexes[i] == 0 && i != origin) {
+            nd[notVisitedNds].distanceFromOrigin = tspInstance->graphMatrix[origin][i];
+            nd[notVisitedNds].target = i;
+            notVisitedNds++;
+        }
+    }
+    sortNeighborsByDistance(nd, notVisitedNds);
+//    printNd(nd, notVisitedNds);
+    //    printf("\n\n");
+    //    printList(notVisitedNeighbors);
     int* NNearestNotVisited = (int*) calloc(N, sizeof (int));
     initializeArray(NNearestNotVisited, N, -1);
-    //    printInstance(tspInstance->nodes[origin]);
-    struct ReachableNode* current = tspInstance->nodes[origin]->head;
-    int NNearestNotVisitedIndex = 0;
-    while (current != NULL && NNearestNotVisitedIndex < N) {
-        if (visitedVertexes[current->id] == 0) {
-            NNearestNotVisited[NNearestNotVisitedIndex++] = current->id;
+    //    newNeighbor = notVisitedNeighbors;
+    //    int notVisitedAmount = 0;
+    //    for (int i = 0; i < neighborsAmount && i < N; i++, notVisitedAmount++) {
+    //        NNearestNotVisited[i] = newNeighbor->target;
+    //        newNeighbor = newNeighbor->next;
+    //    }
+    //    for (int i = 0; i < notVisitedNds; i++) {
+    //        printf("\ndistance to %d=%d", nd[i].target, nd[i].distanceFromOrigin);
+    //    }
+
+    int notVisitedIndex = 0;
+    for (int j = 0; j < notVisitedNds; j++) {
+        int current = nd[j].target;
+        if (notVisitedIndex < N) {
+            NNearestNotVisited[notVisitedIndex++] = current;
         }
-        current = current->next;
+        if (notVisitedIndex >= N) {
+            break;
+        }
     }
+    //    printf("\nN nearest not yet visited: ");
+    //    for (int i = 0; i < notVisitedAmount; i++) {
+    //        printf("\n %d", NNearestNotVisited[i]);
+    //    }
+
+    if (nd) {
+        free(nd);
+    }
+
     return NNearestNotVisited;
 }
+
+//int* getNNearestVertexNotVisited(int origin, int visitedVertexes[], int N) {
+//    int* NNearestNotVisited = (int*) calloc(N, sizeof (int));
+//    initializeArray(NNearestNotVisited, N, -1);
+//    //    printInstance(tspInstance->nodes[origin]);
+//    struct ReachableNode* current = tspInstance->nodes[origin]->head;
+//    int NNearestNotVisitedIndex = 0;
+//    while (current != NULL && NNearestNotVisitedIndex < N) {
+//        if (visitedVertexes[current->id] == 0) {
+//            NNearestNotVisited[NNearestNotVisitedIndex++] = current->id;
+//        }
+//        current = current->next;
+//    }
+//    return NNearestNotVisited;
+//}
 
 double finishCycle(int startingNode, double totalDistance, int* route, int routeSize) {
     //    printf("\nFinishing cycle by connecting %d and %d with distance of %d", route[routeSize - 2], startingNode, tspInstance->graphMatrix[route[routeSize - 2]][startingNode]);
@@ -998,7 +998,7 @@ struct solution* randomDoubleSidedSymmetricGreedyTSP(int startingNode, struct TS
                 }
             }
         }
-//        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
+        //        printRoute(routeOrder, instance->citiesAmount + 1, totalDistance);
         struct solution* solution = malloc(sizeof *(solution));
         solution->route = calloc(instance->citiesAmount + 1, sizeof (int));
         solution->distance = totalDistance;
@@ -1087,13 +1087,13 @@ void freeInstancesMemory(struct TSPLibData *tspLibData,
             }
             free(tspInstance->graphMatrix);
         }
-        if (tspInstance->nodes) {
-            for (int i = 0; i < tspInstance->citiesAmount; i++) {
-                freeList(tspInstance->nodes[i]->head);
-                free(tspInstance->nodes[i]);
-            }
-            free(tspInstance->nodes);
-        }
+//        if (tspInstance->nodes) {
+//            for (int i = 0; i < tspInstance->citiesAmount; i++) {
+//                freeList(tspInstance->nodes[i]->head);
+//                free(tspInstance->nodes[i]);
+//            }
+//            free(tspInstance->nodes);
+//        }
         free(tspInstance);
     }
     if (tspLibData) {
