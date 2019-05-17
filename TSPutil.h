@@ -12,7 +12,7 @@
  */
 typedef struct NeighborDistance{
     int target;
-    double distanceFromOrigin;
+    int distanceFromOrigin;
 } neighbor_distance;
 extern struct NeighborDistance* sortNeighborsByDistance(struct NeighborDistance *neighbors, int amount);
 
