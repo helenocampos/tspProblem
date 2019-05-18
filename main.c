@@ -1139,7 +1139,7 @@ void writeResultToFile(char* result) {
 
 void printHeader() {
     writeResultToFile("name,n,constructive method, constructive distance, constructive calc time, local search "
-            "method, localsearch distance, localsearch time, alpha, random seed");
+            "method, localsearch distance, localsearch time, alpha, random seed, alpha type");
 }
 
 void printLine(char* file, struct solution* constructiveSolution, struct solution* localSearchSolution,
@@ -1166,7 +1166,9 @@ void printLine(char* file, struct solution* constructiveSolution, struct solutio
     strcat(line, lineChunk);
     sprintf(lineChunk, "%d,", config.alpha);
     strcat(line, lineChunk);
-    sprintf(lineChunk, "%d", randomSeed);
+    sprintf(lineChunk, "%d,", randomSeed);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%s", config.alphaType);
     strcat(line, lineChunk);
     writeResultToFile(line);
     free(lineChunk);

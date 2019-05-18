@@ -1,0 +1,15 @@
+Execute for all instances sizes:
+Constructive: RNN  
+Constructive: RDSNN
+
+./tspProblem logSmall_RDSNN RDSNN none 10 folder instances/small 2 ql 10 20 2
+./tspProblem logMedium_RDSNN RDSNN none 10 folder instances/medium 2 ql 10 20 2
+./tspProblem logLarge_RDSNN RDSNN none 10 folder instances/large 2 ql 10 20 2
+
+./tspProblem logSmall_RNN RNN none 10 folder instances/small 2 ql 10 20 2
+./tspProblem logMedium_RNN RNN none 10 folder instances/medium 2 ql 10 20 2
+./tspProblem logLarge_RNN RNN none 10 folder instances/large 2 ql 10 20 2
+
+
+
+
