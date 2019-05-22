@@ -173,12 +173,18 @@ int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
 
 int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
-    char* line = malloc(1);
+    char* line = malloc(10000);
+    char* lineSaved = line;
+    int firstPass = 1;
     size_t len = 0;
     int read = 0;
     fp = fopen(filePath, "r");
     if (fp) {
         while ((read = getline(&line, &len, fp)) != -1) {
+            if (firstPass == 1) {
+                lineSaved = line;
+                firstPass = 0;
+            }
             char delim[] = " ";
             char *ptr = strtok(line, delim);
             while (ptr != NULL) {
@@ -198,10 +204,13 @@ int isValidEuclidian2Dfile(char *filePath) {
                 }
                 ptr = strtok(NULL, delim);
             }
+            free(line);
+            line = NULL;
+            len = 0;
         }
         fclose(fp);
     }
-    free(line);
+//    free(lineSaved);
     return 0;
 }
 
@@ -236,7 +245,9 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
     struct TSPLibData *data = 0;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
-        char* line = malloc(1);
+        char* line = malloc(10);
+        char* lineSaved = line;
+        int firstPass = 1;
         size_t len = 0;
         int read = 0;
         int dataSection = 0;
@@ -245,6 +256,12 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         fp = fopen(filePath, "r");
         if (fp) {
             while ((read = getline(&line, &len, fp)) != -1) {
+                if (firstPass == 1) {
+                    lineSaved = line;
+                    printf("\n Saving original line pointer to free it later. Address original: %p   Address saved: %p"
+                            , line, lineSaved);
+                    firstPass = 0;
+                }
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
@@ -293,11 +310,15 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                     }
 
                 }
+                free(line);
+                line = NULL;
+                len = 0;
             }
             fclose(fp);
 
         }
-        free(line);
+        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
+        //        free(lineSaved);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
