@@ -202,7 +202,7 @@ int isValidEuclidian2Dfile(char *filePath) {
         }
         fclose(fp);
     }
-    free(lineSave);
+//    free(lineSave);
     return 0;
 }
 
@@ -300,7 +300,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
 
         }
 //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-        free(lineSave);
+//        free(lineSave);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
