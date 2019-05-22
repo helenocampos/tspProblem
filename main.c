@@ -179,7 +179,9 @@ int isValidEuclidian2Dfile(char *filePath) {
     fp = fopen(filePath, "r");
     if (fp) {
         while ((read = getline(&originalLine, &len, fp)) != -1) {
-            char * line = originalLine;
+            char* line = malloc(strlen(originalLine));
+            strcpy(line, originalLine);
+
             char delim[] = " ";
             char *ptr = strtok(line, delim);
             while (ptr != NULL) {
@@ -199,6 +201,7 @@ int isValidEuclidian2Dfile(char *filePath) {
                 }
                 ptr = strtok(NULL, delim);
             }
+            free(line);
         }
         fclose(fp);
         free(originalLine);
@@ -246,7 +249,8 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         fp = fopen(filePath, "r");
         if (fp) {
             while ((read = getline(&originalLine, &len, fp)) != -1) {
-                char *line = originalLine;
+                char* line = malloc(strlen(originalLine));
+                strcpy(line, originalLine);
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
@@ -295,11 +299,9 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                     }
 
                 }
+                free(line);
             }
             fclose(fp);
-
-            free(originalLine);
-
 
         }
     } else {
