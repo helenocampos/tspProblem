@@ -1425,9 +1425,11 @@ void executeMethodDir() {
                     && strcmp(de->d_name, ".DS_Store") != 0) {
                 char *filePath1 = concat(config.path, "/");
                 char *filePath2 = concat(filePath1, de->d_name);
-                execute(filePath2);
+                char *filePath3 = concat(filePath2, "\0");
+                execute(filePath3);
                 free(filePath1);
                 free(filePath2);
+                free(filePath3);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
