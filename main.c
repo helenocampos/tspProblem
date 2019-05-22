@@ -1288,7 +1288,7 @@ void executeMethod(char* file) {
     clock_t start = 0, end = 0;
     double readTime = 0, allocationTime = 0, totalTime = 0;
     if (tspLibData != 0) {
-        printf("\nInstance name: %s   file: %s", tspLibData->instanceName, file);
+        printf("\nInstance name: %s ", tspLibData->instanceName);
         if (strcmp(previousInstance, file) != 0) {
             freeInstancesMemory(tspLibData, tspInstance);
             //            printf("\n Reading different instance");
