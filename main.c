@@ -1279,6 +1279,7 @@ struct solution* GRASP_controller() {
     double graspTime = 0, timeToBest = 0;
     clock_t GRASPstart = clock(), timeToBestStart = clock(), GRASPend = 0;
     struct solution* bestSolution = NULL;
+    time_t ltime;
     printf("\n Starting GRASP with criterion type %d and parameter %d", config.GRASP_criterion_type, config.GRASP_criterion_parameter);
     if (config.GRASP_criterion_type == 1) {
         start = clock();
@@ -1307,7 +1308,8 @@ struct solution* GRASP_controller() {
     } else {
         int iteration = 1;
         while (iteration <= config.GRASP_criterion_parameter) {
-            printf("\n iteration %d of GRASP", iteration);
+            ltime = time(NULL);
+            printf("\n %s \n iteration %d of GRASP", asctime(localtime(&ltime)),iteration);
             struct solution* currentSolution = GRASP();
             if (currentSolution != NULL) {
                 if (bestSolution != NULL) {
@@ -1685,7 +1687,7 @@ void printConfigs() {
 
 int main(int argc, char** argv) {
     //        printArguments(argc, argv);
-    setvbuf(stdout, NULL, _IOLBF, 0);
+    setvbuf(stdout, NULL, _IONBF, 0);
     if (argc >= 8) {
         config.logName = malloc(strlen(argv[1]) + 5);
         sprintf(config.logName, "%s.csv", argv[1]);
