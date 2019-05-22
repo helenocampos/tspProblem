@@ -1167,9 +1167,12 @@ struct solution* GRASP_controller() {
             if (currentSolution != NULL) {
                 if (bestSolution != NULL) {
                     if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                        freeSolution(bestSolution);
                         bestSolution = currentSolution;
                         timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                         iterationsToBest = iteration;
+                    }else{
+                        freeSolution(currentSolution);
                     }
                 } else {
                     bestSolution = currentSolution;
@@ -1177,7 +1180,6 @@ struct solution* GRASP_controller() {
                     iterationsToBest = iteration;
                 }
             }
-//            freeSolution(currentSolution);
             iteration++;
         }
     }
