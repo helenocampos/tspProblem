@@ -1413,6 +1413,12 @@ void execute(char *file) {
     }
 }
 
+char* createPathString(char* directory, char*fileName) {
+    char *fullpath = malloc(strlen(directory) + strlen(fileName) + 2);
+    sprintf(fullpath, "%s/%s", directory, fileName);
+    return fullpath;
+}
+
 void executeMethodDir() {
     struct dirent *de; // Pointer for directory entry 
     DIR *dr = opendir(config.path);
@@ -1423,13 +1429,9 @@ void executeMethodDir() {
             if (strcmp(de->d_name, ".") != 0
                     && strcmp(de->d_name, "..") != 0
                     && strcmp(de->d_name, ".DS_Store") != 0) {
-                char *filePath1 = concat(config.path, "/");
-                char *filePath2 = concat(filePath1, de->d_name);
-                char *filePath3 = concat(filePath2, "\0");
-                execute(filePath3);
-                free(filePath1);
-                free(filePath2);
-                free(filePath3);
+                char *fullpath = createPathString(config.path, de->d_name);
+                execute(fullpath);
+                free(fullpath);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
