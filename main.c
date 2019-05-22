@@ -1431,7 +1431,7 @@ void executeMethodDir() {
                     && strcmp(de->d_name, ".DS_Store") != 0) {
                 char *fullpath = createPathString(config.path, de->d_name);
                 execute(fullpath);
-                free(fullpath);
+//                free(fullpath);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
