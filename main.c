@@ -28,14 +28,14 @@
 
 struct TSPLibData {
     int citiesAmount;
-    char* instanceName;
+    char instanceName[4096];
     double *x;
     double *y;
 };
 
 struct TSPInstance {
     int citiesAmount;
-    char* instanceName;
+    char instanceName[4096];
     int** graphMatrix;
 };
 
@@ -212,7 +212,8 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
         if (data->citiesAmount) {
             instance->citiesAmount = data->citiesAmount;
             instance->graphMatrix = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
-            instance->instanceName = data->instanceName;
+            strcpy(instance->instanceName, data->instanceName);
+//            instance->instanceName = data->instanceName;
             //            instance->nodes = calloc(instance->citiesAmount, sizeof *(instance->nodes));
             for (int i = 0; i < instance->citiesAmount; i++) {
                 instance->graphMatrix[i] = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
@@ -288,7 +289,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                         float y = strtod(ptr, NULL);
                         data->x[vertexCounter] = x;
                         data->y[vertexCounter] = y;
-                        data->instanceName = malloc(strlen(filePath)+1);
+//                        data->instanceName = malloc(strlen(filePath)+1);
                         strcpy(data->instanceName,filePath);
                         vertexCounter++;
                     } else {
@@ -1225,9 +1226,9 @@ void freeInstancesMemory(struct TSPLibData *tspLibData,
         if (tspLibData->y) {
             free(tspLibData->y);
         }
-        if(tspLibData->instanceName){
-            free(tspLibData->instanceName);
-        }
+//        if(tspLibData->instanceName){
+//            free(tspLibData->instanceName);
+//        }
         free(tspLibData);
     }
 }
