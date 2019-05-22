@@ -173,15 +173,12 @@ int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
 
 int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
-    char * originalLine = NULL;
+    char* line = NULL;
     size_t len = 0;
     int read = 0;
     fp = fopen(filePath, "r");
     if (fp) {
-        while ((read = getline(&originalLine, &len, fp)) != -1) {
-            char* line = malloc(strlen(originalLine));
-            strcpy(line, originalLine);
-
+        while ((read = getline(&line, &len, fp)) != -1) {
             char delim[] = " ";
             char *ptr = strtok(line, delim);
             while (ptr != NULL) {
@@ -201,11 +198,10 @@ int isValidEuclidian2Dfile(char *filePath) {
                 }
                 ptr = strtok(NULL, delim);
             }
-            free(line);
         }
         fclose(fp);
-        free(originalLine);
     }
+    free(line);
     return 0;
 }
 
@@ -240,7 +236,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
     struct TSPLibData *data = 0;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
-        char * originalLine = NULL;
+        char* line = NULL;
         size_t len = 0;
         int read = 0;
         int dataSection = 0;
@@ -248,9 +244,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         int vertexCounter = 0;
         fp = fopen(filePath, "r");
         if (fp) {
-            while ((read = getline(&originalLine, &len, fp)) != -1) {
-                char* line = malloc(strlen(originalLine));
-                strcpy(line, originalLine);
+            while ((read = getline(&line, &len, fp)) != -1) {
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
@@ -299,11 +293,11 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                     }
 
                 }
-                free(line);
             }
             fclose(fp);
 
         }
+        free(line);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
@@ -1158,7 +1152,6 @@ struct solution* GRASP_controller() {
                     iterationsToBest = totalIterations;
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                 }
-                printf("\n freeing solution from GRASP timebased");
                 freeSolution(currentSolution);
             }
             end = clock();
@@ -1184,7 +1177,6 @@ struct solution* GRASP_controller() {
                     iterationsToBest = iteration;
                 }
             }
-            printf("\n freeing solution from GRASP iteration");
             freeSolution(currentSolution);
             iteration++;
         }
@@ -1368,7 +1360,6 @@ void executeMethod(char* file) {
             //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
             //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
             //            printInstanceData(tspInstance);
-            printf("\n freeing solution from execute method");
             //            freeSolution(solution);
         }
     }
