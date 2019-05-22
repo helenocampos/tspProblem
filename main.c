@@ -201,6 +201,7 @@ int isValidEuclidian2Dfile(char *filePath) {
             }
         }
         fclose(fp);
+        free(originalLine);
     }
     return 0;
 }
@@ -1113,20 +1114,15 @@ struct solution* GRASP() {
 
 void freeSolution(struct solution* solution) {
     if (solution != NULL) {
-        printf("\nfreeing local search route...");
         if (solution->local_search_route != NULL) {
             free(solution->local_search_route);
             solution->local_search_route = NULL;
         }
-        printf("\nfreeing constructive search route...");
         if (solution->constructive_route != NULL) {
             free(solution->constructive_route);
             solution->constructive_route = NULL;
         }
-        printf("\nfreeing solution... %d", solution->constructive_distance);
-        printf("\nfreeing solution... %d\n", solution->constructive_distance);
         free(solution);
-        printf("\n done;");
     }
     solution = NULL;
 }
