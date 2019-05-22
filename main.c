@@ -173,7 +173,7 @@ int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
 
 int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
-    char* line = NULL;
+    char* line = malloc(1);
     size_t len = 0;
     int read = 0;
     fp = fopen(filePath, "r");
@@ -236,7 +236,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
     struct TSPLibData *data = 0;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
-        char* line = NULL;
+        char* line = malloc(1);
         size_t len = 0;
         int read = 0;
         int dataSection = 0;
