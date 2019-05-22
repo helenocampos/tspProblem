@@ -1171,7 +1171,7 @@ struct solution* GRASP_controller() {
                         bestSolution = currentSolution;
                         timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                         iterationsToBest = iteration;
-                    }else{
+                    } else {
                         freeSolution(currentSolution);
                     }
                 } else {
@@ -1362,7 +1362,7 @@ void executeMethod(char* file) {
             //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
             //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
             //            printInstanceData(tspInstance);
-            //            freeSolution(solution);
+            freeSolution(solution);
         }
     }
     strcpy(previousInstance, file);
@@ -1433,7 +1433,7 @@ void executeMethodDir() {
                     && strcmp(de->d_name, ".DS_Store") != 0) {
                 char *fullpath = createPathString(config.path, de->d_name);
                 execute(fullpath);
-//                free(fullpath);
+                //                free(fullpath);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
