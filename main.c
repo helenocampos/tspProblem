@@ -202,7 +202,7 @@ int isValidEuclidian2Dfile(char *filePath) {
         }
         fclose(fp);
     }
-//    free(lineSave);
+    //    free(lineSave);
     return 0;
 }
 
@@ -299,8 +299,8 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
             fclose(fp);
 
         }
-//        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-//        free(lineSave);
+        //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
+        //        free(lineSave);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
@@ -1436,7 +1436,7 @@ void executeMethodDir() {
                     && strcmp(de->d_name, ".DS_Store") != 0) {
                 char *fullpath = createPathString(config.path, de->d_name);
                 execute(fullpath);
-                //                free(fullpath);
+                free(fullpath);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
