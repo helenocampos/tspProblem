@@ -173,44 +173,36 @@ int getEuclidianDistance(int i, int j, struct TSPLibData *dat) {
 
 int isValidEuclidian2Dfile(char *filePath) {
     FILE * fp = NULL;
-    char* line = malloc(10000);
-    char* lineSaved = line;
-    int firstPass = 1;
+    char* line = NULL;
+    char* lineSave = NULL;
     size_t len = 0;
     int read = 0;
     fp = fopen(filePath, "r");
     if (fp) {
         while ((read = getline(&line, &len, fp)) != -1) {
-            if (firstPass == 1) {
-                lineSaved = line;
-                firstPass = 0;
-            }
             char delim[] = " ";
-            char *ptr = strtok(line, delim);
+            char *ptr = strtok_r(line, delim, &lineSave);
             while (ptr != NULL) {
                 if (strcmp(ptr, "EDGE_WEIGHT_TYPE") == 0) {
-                    ptr = strtok(NULL, delim);
-                    ptr = strtok(NULL, delim);
+                    ptr = strtok_r(NULL, delim, &lineSave);
+                    ptr = strtok_r(NULL, delim, &lineSave);
                     if (strcmp(ptr, "EUC_2D\n") == 0) {
                         fclose(fp);
                         return 1;
                     }
                 } else if (strcmp(ptr, "EDGE_WEIGHT_TYPE:") == 0) {
-                    ptr = strtok(NULL, delim);
+                    ptr = strtok_r(NULL, delim, &lineSave);
                     if (strcmp(ptr, "EUC_2D\n") == 0) {
                         fclose(fp);
                         return 1;
                     }
                 }
-                ptr = strtok(NULL, delim);
+                ptr = strtok_r(NULL, delim, &lineSave);
             }
-            free(line);
-            line = NULL;
-            len = 0;
         }
         fclose(fp);
     }
-//    free(lineSaved);
+    free(lineSave);
     return 0;
 }
 
@@ -245,9 +237,8 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
     struct TSPLibData *data = 0;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
-        char* line = malloc(10);
-        char* lineSaved = line;
-        int firstPass = 1;
+        char* line = NULL;
+        char* lineSave = NULL;
         size_t len = 0;
         int read = 0;
         int dataSection = 0;
@@ -256,20 +247,14 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         fp = fopen(filePath, "r");
         if (fp) {
             while ((read = getline(&line, &len, fp)) != -1) {
-                if (firstPass == 1) {
-                    lineSaved = line;
-                    printf("\n Saving original line pointer to free it later. Address original: %p   Address saved: %p"
-                            , line, lineSaved);
-                    firstPass = 0;
-                }
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
-                        char *ptr = strtok(line, delim);
+                        char *ptr = strtok_r(line, delim, &lineSave);
                         if (strcmp(ptr, "DIMENSION") == 0) {
-                            ptr = strtok(NULL, delim);
+                            ptr = strtok_r(NULL, delim, &lineSave);
                             if (strcmp(ptr, ":") == 0) {
-                                ptr = strtok(NULL, delim);
+                                ptr = strtok_r(NULL, delim, &lineSave);
                             }
                             vertexAmount = atoi(ptr);
                             data = malloc(sizeof *data);
@@ -279,7 +264,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                             }
                             data->citiesAmount = vertexAmount;
                         } else if (strcmp(ptr, "DIMENSION:") == 0) {
-                            ptr = strtok(NULL, delim);
+                            ptr = strtok_r(NULL, delim, &lineSave);
                             vertexAmount = atoi(ptr);
                             data = malloc(sizeof (*data));
 
@@ -296,10 +281,10 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                 } else {
                     if (vertexCounter < vertexAmount) {
                         char delim[] = " ";
-                        char *ptr = strtok(line, delim);
-                        ptr = strtok(NULL, delim);
+                        char *ptr = strtok_r(line, delim, &lineSave);
+                        ptr = strtok_r(NULL, delim, &lineSave);
                         float x = strtod(ptr, NULL);
-                        ptr = strtok(NULL, delim);
+                        ptr = strtok_r(NULL, delim, &lineSave);
                         float y = strtod(ptr, NULL);
                         data->x[vertexCounter] = x;
                         data->y[vertexCounter] = y;
@@ -310,15 +295,12 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                     }
 
                 }
-                free(line);
-                line = NULL;
-                len = 0;
             }
             fclose(fp);
 
         }
-        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-        //        free(lineSaved);
+//        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
+        free(lineSave);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
