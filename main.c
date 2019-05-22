@@ -752,10 +752,10 @@ struct solution* localSearch(struct solution* currentSolution, int solutionSize)
                     break;
             }
             if (newSolution == 0) {
-//                printf("\nLocal optimum found. Stopping.");
+                //                printf("\nLocal optimum found. Stopping.");
                 keepSearching = 0;
             } else {
-//                printf("\n Improvement found. Moving to neighbor of distance %d", currentSolution->local_search_distance);
+                //                printf("\n Improvement found. Moving to neighbor of distance %d", currentSolution->local_search_distance);
                 //                                                                            printf("\n Current solution: ");
                 //                                                                            printRoute(currentSolution->local_search_route, solutionSize, currentSolution->local_search_distance);
             }
@@ -1048,7 +1048,7 @@ struct solution* randomSymmetricGreedyTSP(int startingNode, struct TSPInstance *
         visitedVertexes[startingNode] = 1;
         int lastVisited = startingNode;
         int candidateSetSize = getCandidatesSetSize(instance->citiesAmount - 1);
-        //                printf("\n candidateSetSize: %d\n", candidateSetSize);
+        printf("\n candidateSetSize: %d\n", candidateSetSize);
         int visitNumber = 1;
         for (; visitNumber < instance->citiesAmount; visitNumber++) {
             int randomNearestNotVisited = -1;

@@ -7,7 +7,7 @@
 
 typedef struct NeighborDistance {
     int target;
-    double distanceFromOrigin;
+    int distanceFromOrigin;
 } neighbor_distance;
 
 int distance_comparator(const void *v1, const void *v2) {

@@ -3,11 +3,11 @@ SOURCE	= main.c mtwister.c TSPutil.c
 HEADER	= TSPutil.h mtwister.h
 OUT	= tspProblem
 CC	 = gcc
-FLAGS	 = -g -c -Wall
-LFLAGS	 = 
+FLAGS	 = -c -Wall
+LFLAGS	 =
 
 all: $(OBJS)
-	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+	$(CC) $(OBJS) -o $(OUT) $(LFLAGS)
 
 main.o: main.c
 	$(CC) $(FLAGS) main.c -std=c99

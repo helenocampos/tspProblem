@@ -1,0 +1,648 @@
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: NN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 0
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: DSNN
+local search method: best
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 1
+local search methodIndex: 2
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: NN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 0
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: DSNN
+local search method: first
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 1
+local search methodIndex: 1
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: NN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 0
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: DSNN
+local search method: best_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 1
+local search methodIndex: 4
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RNN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 2
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: RDSNN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 3
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: qt
+alpha index: 0
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: NN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 0
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019
+
+
+
+
+log name: testMerge.csv
+constructive method: DSNN
+local search method: first_2
+mode: file
+path: instances/small/eil51.tsp
+constructive methodIndex: 1
+local search methodIndex: 3
+repeatTimes: 1
+alpha: 20
+alphaUB: 0
+alpha type: ql
+alpha index: 1
+testAlpha: 0
+Alpha incremental step: 10
+ initial seed 1
+ GRASP type (0 disabled, 1 time, 2 iteration): 0
+ GRASP parameter: 10
+
+Started at: Sun May 19 13:18:08 2019
+
+Saving results to file testMerge.csv
+
+Finished at: Sun May 19 13:18:08 2019

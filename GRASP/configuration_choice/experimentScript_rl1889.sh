@@ -1,0 +1,25 @@
+#!/bin/bash
+./tspProblem configChoice_rl1889 RNN best 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN best 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN best 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN best 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 NN best 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 DSNN best 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN first 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN first 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN first 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN first 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 NN first 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 DSNN first 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN best_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN best_2 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN best_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN best_2 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 NN best_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 DSNN best_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN first_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RNN first_2 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN first_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 RDSNN first_2 1 file instances/medium/rl1889.tsp 1 qt 0 10 20;
+./tspProblem configChoice_rl1889 NN first_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;
+./tspProblem configChoice_rl1889 DSNN first_2 1 file instances/medium/rl1889.tsp 1 ql 0 10 20;

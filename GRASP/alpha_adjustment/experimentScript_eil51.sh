@@ -1,0 +1,25 @@
+#!/bin/bash
+./tspProblem configChoice_eil51 RNN best 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN best 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 RDSNN best 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RDSNN best 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 NN best 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 DSNN best 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN first 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN first 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 RDSNN first 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RDSNN first 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 NN first 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 DSNN first 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN best_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN best_2 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 RDSNN best_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RDSNN best_2 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 NN best_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 DSNN best_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN first_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RNN first_2 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 RDSNN first_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 RDSNN first_2 1 file instances/small/eil51.tsp 1 qt 0 10 20;
+./tspProblem configChoice_eil51 NN first_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;
+./tspProblem configChoice_eil51 DSNN first_2 1 file instances/small/eil51.tsp 1 ql 0 10 20;

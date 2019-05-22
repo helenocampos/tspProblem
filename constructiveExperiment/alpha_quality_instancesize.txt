@@ -1,0 +1,7 @@
+#Alpha	#% of optimal (large) RNN	#% of optimal (large) RDSNN	#% of optimal (medium)R NN	#% of optimal (medium) RDSNN	#% of optimal (small) RNN	#% of optimal (small) RDSNN
+10	-4454%	-3225%	-1732%	-1252%	-578%	-421%
+12	-4878%	-3518%	-1890%	-1378%	-642%	-455%
+14	-5249%	-3785%	-2038%	-1489%	-696%	-497%
+16	-5582%	-4011%	-2168%	-1577%	-738%	-521%
+18	-5885%	-4231%	-2286%	-1659%	-782%	-563%
+20	-6158%	-4422%	-2392%	-1746%	-824%	-588%
