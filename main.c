@@ -202,7 +202,7 @@ int isValidEuclidian2Dfile(char *filePath) {
         }
         fclose(fp);
     }
-//    free(lineSave);
+    free(line);
     return 0;
 }
 
@@ -213,7 +213,7 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
             instance->citiesAmount = data->citiesAmount;
             instance->graphMatrix = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
             strcpy(instance->instanceName, data->instanceName);
-//            instance->instanceName = data->instanceName;
+            //            instance->instanceName = data->instanceName;
             //            instance->nodes = calloc(instance->citiesAmount, sizeof *(instance->nodes));
             for (int i = 0; i < instance->citiesAmount; i++) {
                 instance->graphMatrix[i] = calloc(instance->citiesAmount, sizeof *(instance->graphMatrix));
@@ -236,9 +236,9 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
 
 struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for Euclidian2D instances
     struct TSPLibData *data = 0;
+    char* line = NULL;
     if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
-        char* line = NULL;
         char* lineSave = NULL;
         size_t len = 0;
         int read = 0;
@@ -289,8 +289,8 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                         float y = strtod(ptr, NULL);
                         data->x[vertexCounter] = x;
                         data->y[vertexCounter] = y;
-//                        data->instanceName = malloc(strlen(filePath)+1);
-                        strcpy(data->instanceName,filePath);
+                        //                        data->instanceName = malloc(strlen(filePath)+1);
+                        strcpy(data->instanceName, filePath);
                         vertexCounter++;
                     } else {
                         continue;
@@ -301,11 +301,11 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
             fclose(fp);
 
         }
-//        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-//        free(lineSave);
+        //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
     } else {
         printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
     }
+    free(line);
     return data;
 }
 
@@ -1214,9 +1214,9 @@ void freeInstancesMemory(struct TSPLibData *tspLibData,
         //            }
         //            free(tspInstance->nodes);
         //        }
-//        if(tspInstance->instanceName){
-//            free(tspInstance->instanceName);
-//        }
+        //        if(tspInstance->instanceName){
+        //            free(tspInstance->instanceName);
+        //        }
         free(tspInstance);
     }
     if (tspLibData) {
@@ -1226,9 +1226,9 @@ void freeInstancesMemory(struct TSPLibData *tspLibData,
         if (tspLibData->y) {
             free(tspLibData->y);
         }
-//        if(tspLibData->instanceName){
-//            free(tspLibData->instanceName);
-//        }
+        //        if(tspLibData->instanceName){
+        //            free(tspLibData->instanceName);
+        //        }
         free(tspLibData);
     }
 }
@@ -1377,7 +1377,7 @@ void executeMethod(char* file) {
         }
     }
     strcpy(previousInstance, file);
-//    printf("\n\n\nprevious instance address %p, file address %p\n\n\n", previousInstance, file);
+    //    printf("\n\n\nprevious instance address %p, file address %p\n\n\n", previousInstance, file);
     //    freeInstancesMemory(tspLibData, tspInstance);
 }
 
@@ -1444,7 +1444,7 @@ void executeMethodDir() {
                     && strcmp(de->d_name, ".DS_Store") != 0) {
                 char *fullpath = createPathString(config.path, de->d_name);
                 execute(fullpath);
-                                free(fullpath);
+                free(fullpath);
                 //                        printf("%s\n",de->d_name);
             }
         closedir(dr);
