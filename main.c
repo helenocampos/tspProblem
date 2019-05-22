@@ -245,7 +245,7 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
         fp = fopen(filePath, "r");
         if (fp) {
             while ((read = getline(&originalLine, &len, fp)) != -1) {
-                char * line = originalLine;
+                char *line = originalLine;
                 if (dataSection == 0) {
                     if (vertexAmount == 0) {
                         char delim[] = " ";
@@ -296,6 +296,9 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
                 }
             }
             fclose(fp);
+
+            free(originalLine);
+
 
         }
     } else {
@@ -1368,7 +1371,7 @@ void executeMethod(char* file) {
             //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
             //            printInstanceData(tspInstance);
             printf("\n freeing solution from execute method");
-//            freeSolution(solution);
+            //            freeSolution(solution);
         }
     }
     strcpy(previousInstance, file);
