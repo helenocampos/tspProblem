@@ -1177,7 +1177,7 @@ struct solution* GRASP_controller() {
                     iterationsToBest = iteration;
                 }
             }
-            freeSolution(currentSolution);
+//            freeSolution(currentSolution);
             iteration++;
         }
     }
