@@ -51,6 +51,8 @@ struct solution {
     double timeToBestSolution;
     int iterationsToBestSolution;
     double totalTime;
+    int graspTotalIterations;
+    double graspMeanValue;
 };
 
 struct Config {
@@ -1057,6 +1059,61 @@ struct solution* doubleSidedSymmetricGreedyTSP(int startingNode, struct TSPInsta
     return NULL;
 }
 
+void writeResultToFile(char* result) {
+    fputs(result, resultsFile);
+}
+
+void printLine(char* file, struct solution* solution) {
+    char* line = (char*) malloc(256 * sizeof (char));
+    char* lineChunk = (char*) malloc(50 * sizeof (char));
+    sprintf(lineChunk, "\n");
+    strcpy(line, lineChunk);
+    sprintf(lineChunk, "%s,", file);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", tspInstance->citiesAmount);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%s,", getConstructiveMethodName(config.constructiveMethodIndex));
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", solution->constructive_distance);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%.6f,", solution->constructiveTime);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%s,", getLocalSearchMethodName(config.localSearchMethodIndex));
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", solution->local_search_distance);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%.6f,", solution->localSearchTime);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", config.alpha);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%d,", randomSeed);
+    strcat(line, lineChunk);
+    sprintf(lineChunk, "%.6f,", solution->totalTime);
+    strcat(line, lineChunk);
+    if (config.GRASP_criterion_type != 0) {
+        sprintf(lineChunk, "%s,", config.alphaType);
+        strcat(line, lineChunk);
+        sprintf(lineChunk, "%.6f,", solution->GRASPTime);
+        strcat(line, lineChunk);
+        sprintf(lineChunk, "%.6f,", solution->timeToBestSolution);
+        strcat(line, lineChunk);
+        sprintf(lineChunk, "%d,", solution->iterationsToBestSolution);
+        strcat(line, lineChunk);
+        sprintf(lineChunk, "%.6f,", solution->graspMeanValue);
+        strcat(line, lineChunk);
+        sprintf(lineChunk, "%d", solution->graspTotalIterations);
+        strcat(line, lineChunk);
+    } else {
+        sprintf(lineChunk, "%s", config.alphaType);
+        strcat(line, lineChunk);
+    }
+
+
+    writeResultToFile(line);
+    free(lineChunk);
+    free(line);
+}
+
 struct solution* constructive_controller() {
     clock_t start = 0, end = 0;
     struct solution* constructiveSolution = NULL;
@@ -1138,6 +1195,7 @@ struct solution* GRASP_controller() {
     clock_t GRASPstart = clock(), timeToBestStart = clock(), GRASPend = 0;
     struct solution* bestSolution = NULL;
     time_t ltime;
+    double graspMeanValue = 0;
     printf("\n Starting GRASP with criterion type %d and parameter %d", config.GRASP_criterion_type, config.GRASP_criterion_parameter);
     if (config.GRASP_criterion_type == 1) {
         start = clock();
@@ -1147,13 +1205,14 @@ struct solution* GRASP_controller() {
             randomizerLocalSearch = seedRand(randomSeed);
             struct solution* currentSolution = GRASP();
             if (currentSolution != NULL) {
+                graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
                 if (bestSolution != NULL) {
                     if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
                         freeSolution(bestSolution);
                         bestSolution = currentSolution;
                         timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                         iterationsToBest = totalIterations;
-                    }else{
+                    } else {
                         freeSolution(currentSolution);
                     }
                 } else {
@@ -1167,32 +1226,34 @@ struct solution* GRASP_controller() {
             ++totalIterations;
         }
     } else {
-        int iteration = 1;
-        while (iteration <= config.GRASP_criterion_parameter) {
+        while (totalIterations <= config.GRASP_criterion_parameter) {
             ltime = time(NULL);
-            printf("\n %s \n iteration %d of GRASP", asctime(localtime(&ltime)), iteration);
+            printf("\n %s \n iteration %d of GRASP. Previous Mean value: %.6f", asctime(localtime(&ltime)), totalIterations, graspMeanValue);
             struct solution* currentSolution = GRASP();
             if (currentSolution != NULL) {
+                graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
                 if (bestSolution != NULL) {
                     if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
                         freeSolution(bestSolution);
                         bestSolution = currentSolution;
                         timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
-                        iterationsToBest = iteration;
+                        iterationsToBest = totalIterations;
                     } else {
                         freeSolution(currentSolution);
                     }
                 } else {
                     bestSolution = currentSolution;
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
-                    iterationsToBest = iteration;
+                    iterationsToBest = totalIterations;
                 }
             }
-            iteration++;
+            totalIterations++;
         }
     }
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
+    bestSolution->graspMeanValue = graspMeanValue;
+    bestSolution->graspTotalIterations = totalIterations-1;
     bestSolution->GRASPTime = graspTime;
     bestSolution->timeToBestSolution = timeToBest;
     bestSolution->iterationsToBestSolution = iterationsToBest;
@@ -1243,60 +1304,10 @@ char* concat(const char *s1, const char *s2) {
     return result;
 }
 
-void writeResultToFile(char* result) {
-    fputs(result, resultsFile);
-}
-
 void printHeader() {
     writeResultToFile("name,n,constructive method, constructive distance, constructive calc time, local search "
-            "method, localsearch distance, localsearch time, alpha, random seed, total time, alpha type, grasp time, timeToBest grasp, iterationsToBestGrasp");
-}
-
-void printLine(char* file, struct solution* solution) {
-    char* line = (char*) malloc(256 * sizeof (char));
-    char* lineChunk = (char*) malloc(50 * sizeof (char));
-    sprintf(lineChunk, "\n");
-    strcpy(line, lineChunk);
-    sprintf(lineChunk, "%s,", file);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%d,", tspInstance->citiesAmount);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%s,", getConstructiveMethodName(config.constructiveMethodIndex));
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%d,", solution->constructive_distance);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%.6f,", solution->constructiveTime);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%s,", getLocalSearchMethodName(config.localSearchMethodIndex));
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%d,", solution->local_search_distance);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%.6f,", solution->localSearchTime);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%d,", config.alpha);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%d,", randomSeed);
-    strcat(line, lineChunk);
-    sprintf(lineChunk, "%.6f,", solution->totalTime);
-    strcat(line, lineChunk);
-    if (config.GRASP_criterion_type != 0) {
-        sprintf(lineChunk, "%s,", config.alphaType);
-        strcat(line, lineChunk);
-        sprintf(lineChunk, "%.6f,", solution->GRASPTime);
-        strcat(line, lineChunk);
-        sprintf(lineChunk, "%.6f,", solution->timeToBestSolution);
-        strcat(line, lineChunk);
-        sprintf(lineChunk, "%d,", solution->iterationsToBestSolution);
-        strcat(line, lineChunk);
-    } else {
-        sprintf(lineChunk, "%s", config.alphaType);
-        strcat(line, lineChunk);
-    }
-
-
-    writeResultToFile(line);
-    free(lineChunk);
-    free(line);
+            "method, localsearch distance, localsearch time, alpha, random seed, total time, alpha type, grasp time,"
+            " timeToBest grasp, iterationsToBestGrasp, meanGRASPDistance, totalIterationsGrasp");
 }
 
 void executeMethod(char* file) {
@@ -1606,7 +1617,7 @@ int main(int argc, char** argv) {
         printConfigs();
         printf("\nStarted at: %s", asctime(localtime(&ltime)));
         printf("\nSaving results to file %s\n", config.logName);
-        resultsFile = fopen(config.logName, "a");
+        resultsFile = fopen(config.logName, "w");
         printHeader();
         invokeExecution();
         fclose(resultsFile);
