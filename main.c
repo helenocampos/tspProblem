@@ -240,74 +240,74 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
 struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for Euclidian2D instances
     struct TSPLibData *data = 0;
     char* line = NULL;
-//    if (isValidEuclidian2Dfile(filePath)) {
-        FILE * fp = NULL;
-        char* lineSave = NULL;
-        size_t len = 0;
-        int read = 0;
-        int dataSection = 0;
-        int vertexAmount = 0;
-        int vertexCounter = 0;
-        fp = fopen(filePath, "r");
-        if (fp) {
-            while ((read = getline(&line, &len, fp)) != -1) {
-                if (dataSection == 0) {
-                    if (vertexAmount == 0) {
-                        char delim[] = " ";
-                        char *ptr = strtok_r(line, delim, &lineSave);
-                        if (strcmp(ptr, "DIMENSION") == 0) {
+    //    if (isValidEuclidian2Dfile(filePath)) {
+    FILE * fp = NULL;
+    char* lineSave = NULL;
+    size_t len = 0;
+    int read = 0;
+    int dataSection = 0;
+    int vertexAmount = 0;
+    int vertexCounter = 0;
+    fp = fopen(filePath, "r");
+    if (fp) {
+        while ((read = getline(&line, &len, fp)) != -1) {
+            if (dataSection == 0) {
+                if (vertexAmount == 0) {
+                    char delim[] = " ";
+                    char *ptr = strtok_r(line, delim, &lineSave);
+                    if (strcmp(ptr, "DIMENSION") == 0) {
+                        ptr = strtok_r(NULL, delim, &lineSave);
+                        if (strcmp(ptr, ":") == 0) {
                             ptr = strtok_r(NULL, delim, &lineSave);
-                            if (strcmp(ptr, ":") == 0) {
-                                ptr = strtok_r(NULL, delim, &lineSave);
-                            }
-                            vertexAmount = atoi(ptr);
-                            data = malloc(sizeof *data);
-                            if (data) {
-                                data->x = calloc(vertexAmount, sizeof *(data->x));
-                                data->y = calloc(vertexAmount, sizeof *(data->y));
-                            }
-                            data->citiesAmount = vertexAmount;
-                        } else if (strcmp(ptr, "DIMENSION:") == 0) {
-                            ptr = strtok_r(NULL, delim, &lineSave);
-                            vertexAmount = atoi(ptr);
-                            data = malloc(sizeof (*data));
-
-                            if (data) {
-                                data->x = calloc(vertexAmount, sizeof *(data->x));
-                                data->y = calloc(vertexAmount, sizeof *(data->y));
-                            }
-                            data->citiesAmount = vertexAmount;
                         }
-                    }
-                    if (strcmp(line, "NODE_COORD_SECTION\n") == 0) {
-                        dataSection = 1;
-                    }
-                } else {
-                    if (vertexCounter < vertexAmount) {
-                        char delim[] = " ";
-                        char *ptr = strtok_r(line, delim, &lineSave);
+                        vertexAmount = atoi(ptr);
+                        data = malloc(sizeof *data);
+                        if (data) {
+                            data->x = calloc(vertexAmount, sizeof *(data->x));
+                            data->y = calloc(vertexAmount, sizeof *(data->y));
+                        }
+                        data->citiesAmount = vertexAmount;
+                    } else if (strcmp(ptr, "DIMENSION:") == 0) {
                         ptr = strtok_r(NULL, delim, &lineSave);
-                        float x = strtod(ptr, NULL);
-                        ptr = strtok_r(NULL, delim, &lineSave);
-                        float y = strtod(ptr, NULL);
-                        data->x[vertexCounter] = x;
-                        data->y[vertexCounter] = y;
-                        //                        data->instanceName = malloc(strlen(filePath)+1);
-                        strcpy(data->instanceName, filePath);
-                        vertexCounter++;
-                    } else {
-                        continue;
-                    }
+                        vertexAmount = atoi(ptr);
+                        data = malloc(sizeof (*data));
 
+                        if (data) {
+                            data->x = calloc(vertexAmount, sizeof *(data->x));
+                            data->y = calloc(vertexAmount, sizeof *(data->y));
+                        }
+                        data->citiesAmount = vertexAmount;
+                    }
                 }
-            }
-            fclose(fp);
+                if (strcmp(line, "NODE_COORD_SECTION\n") == 0) {
+                    dataSection = 1;
+                }
+            } else {
+                if (vertexCounter < vertexAmount) {
+                    char delim[] = " ";
+                    char *ptr = strtok_r(line, delim, &lineSave);
+                    ptr = strtok_r(NULL, delim, &lineSave);
+                    float x = strtod(ptr, NULL);
+                    ptr = strtok_r(NULL, delim, &lineSave);
+                    float y = strtod(ptr, NULL);
+                    data->x[vertexCounter] = x;
+                    data->y[vertexCounter] = y;
+                    //                        data->instanceName = malloc(strlen(filePath)+1);
+                    strcpy(data->instanceName, filePath);
+                    vertexCounter++;
+                } else {
+                    continue;
+                }
 
+            }
         }
-        //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-//    } else {
-//        printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
-//    }
+        fclose(fp);
+
+    }
+    //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
+    //    } else {
+    //        printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
+    //    }
     free(line);
     return data;
 }
@@ -1136,10 +1136,10 @@ struct solution* constructive_controller() {
     if (constructiveSolution != NULL) {
         constructiveSolution->constructiveTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     }
-        printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
-                getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
-                constructiveSolution->constructive_distance);
-//        printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
+    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
+            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
+            constructiveSolution->constructive_distance);
+    //        printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
     return constructiveSolution;
 }
 
@@ -1158,10 +1158,10 @@ struct solution* local_search_controller(struct solution* currentSolution) {
             currentSolution->local_search_route = malloc(0);
         }
     }
-        printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
-                getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
-                currentSolution->local_search_distance);
-//        printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
+    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
+            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
+            currentSolution->local_search_distance);
+    //        printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
     return currentSolution;
 }
 
@@ -1221,11 +1221,13 @@ struct solution* GRASP_controller() {
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                 }
             }
-            printf("\n\n Finished GRASP iterations");
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
+            printf("\n %s \n Time elapsed in GRASP: %.2f of %d of GRASP. Current Mean distance: %.6f", asctime(localtime(&ltime)), 
+                    timeElapsed, config.GRASP_criterion_parameter, graspMeanValue);
             ++totalIterations;
         }
+        printf("\n\n Finished GRASP iterations");
     } else {
         while (totalIterations <= config.GRASP_criterion_parameter) {
             ltime = time(NULL);
