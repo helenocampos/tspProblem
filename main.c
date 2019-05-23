@@ -10,6 +10,7 @@
  *
  * Created on 28 de Março de 2019, 09:32
  */
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -1148,16 +1149,18 @@ struct solution* GRASP_controller() {
             if (currentSolution != NULL) {
                 if (bestSolution != NULL) {
                     if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                        freeSolution(bestSolution);
                         bestSolution = currentSolution;
                         timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                         iterationsToBest = totalIterations;
+                    }else{
+                        freeSolution(currentSolution);
                     }
                 } else {
                     bestSolution = currentSolution;
                     iterationsToBest = totalIterations;
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                 }
-                freeSolution(currentSolution);
             }
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
