@@ -1136,10 +1136,10 @@ struct solution* constructive_controller() {
     if (constructiveSolution != NULL) {
         constructiveSolution->constructiveTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     }
-    //    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
-    //            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
-    //            constructiveSolution->constructive_distance);
-    //    printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
+        printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
+                getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
+                constructiveSolution->constructive_distance);
+//        printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
     return constructiveSolution;
 }
 
@@ -1158,10 +1158,10 @@ struct solution* local_search_controller(struct solution* currentSolution) {
             currentSolution->local_search_route = malloc(0);
         }
     }
-    //    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
-    //            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
-    //            currentSolution->local_search_distance);
-    //    printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
+        printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
+                getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
+                currentSolution->local_search_distance);
+//        printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
     return currentSolution;
 }
 
@@ -1221,6 +1221,7 @@ struct solution* GRASP_controller() {
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
                 }
             }
+            printf("\n\n Finished GRASP iterations");
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
             ++totalIterations;
@@ -1317,7 +1318,7 @@ void executeMethod(char* file) {
     clock_t start = 0, end = 0;
     double readTime = 0, allocationTime = 0, totalTime = 0;
     if (tspLibData != 0) {
-        printf("\nInstance name: %s ", tspLibData->instanceName);
+        printf("\nInstance name: %s ", file);
         if (strcmp(previousInstance, file) != 0) {
             freeInstancesMemory(tspLibData, tspInstance);
             //            printf("\n Reading different instance");
