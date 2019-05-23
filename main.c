@@ -240,7 +240,7 @@ struct TSPInstance* allocateTSPInstanceEuclidian2D(struct TSPLibData *data) {
 struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for Euclidian2D instances
     struct TSPLibData *data = 0;
     char* line = NULL;
-    if (isValidEuclidian2Dfile(filePath)) {
+//    if (isValidEuclidian2Dfile(filePath)) {
         FILE * fp = NULL;
         char* lineSave = NULL;
         size_t len = 0;
@@ -305,9 +305,9 @@ struct TSPLibData* parseTSPLibFileEuclidian2D(char *filePath) { //only valid for
 
         }
         //        printf("\n Freeing line buffer at address %p.  Original is at address %p", lineSaved, line);
-    } else {
-        printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
-    }
+//    } else {
+//        printf("\nThe file you supplied is invalid or cannot be read. File: %s \n", filePath);
+//    }
     free(line);
     return data;
 }
@@ -1136,9 +1136,9 @@ struct solution* constructive_controller() {
     if (constructiveSolution != NULL) {
         constructiveSolution->constructiveTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     }
-    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
-            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
-            constructiveSolution->constructive_distance);
+    //    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
+    //            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
+    //            constructiveSolution->constructive_distance);
     //    printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
     return constructiveSolution;
 }
@@ -1158,9 +1158,9 @@ struct solution* local_search_controller(struct solution* currentSolution) {
             currentSolution->local_search_route = malloc(0);
         }
     }
-    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
-            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
-            currentSolution->local_search_distance);
+    //    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
+    //            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
+    //            currentSolution->local_search_distance);
     //    printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
     return currentSolution;
 }
@@ -1253,10 +1253,12 @@ struct solution* GRASP_controller() {
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
     bestSolution->graspMeanValue = graspMeanValue;
-    bestSolution->graspTotalIterations = totalIterations-1;
+    bestSolution->graspTotalIterations = totalIterations - 1;
     bestSolution->GRASPTime = graspTime;
     bestSolution->timeToBestSolution = timeToBest;
     bestSolution->iterationsToBestSolution = iterationsToBest;
+    printf("\n\nExiting GRASP");
+    printf("\n\nExiting GRASP");
     return bestSolution;
 }
 
@@ -1387,7 +1389,11 @@ void executeMethod(char* file) {
             //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
             //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
             //            printInstanceData(tspInstance);
+            printf("\n\nbefore freeSolution from execute method");
+            printf("\n\nbefore freeSolution from execute method");
             freeSolution(solution);
+            printf("\n\nafter freeSolution from execute method");
+            printf("\n\nafter freeSolution from execute method");
         }
     }
     strcpy(previousInstance, file);
