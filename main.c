@@ -899,7 +899,7 @@ struct solution* randomSymmetricGreedyTSP(int startingNode, struct TSPInstance *
         visitedVertexes[startingNode] = 1;
         int lastVisited = startingNode;
         int candidateSetSize = getCandidatesSetSize(instance->citiesAmount - 1);
-        printf("\n candidateSetSize: %d\n", candidateSetSize);
+//        printf("\n candidateSetSize: %d\n", candidateSetSize);
         int visitNumber = 1;
         for (; visitNumber < instance->citiesAmount; visitNumber++) {
             int randomNearestNotVisited = -1;
@@ -1276,6 +1276,7 @@ struct solution* GRASP_controller() {
         struct solution* currentSolution = GRASP();
         int currentDistance = currentSolution->local_search_distance;
         int bestDistance = currentDistance;
+        int previousTotalIterations =0;
         do {
             graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
             freeSolution(currentSolution);
@@ -1294,9 +1295,11 @@ struct solution* GRASP_controller() {
                 if (strlen(currentTime) > 0) {
                     currentTime[strlen(currentTime) - 1] = 0;
                 }
-                printf("\r %s --- Time elapsed in GRASP: %.2f (s). Total iterations tried: %d.  Best distance so far: %d", currentTime,
-                        timeElapsed, totalIterations, bestDistance);
+                int speed = (totalIterations-previousTotalIterations)/10;
+                printf("\r %s --- Time elapsed in GRASP: %.2f (s). Total iterations tried: %d (speed: %d iterations/s).  Best distance so far: %d", currentTime,
+                        timeElapsed, totalIterations, speed,bestDistance);
                 lastTimeElapsed = timeElapsed;
+                previousTotalIterations = totalIterations;
             }
             totalIterations++;
         } while (currentDistance > config.GRASP_criterion_parameter);
