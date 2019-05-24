@@ -1136,9 +1136,9 @@ struct solution* constructive_controller() {
     if (constructiveSolution != NULL) {
         constructiveSolution->constructiveTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     }
-    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
-            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
-            constructiveSolution->constructive_distance);
+//    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
+//            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
+//            constructiveSolution->constructive_distance);
     //        printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
     return constructiveSolution;
 }
@@ -1158,9 +1158,9 @@ struct solution* local_search_controller(struct solution* currentSolution) {
             currentSolution->local_search_route = malloc(0);
         }
     }
-    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
-            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
-            currentSolution->local_search_distance);
+//    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
+//            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
+//            currentSolution->local_search_distance);
     //        printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
     return currentSolution;
 }
@@ -1223,7 +1223,8 @@ struct solution* GRASP_controller() {
             }
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
-            printf("\n %s \n Time elapsed in GRASP: %.2f of %d of GRASP. Current Mean distance: %.6f", asctime(localtime(&ltime)), 
+            ltime = time(NULL);
+            printf("\n %s --- Time elapsed in GRASP: %.2f of %d of GRASP. Current Mean distance: %.6f", asctime(localtime(&ltime)), 
                     timeElapsed, config.GRASP_criterion_parameter, graspMeanValue);
             ++totalIterations;
         }
