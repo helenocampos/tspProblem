@@ -126,12 +126,17 @@ char* getLocalSearchMethodName(int methodIndex) {
 
 int getRandomInt(int lb, int ub, int randomizer) {
     double randN = 0;
-    if (randomizer == 1) {
-        randN = genRand(&randomizerConstructive);
-    } else {
-        randN = genRand(&randomizerLocalSearch);
-    }
-    int generatedInt = randN * (ub - lb + 1) + lb;
+    int generatedInt = -1;
+    do {
+        if (randomizer == 1) {
+            randN = genRand(&randomizerConstructive);
+        } else {
+            randN = genRand(&randomizerLocalSearch);
+        }
+        generatedInt = randN * (ub - lb + 1) + lb;
+    } while (generatedInt > ub || generatedInt < lb);
+
+//    printf("\n random: %.5f, lower bound: %d, upped bound: %d, generated: %d", randN, lb, ub, generatedInt);
     return generatedInt;
 }
 
@@ -836,7 +841,7 @@ int getRandomNearestNotVisited(int origin,
 
 int getMinDistanceIndexNotVisited(int* visitedVertexes, int vertexesAmount, int origin) {
     int minDistance = INT_MAX;
-    int minDistanceIndex = 0;
+    int minDistanceIndex = -1;
     for (int i = 0; i < vertexesAmount; i++) {
         if (visitedVertexes[i] == 0 &&
                 tspInstance->graphMatrix[origin][i] < minDistance) {
@@ -849,7 +854,7 @@ int getMinDistanceIndexNotVisited(int* visitedVertexes, int vertexesAmount, int 
 
 int getMaxDistanceIndexNotVisited(int* visitedVertexes, int vertexesAmount, int origin) {
     int maxDistance = INT_MIN;
-    int maxDistanceIndex = 0;
+    int maxDistanceIndex = -1;
     for (int i = 0; i < vertexesAmount; i++) {
         if (visitedVertexes[i] == 0 &&
                 tspInstance->graphMatrix[origin][i] > maxDistance) {
@@ -872,10 +877,11 @@ int getRandomNearestNotVisited_2(int origin,
     int threshold = minCandidateDistance + alphaOperand;
     int randomIndex = -1;
     do {
-        randomIndex = getRandomInt(0, tspInstance->citiesAmount - 1, 1);
-        //        printf("\nRandom index: %d. Visited: %d  Distance: %d   Threshold: %d  Origin: %d",
-        //                randomIndex, visitedVertexes[randomIndex], tspInstance->graphMatrix[origin][randomIndex], 
-        //                threshold, origin);
+        randomIndex = getRandomInt(0, (tspInstance->citiesAmount - 1), 1);
+//        printf("\n cities amount: %d", tspInstance->citiesAmount);
+//        printf("\nRandom index: %d. Visited: %d  Distance: %d   Threshold: %d  Origin: %d  MinDistanceIndex: %d",
+//                randomIndex, visitedVertexes[randomIndex], tspInstance->graphMatrix[origin][randomIndex],
+//                threshold, origin, minDistanceIndex);
     } while (visitedVertexes[randomIndex] == 1
             || tspInstance->graphMatrix[origin][randomIndex] > threshold
             || randomIndex == origin);
@@ -1136,9 +1142,9 @@ struct solution* constructive_controller() {
     if (constructiveSolution != NULL) {
         constructiveSolution->constructiveTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     }
-//    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
-//            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
-//            constructiveSolution->constructive_distance);
+    //    printf("\nGot constructive Solution using %s in %.6f seconds. Distance: %d",
+    //            getConstructiveMethodName(config.constructiveMethodIndex), constructiveSolution->constructiveTime,
+    //            constructiveSolution->constructive_distance);
     //        printRoute(constructiveSolution->constructive_route, tspInstance->citiesAmount + 1, constructiveSolution->constructive_distance);
     return constructiveSolution;
 }
@@ -1158,9 +1164,9 @@ struct solution* local_search_controller(struct solution* currentSolution) {
             currentSolution->local_search_route = malloc(0);
         }
     }
-//    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
-//            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
-//            currentSolution->local_search_distance);
+    //    printf("\n Local search Solution using %s in %.6f seconds. Distance:  %d",
+    //            getLocalSearchMethodName(config.localSearchMethodIndex), currentSolution->localSearchTime,
+    //            currentSolution->local_search_distance);
     //        printRoute(currentSolution->constructive_route, tspInstance->citiesAmount + 1, currentSolution->constructive_distance);
     return currentSolution;
 }
@@ -1224,11 +1230,11 @@ struct solution* GRASP_controller() {
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
             ltime = time(NULL);
-            printf("\n %s --- Time elapsed in GRASP: %.2f of %d of GRASP. Current Mean distance: %.6f", asctime(localtime(&ltime)), 
+            printf("\n %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f", asctime(localtime(&ltime)),
                     timeElapsed, config.GRASP_criterion_parameter, graspMeanValue);
             ++totalIterations;
         }
-        printf("\n\n Finished GRASP iterations");
+//        printf("\n\n Finished GRASP iterations");
     } else {
         while (totalIterations <= config.GRASP_criterion_parameter) {
             ltime = time(NULL);
@@ -1256,13 +1262,14 @@ struct solution* GRASP_controller() {
     }
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
-    bestSolution->graspMeanValue = graspMeanValue;
-    bestSolution->graspTotalIterations = totalIterations - 1;
-    bestSolution->GRASPTime = graspTime;
-    bestSolution->timeToBestSolution = timeToBest;
-    bestSolution->iterationsToBestSolution = iterationsToBest;
-    printf("\n\nExiting GRASP");
-    printf("\n\nExiting GRASP");
+    if (bestSolution != NULL) {
+        bestSolution->graspMeanValue = graspMeanValue;
+        bestSolution->graspTotalIterations = totalIterations - 1;
+        bestSolution->GRASPTime = graspTime;
+        bestSolution->timeToBestSolution = timeToBest;
+        bestSolution->iterationsToBestSolution = iterationsToBest;
+    }
+//    printf("\n\nExiting GRASP");
     return bestSolution;
 }
 
@@ -1373,31 +1380,29 @@ void executeMethod(char* file) {
             }
             end = clock();
             totalTime = ((double) (end - start)) / CLOCKS_PER_SEC;
-            solution->totalTime = totalTime;
-            printLine(file, solution);
-            //            printf("\n<instance>\n");
-            //            printf("\t<name>%s</name>\n", file);
-            //            printf("\t<N>%d</N>", tspInstance->citiesAmount);
-            //            printf("\t<ConstructiveMethod>%s</ConstructiveMethod>\n", getConstructiveMethodName(config.constructiveMethodIndex));
-            //            printf("\t<ConstructiveDistance>%.2f</ConstructiveDistance>\n", constructiveSolution->distance);
-            //            printf("\t<ConstructiveCalcTime>%f</ConstructiveCalcTime>\n", constructiveCalculationTime);
-            //            printf("\t<LocalSearchMethod>%s</LocalSearchMethod>\n", getLocalSearchMethodName(config.localSearchMethodIndex));
-            //            printf("\t<LocalSearchDistance>%.2f</LocalSearchDistance>\n", localSearchSolution->distance);
-            //            printf("\t<LocalSearchCalcTime>%f</LocalSearchCalcTime>\n", localSearchCalculationTime);
-            //            printf("\t<alpha>%d</alpha>\n", config.alpha);
-            //            printf("\t<randomSeed>%d</randomSeed>\n", randomSeed);
-            //            printf("</instance>");
-            //            printTSPLibData(tspLibData);
-            //            printInstanceData(tspInstance);
-            //            verifyCanonicalDistance();
-            //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
-            //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
-            //            printInstanceData(tspInstance);
-            printf("\n\nbefore freeSolution from execute method");
-            printf("\n\nbefore freeSolution from execute method");
-            freeSolution(solution);
-            printf("\n\nafter freeSolution from execute method");
-            printf("\n\nafter freeSolution from execute method");
+            if (solution != NULL) {
+                solution->totalTime = totalTime;
+                printLine(file, solution);
+                //            printf("\n<instance>\n");
+                //            printf("\t<name>%s</name>\n", file);
+                //            printf("\t<N>%d</N>", tspInstance->citiesAmount);
+                //            printf("\t<ConstructiveMethod>%s</ConstructiveMethod>\n", getConstructiveMethodName(config.constructiveMethodIndex));
+                //            printf("\t<ConstructiveDistance>%.2f</ConstructiveDistance>\n", constructiveSolution->distance);
+                //            printf("\t<ConstructiveCalcTime>%f</ConstructiveCalcTime>\n", constructiveCalculationTime);
+                //            printf("\t<LocalSearchMethod>%s</LocalSearchMethod>\n", getLocalSearchMethodName(config.localSearchMethodIndex));
+                //            printf("\t<LocalSearchDistance>%.2f</LocalSearchDistance>\n", localSearchSolution->distance);
+                //            printf("\t<LocalSearchCalcTime>%f</LocalSearchCalcTime>\n", localSearchCalculationTime);
+                //            printf("\t<alpha>%d</alpha>\n", config.alpha);
+                //            printf("\t<randomSeed>%d</randomSeed>\n", randomSeed);
+                //            printf("</instance>");
+                //            printTSPLibData(tspLibData);
+                //            printInstanceData(tspInstance);
+                //            verifyCanonicalDistance();
+                //        printf("instance: %s \n \t distancia: %.2f tempos leitura: %f \t "
+                //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
+                //            printInstanceData(tspInstance);
+                freeSolution(solution);
+            }
         }
     }
     strcpy(previousInstance, file);
