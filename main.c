@@ -136,7 +136,7 @@ int getRandomInt(int lb, int ub, int randomizer) {
         generatedInt = randN * (ub - lb + 1) + lb;
     } while (generatedInt > ub || generatedInt < lb);
 
-//    printf("\n random: %.5f, lower bound: %d, upped bound: %d, generated: %d", randN, lb, ub, generatedInt);
+    //    printf("\n random: %.5f, lower bound: %d, upped bound: %d, generated: %d", randN, lb, ub, generatedInt);
     return generatedInt;
 }
 
@@ -878,10 +878,10 @@ int getRandomNearestNotVisited_2(int origin,
     int randomIndex = -1;
     do {
         randomIndex = getRandomInt(0, (tspInstance->citiesAmount - 1), 1);
-//        printf("\n cities amount: %d", tspInstance->citiesAmount);
-//        printf("\nRandom index: %d. Visited: %d  Distance: %d   Threshold: %d  Origin: %d  MinDistanceIndex: %d",
-//                randomIndex, visitedVertexes[randomIndex], tspInstance->graphMatrix[origin][randomIndex],
-//                threshold, origin, minDistanceIndex);
+        //        printf("\n cities amount: %d", tspInstance->citiesAmount);
+        //        printf("\nRandom index: %d. Visited: %d  Distance: %d   Threshold: %d  Origin: %d  MinDistanceIndex: %d",
+        //                randomIndex, visitedVertexes[randomIndex], tspInstance->graphMatrix[origin][randomIndex],
+        //                threshold, origin, minDistanceIndex);
     } while (visitedVertexes[randomIndex] == 1
             || tspInstance->graphMatrix[origin][randomIndex] > threshold
             || randomIndex == origin);
@@ -1194,6 +1194,7 @@ void freeSolution(struct solution* solution) {
 
 struct solution* GRASP_controller() {
     double timeElapsed = 0;
+    double lastTimeElapsed = 0;
     clock_t start = 0, end = 0;
     int totalIterations = 1;
     int iterationsToBest = 0;
@@ -1202,7 +1203,8 @@ struct solution* GRASP_controller() {
     struct solution* bestSolution = NULL;
     time_t ltime;
     double graspMeanValue = 0;
-    printf("\n Starting GRASP with criterion type %d and parameter %d", config.GRASP_criterion_type, config.GRASP_criterion_parameter);
+    double previousGraspMeanValue = 0;
+    printf("\n Starting GRASP with criterion type %d and parameter %d\n", config.GRASP_criterion_type, config.GRASP_criterion_parameter);
     if (config.GRASP_criterion_type == 1) {
         start = clock();
         while (timeElapsed < config.GRASP_criterion_parameter) {
@@ -1229,13 +1231,22 @@ struct solution* GRASP_controller() {
             }
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
-            ltime = time(NULL);
-            printf("\n %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f", asctime(localtime(&ltime)),
-                    timeElapsed, config.GRASP_criterion_parameter, graspMeanValue);
+            if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
+                ltime = time(NULL);
+                char* currentTime = asctime(localtime(&ltime));
+                if (strlen(currentTime) > 0) {
+                    currentTime[strlen(currentTime) - 1] = 0;
+                }
+                printf("\r %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f "
+                        "Previous mean distance: %.6f", currentTime,
+                        timeElapsed, config.GRASP_criterion_parameter, graspMeanValue, previousGraspMeanValue);
+                lastTimeElapsed = timeElapsed;
+                previousGraspMeanValue = graspMeanValue;
+            }
             ++totalIterations;
         }
-//        printf("\n\n Finished GRASP iterations");
-    } else {
+        //        printf("\n\n Finished GRASP iterations");
+    } else if (config.GRASP_criterion_type == 2) {
         while (totalIterations <= config.GRASP_criterion_parameter) {
             ltime = time(NULL);
             printf("\n %s \n iteration %d of GRASP. Previous Mean value: %.6f", asctime(localtime(&ltime)), totalIterations, graspMeanValue);
@@ -1259,6 +1270,33 @@ struct solution* GRASP_controller() {
             }
             totalIterations++;
         }
+
+    } else { //time to target
+        printf("\nExecuting GRASP until target distance %d is found\n", config.GRASP_criterion_parameter);
+        struct solution* currentSolution = GRASP();
+        int currentDistance = currentSolution->local_search_distance;
+        do {
+            graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
+            freeSolution(currentSolution);
+            currentSolution = GRASP();
+            if (currentSolution != NULL) {
+                currentDistance = currentSolution->local_search_distance;
+            }
+            end = clock();
+            timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
+            if (timeElapsed - lastTimeElapsed > 10.00f) {
+                ltime = time(NULL);
+                char* currentTime = asctime(localtime(&ltime));
+                if (strlen(currentTime) > 0) {
+                    currentTime[strlen(currentTime) - 1] = 0;
+                }
+                printf("\r %s --- Time elapsed in GRASP: %.2f (s). Total iterations tried: %d", currentTime,
+                        timeElapsed, totalIterations);
+                lastTimeElapsed = timeElapsed;
+            }
+            totalIterations++;
+        } while (currentDistance > config.GRASP_criterion_parameter);
+        bestSolution = currentSolution;
     }
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
@@ -1269,7 +1307,7 @@ struct solution* GRASP_controller() {
         bestSolution->timeToBestSolution = timeToBest;
         bestSolution->iterationsToBestSolution = iterationsToBest;
     }
-//    printf("\n\nExiting GRASP");
+    //    printf("\n\nExiting GRASP");
     return bestSolution;
 }
 
