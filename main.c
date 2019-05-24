@@ -1275,12 +1275,16 @@ struct solution* GRASP_controller() {
         printf("\nExecuting GRASP until target distance %d is found\n", config.GRASP_criterion_parameter);
         struct solution* currentSolution = GRASP();
         int currentDistance = currentSolution->local_search_distance;
+        int bestDistance = currentDistance;
         do {
             graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
             freeSolution(currentSolution);
             currentSolution = GRASP();
             if (currentSolution != NULL) {
                 currentDistance = currentSolution->local_search_distance;
+            }
+            if(currentDistance < bestDistance){
+                bestDistance = currentDistance;
             }
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
@@ -1290,8 +1294,8 @@ struct solution* GRASP_controller() {
                 if (strlen(currentTime) > 0) {
                     currentTime[strlen(currentTime) - 1] = 0;
                 }
-                printf("\r %s --- Time elapsed in GRASP: %.2f (s). Total iterations tried: %d", currentTime,
-                        timeElapsed, totalIterations);
+                printf("\r %s --- Time elapsed in GRASP: %.2f (s). Total iterations tried: %d.  Best distance so far: %d", currentTime,
+                        timeElapsed, totalIterations, bestDistance);
                 lastTimeElapsed = timeElapsed;
             }
             totalIterations++;
