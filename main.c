@@ -698,9 +698,9 @@ struct solution* localSearch(struct solution* currentSolution, int solutionSize)
         struct solution* originalSolution = copySolution(currentSolution);
         int keepSearching = 1;
         int* dontLook = calloc(solutionSize, sizeof *(dontLook));
-//        for (int i = 0; i < solutionSize; i++) {
-//            dontLook[i] = 0;
-//        }
+        //        for (int i = 0; i < solutionSize; i++) {
+        //            dontLook[i] = 0;
+        //        }
         do {
             //            printf("\n Current solution distance: %d ", currentSolution->local_search_distance);
             //                                                        printRoute(currentSolution->local_search_route, solutionSize, currentSolution->local_search_distance);
@@ -734,13 +734,13 @@ struct solution* localSearch(struct solution* currentSolution, int solutionSize)
         //    printRoute(currentSolution->route, constructiveSolutionSize, currentSolution->distance);
         //    testRoute();    
         free(dontLook);
-        if(currentSolution->local_search_distance > originalSolution->local_search_distance){
+        if (currentSolution->local_search_distance > originalSolution->local_search_distance) {
             freeSolution(currentSolution);
             currentSolution = originalSolution;
-        }else{
+        } else {
             freeSolution(originalSolution);
         }
-        
+
     }
 
     return currentSolution;
@@ -1268,7 +1268,7 @@ int getSymmetricDifference(int *route1, int *route2) {
 
 int getMinSymmetricDifference(struct solution *solution) {
     int minSymmetricDiff = tspInstance->citiesAmount + 1;
-//    printEliteSet();
+    //    printEliteSet();
     for (int i = 0; i < eliteSet_currentSize; i++) {
         if (eliteSet[i] != NULL) {
             //            printf("\n look at eliteset[%d]", i);
@@ -1295,7 +1295,7 @@ int getWorseEliteSolutionIndex() {
 }
 
 void updateEliteSet(struct solution *solution) {
-//    printf("\nCurrent elite set size: %d", eliteSet_currentSize);
+    //    printf("\nCurrent elite set size: %d", eliteSet_currentSize);
     if (eliteSet_currentSize < ELITE_MAX_SIZE) {
         if (eliteSet_currentSize == 0) {
             eliteSet[eliteSet_currentSize++] = copySolution(solution);
@@ -1399,11 +1399,11 @@ struct solution* forward_path_relinking(struct solution* baseSolution, struct so
     struct swap bestSwap;
     int bestTotalCost = INT_MAX;
     int currentCost = baseCost;
-    int pathRelinkMovements = 0, movementsToBest =0;
+    int pathRelinkMovements = 0, movementsToBest = 0;
     while (routeDifference > 2) {
         struct swap currentSwap = performBestSwap(route1, targetRoute, currentCost);
         routeDifference = getRouteDifferenceSize(route1, targetRoute);
-//                printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
+        //                printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
         if (currentSwap.cost < bestTotalCost) {
             bestTotalCost = currentSwap.cost;
             bestSwap = currentSwap;
@@ -1413,9 +1413,9 @@ struct solution* forward_path_relinking(struct solution* baseSolution, struct so
         currentCost = currentSwap.cost;
         pathRelinkMovements++;
     }
-//    free(relinkedSolution->local_search_route);
-    
-    printf("\n #, %s, %d, %d", config.path,pathRelinkMovements, movementsToBest);
+    //    free(relinkedSolution->local_search_route);
+
+    printf("\n #, %s, %d, %d", config.path, pathRelinkMovements, movementsToBest);
     memcpy(relinkedSolution->local_search_route, bestRelinkedRoute, routeSize * sizeof (int));
     memcpy(relinkedSolution->constructive_route, bestRelinkedRoute, routeSize * sizeof (int));
     relinkedSolution->local_search_distance = bestTotalCost;
@@ -1423,14 +1423,14 @@ struct solution* forward_path_relinking(struct solution* baseSolution, struct so
     free(bestRelinkedRoute);
     free(route1);
     freeSolution(baseSolution);
-//    printf("\nOverall best swap total distance: %d. Route:", bestTotalCost);
-//    printRoute(relinkedSolution->constructive_route, routeSize, bestTotalCost);
-//    printf("\nAfter Local search on best solution: ");
+    //    printf("\nOverall best swap total distance: %d. Route:", bestTotalCost);
+    //    printRoute(relinkedSolution->constructive_route, routeSize, bestTotalCost);
+    //    printf("\nAfter Local search on best solution: ");
     //    struct solution* solution = malloc(sizeof *(solution));
     //    solution->constructive_route = bestRelinkedRoute;
     //    solution->constructive_distance = bestTotalCost;
     localSearch(relinkedSolution, routeSize);
-//    printRoute(relinkedSolution->local_search_route, routeSize, relinkedSolution->local_search_distance);
+    //    printRoute(relinkedSolution->local_search_route, routeSize, relinkedSolution->local_search_distance);
     return relinkedSolution;
 }
 
@@ -1450,7 +1450,7 @@ struct solution* truncated_path_relinking(struct solution* baseSolution, struct 
     //from base
     while (pathRelinkMovements != 4) {
         struct swap currentSwap = performBestSwap(route1, targetRoute, currentCost);
-//                        printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
+        //                        printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
         if (currentSwap.cost < bestTotalCost) {
             bestTotalCost = currentSwap.cost;
             bestSwap = currentSwap;
@@ -1460,13 +1460,13 @@ struct solution* truncated_path_relinking(struct solution* baseSolution, struct 
         pathRelinkMovements++;
     }
     pathRelinkMovements = 0;
-    
+
     memcpy(route1, targetRoute, routeSize * sizeof (int));
     currentCost = targetSolution->local_search_distance;
     //from target
     while (pathRelinkMovements != 4) {
         struct swap currentSwap = performBestSwap(route1, baseRoute, currentCost);
-//                        printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
+        //                        printf("\nBest Possible swap: (%d,%d). Distance after swapping: %d", route1[currentSwap.i], route1[currentSwap.j], currentSwap.cost);
         if (currentSwap.cost < bestTotalCost) {
             bestTotalCost = currentSwap.cost;
             bestSwap = currentSwap;
@@ -1475,8 +1475,8 @@ struct solution* truncated_path_relinking(struct solution* baseSolution, struct 
         currentCost = currentSwap.cost;
         pathRelinkMovements++;
     }
-    
-//    free(relinkedSolution->local_search_route);
+
+    //    free(relinkedSolution->local_search_route);
     struct solution* relinkedSolution = copySolution(baseSolution);
     memcpy(relinkedSolution->local_search_route, bestRelinkedRoute, routeSize * sizeof (int));
     memcpy(relinkedSolution->constructive_route, bestRelinkedRoute, routeSize * sizeof (int));
@@ -1485,14 +1485,14 @@ struct solution* truncated_path_relinking(struct solution* baseSolution, struct 
     free(bestRelinkedRoute);
     free(route1);
     freeSolution(baseSolution);
-//    printf("\nOverall best swap total distance: %d. Route:", bestTotalCost);
-//    printRoute(relinkedSolution->constructive_route, routeSize, bestTotalCost);
-//    printf("\nAfter Local search on best solution: ");
+    //    printf("\nOverall best swap total distance: %d. Route:", bestTotalCost);
+    //    printRoute(relinkedSolution->constructive_route, routeSize, bestTotalCost);
+    //    printf("\nAfter Local search on best solution: ");
     //    struct solution* solution = malloc(sizeof *(solution));
     //    solution->constructive_route = bestRelinkedRoute;
     //    solution->constructive_distance = bestTotalCost;
     localSearch(relinkedSolution, routeSize);
-//    printRoute(relinkedSolution->local_search_route, routeSize, relinkedSolution->local_search_distance);
+    //    printRoute(relinkedSolution->local_search_route, routeSize, relinkedSolution->local_search_distance);
     return relinkedSolution;
 }
 
@@ -1506,7 +1506,7 @@ struct solution* GRASP_controller() {
     double timeElapsed = 0;
     double lastTimeElapsed = 0;
     clock_t start = 0, end = 0;
-    int totalIterations = 1;
+    int totalIterations = 0;
     int iterationsToBest = 0;
     double graspTime = 0, timeToBest = 0;
     clock_t GRASPstart = clock(), timeToBestStart = clock(), GRASPend = 0;
@@ -1518,6 +1518,7 @@ struct solution* GRASP_controller() {
     if (config.GRASP_criterion_type == 1) { // time based
         start = clock();
         while (timeElapsed < config.GRASP_criterion_parameter) {
+            totalIterations++;
             randomSeed++;
             randomizerConstructive = seedRand(randomSeed);
             randomizerLocalSearch = seedRand(randomSeed);
@@ -1553,12 +1554,12 @@ struct solution* GRASP_controller() {
                 lastTimeElapsed = timeElapsed;
                 previousGraspMeanValue = graspMeanValue;
             }
-            ++totalIterations;
         }
         //        printf("\n\n Finished GRASP iterations");
     } else if (config.GRASP_criterion_type == 2) { // total iterations
         while (totalIterations <= config.GRASP_criterion_parameter) {
             ltime = time(NULL);
+            totalIterations++;
             printf("\n %s \n iteration %d of GRASP. Previous Mean value: %.6f", asctime(localtime(&ltime)), totalIterations, graspMeanValue);
             struct solution* currentSolution = GRASP();
             if (currentSolution != NULL) {
@@ -1578,18 +1579,18 @@ struct solution* GRASP_controller() {
                     iterationsToBest = totalIterations;
                 }
             }
-            totalIterations++;
         }
-
-    } else if (config.GRASP_criterion_type == 3) { //time to target withouth path relinking
+    } else if (config.GRASP_criterion_type == 3) { //time to target without path relinking
         printf("\nExecuting GRASP until target distance %d is found\n", config.GRASP_criterion_parameter);
+        start = clock();
         struct solution* currentSolution = GRASP();
+        totalIterations++;
         int currentDistance = currentSolution->local_search_distance;
         int bestDistance = currentDistance;
         int previousTotalIterations = 0;
-        start = clock();
-        do {
+        while (currentDistance > config.GRASP_criterion_parameter && timeElapsed < config.GRASP_criterion_parameter2) {
             graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
+            totalIterations++;
             freeSolution(currentSolution);
             currentSolution = GRASP();
             if (currentSolution != NULL) {
@@ -1612,21 +1613,23 @@ struct solution* GRASP_controller() {
                 lastTimeElapsed = timeElapsed;
                 previousTotalIterations = totalIterations;
             }
-            totalIterations++;
-        } while (currentDistance > config.GRASP_criterion_parameter && timeElapsed < config.GRASP_criterion_parameter2);
-//        printf("\n Finished GRASP, timeElapsed: %.2f, lastTimeElapsed: %.2f, bestDistance: %d", timeElapsed, lastTimeElapsed, bestDistance);
+        }
+        //        printf("\n Finished GRASP, timeElapsed: %.2f, lastTimeElapsed: %.2f, bestDistance: %d", timeElapsed, lastTimeElapsed, bestDistance);
         bestSolution = currentSolution;
-//        printf("\n");
+        //        printf("\n");
     } else { // time + target limit with path relinking
         printf("\nExecuting GRASP until target distance %d is found or time limit of %d seconds runs out.\n",
                 config.GRASP_criterion_parameter, config.GRASP_criterion_parameter2);
+        start = clock();
         struct solution* currentSolution = GRASP();
+        totalIterations++;
         int currentDistance = currentSolution->local_search_distance;
         int bestDistance = currentDistance;
         updateEliteSet(currentSolution);
-        start= clock();
+        timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
         while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
-            printf("\r time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            printf("\n time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            totalIterations++;
             randomSeed++;
             randomizerConstructive = seedRand(randomSeed);
             randomizerLocalSearch = seedRand(randomSeed);
@@ -1655,9 +1658,7 @@ struct solution* GRASP_controller() {
                     bestDistance = bestSolution->local_search_distance;
                 }
             }
-            end = clock();
-            timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
-
+            timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
             if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
                 ltime = time(NULL);
                 char* currentTime = asctime(localtime(&ltime));
@@ -1670,14 +1671,13 @@ struct solution* GRASP_controller() {
                 lastTimeElapsed = timeElapsed;
                 previousGraspMeanValue = graspMeanValue;
             }
-            ++totalIterations;
         }
     }
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
     if (bestSolution != NULL) {
         bestSolution->graspMeanValue = graspMeanValue;
-        bestSolution->graspTotalIterations = totalIterations - 1;
+        bestSolution->graspTotalIterations = totalIterations;
         bestSolution->GRASPTime = graspTime;
         bestSolution->timeToBestSolution = timeToBest;
         bestSolution->iterationsToBestSolution = iterationsToBest;
