@@ -1238,10 +1238,11 @@ struct solution* getRandomElite() {
     }
 }
 
-void initializeEliteSet() {
-    for (int i = 0; i < ELITE_MAX_SIZE; i++) {
+void resetEliteSet() {
+    for (int i = 0; i < eliteSet_currentSize; i++) {
         freeSolution(eliteSet[i]);
     }
+    eliteSet_currentSize = 0;
 }
 
 void printEliteSet() {
@@ -1636,7 +1637,7 @@ struct solution* GRASP_controller() {
         freeSolution(currentSolution);
         timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
         while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
-            printf("\n time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            printf("\r time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
             totalIterations++;
             randomSeed++;
             randomizerConstructive = seedRand(randomSeed);
@@ -1672,6 +1673,7 @@ struct solution* GRASP_controller() {
                 previousGraspMeanValue = graspMeanValue;
             }
         }
+        resetEliteSet();
     }
     GRASPend = clock();
     graspTime = ((double) (GRASPend - GRASPstart)) / CLOCKS_PER_SEC;
@@ -1683,6 +1685,7 @@ struct solution* GRASP_controller() {
         bestSolution->iterationsToBestSolution = iterationsToBest;
     }
     //    printf("\n\nExiting GRASP");
+    printEliteSet();
     return bestSolution;
 }
 
@@ -1816,7 +1819,7 @@ void executeMethod(char* file) {
                 //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
                 //            printInstanceData(tspInstance);
                 freeSolution(solution);
-            } 
+            }
         }
     }
     strcpy(previousInstance, file);
