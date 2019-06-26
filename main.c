@@ -1685,7 +1685,6 @@ struct solution* GRASP_controller() {
         bestSolution->iterationsToBestSolution = iterationsToBest;
     }
     //    printf("\n\nExiting GRASP");
-    printEliteSet();
     return bestSolution;
 }
 
