@@ -1587,6 +1587,8 @@ struct solution* GRASP_controller() {
         totalIterations++;
         int currentDistance = currentSolution->local_search_distance;
         int bestDistance = currentDistance;
+        graspMeanValue = currentDistance;
+        iterationsToBest = 1;
         int previousTotalIterations = 0;
         while (currentDistance > config.GRASP_criterion_parameter && timeElapsed < config.GRASP_criterion_parameter2) {
             graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
@@ -1598,6 +1600,7 @@ struct solution* GRASP_controller() {
             }
             if (currentDistance < bestDistance) {
                 bestDistance = currentDistance;
+                iterationsToBest = totalIterations;
             }
             end = clock();
             timeElapsed = ((double) (end - start)) / CLOCKS_PER_SEC;
@@ -1625,7 +1628,12 @@ struct solution* GRASP_controller() {
         totalIterations++;
         int currentDistance = currentSolution->local_search_distance;
         int bestDistance = currentDistance;
+        graspMeanValue = currentSolution->local_search_distance;
+        bestSolution = copySolution(currentSolution);
+        iterationsToBest = 1;
+        timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
         updateEliteSet(currentSolution);
+        freeSolution(currentSolution);
         timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
         while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
             printf("\n time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
@@ -1641,22 +1649,14 @@ struct solution* GRASP_controller() {
                 }
                 updateEliteSet(currentSolution);
                 graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
-                if (bestSolution != NULL) {
-                    if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
-                        freeSolution(bestSolution);
-                        bestSolution = currentSolution;
-                        timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
-                        iterationsToBest = totalIterations;
-                        bestDistance = bestSolution->local_search_distance;
-                    } else {
-                        freeSolution(currentSolution);
-                    }
-                } else {
-                    bestSolution = currentSolution;
-                    iterationsToBest = totalIterations;
+                if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                    freeSolution(bestSolution);
+                    bestSolution = copySolution(currentSolution);
                     timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+                    iterationsToBest = totalIterations;
                     bestDistance = bestSolution->local_search_distance;
                 }
+                freeSolution(currentSolution);
             }
             timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
             if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
@@ -1816,7 +1816,7 @@ void executeMethod(char* file) {
                 //                "alocação: %f \t calculo %f  \n\n\n", file, distance, readTime, allocationTime, calculationTime);
                 //            printInstanceData(tspInstance);
                 freeSolution(solution);
-            }
+            } 
         }
     }
     strcpy(previousInstance, file);
