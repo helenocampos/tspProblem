@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'vm1748_GRASP_PR'
+		set terminal postscript color 'Helvetica'
+		set output 'vm1748_GRASP_PR-qq.ps'
+		plot "vm1748_GRASP_PR-el.dat" t "empirical" w points, "vm1748_GRASP_PR-tl.dat" t "estimated" with lines, "vm1748_GRASP_PR-ul.dat" t "+1 std dev range" w lines, "vm1748_GRASP_PR-ll.dat" t "-1 std dev range" w lines
+		quit

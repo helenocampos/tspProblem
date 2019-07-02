@@ -75,6 +75,7 @@ struct Config {
     int GRASP_criterion_parameter;
     int GRASP_criterion_parameter2;
     int GRASP_criterion_type;
+    int restart_parameter;
 };
 
 struct neighbor {
@@ -1621,7 +1622,7 @@ struct solution* GRASP_controller() {
         //        printf("\n Finished GRASP, timeElapsed: %.2f, lastTimeElapsed: %.2f, bestDistance: %d", timeElapsed, lastTimeElapsed, bestDistance);
         bestSolution = currentSolution;
         //        printf("\n");
-    } else { // time + target limit with path relinking
+    } else if (config.GRASP_criterion_type == 4) { // time + target limit with path relinking
         printf("\nExecuting GRASP until target distance %d is found or time limit of %d seconds runs out.\n",
                 config.GRASP_criterion_parameter, config.GRASP_criterion_parameter2);
         start = clock();
@@ -1659,6 +1660,194 @@ struct solution* GRASP_controller() {
                 }
                 freeSolution(currentSolution);
             }
+            timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+            if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
+                ltime = time(NULL);
+                char* currentTime = asctime(localtime(&ltime));
+                if (strlen(currentTime) > 0) {
+                    currentTime[strlen(currentTime) - 1] = 0;
+                }
+                //                printf("\r %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f "
+                //                        "Previous mean distance: %.6f", currentTime,
+                //                        timeElapsed, config.GRASP_criterion_parameter, graspMeanValue, previousGraspMeanValue);
+                lastTimeElapsed = timeElapsed;
+                previousGraspMeanValue = graspMeanValue;
+            }
+        }
+        resetEliteSet();
+    } else if (config.GRASP_criterion_type == 5) { // time + target limit with path relinking and restart every X iterations
+        printf("\nExecuting GRASP until target distance %d is found or time limit of %d seconds runs out.\n",
+                config.GRASP_criterion_parameter, config.GRASP_criterion_parameter2);
+        start = clock();
+        struct solution* currentSolution = GRASP();
+        totalIterations++;
+        int currentDistance = currentSolution->local_search_distance;
+        int bestDistance = currentDistance;
+        graspMeanValue = currentSolution->local_search_distance;
+        bestSolution = copySolution(currentSolution);
+        iterationsToBest = 1;
+        timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+        updateEliteSet(currentSolution);
+        freeSolution(currentSolution);
+        timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+        int iterationsSinceLastImprovement = 0;
+        while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
+            printf("\r time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            totalIterations++;
+            iterationsSinceLastImprovement++;
+            randomSeed++;
+            randomizerConstructive = seedRand(randomSeed);
+            randomizerLocalSearch = seedRand(randomSeed);
+            currentSolution = GRASP();
+            if (iterationsSinceLastImprovement >= config.restart_parameter) {
+                resetEliteSet();
+                iterationsSinceLastImprovement = 0;
+            }
+            if (currentSolution != NULL) {
+                if (eliteSet_currentSize > 0) {
+                    struct solution* targetSolution = getRandomElite();
+                    currentSolution = truncated_path_relinking(currentSolution, targetSolution);
+                }
+                updateEliteSet(currentSolution);
+                graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
+                if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                    freeSolution(bestSolution);
+                    bestSolution = copySolution(currentSolution);
+                    timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+                    iterationsToBest = totalIterations;
+                    bestDistance = bestSolution->local_search_distance;
+                    iterationsSinceLastImprovement = 0;
+                }
+                freeSolution(currentSolution);
+            }
+            timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+            if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
+                ltime = time(NULL);
+                char* currentTime = asctime(localtime(&ltime));
+                if (strlen(currentTime) > 0) {
+                    currentTime[strlen(currentTime) - 1] = 0;
+                }
+                //                printf("\r %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f "
+                //                        "Previous mean distance: %.6f", currentTime,
+                //                        timeElapsed, config.GRASP_criterion_parameter, graspMeanValue, previousGraspMeanValue);
+                lastTimeElapsed = timeElapsed;
+                previousGraspMeanValue = graspMeanValue;
+            }
+        }
+        resetEliteSet();
+    } else if (config.GRASP_criterion_type == 6) { // time + target limit with path relinking and adaptive restart
+        printf("\nExecuting GRASP until target distance %d is found or time limit of %d seconds runs out.\n",
+                config.GRASP_criterion_parameter, config.GRASP_criterion_parameter2);
+        start = clock();
+        struct solution* currentSolution = GRASP();
+        totalIterations++;
+        int currentDistance = currentSolution->local_search_distance;
+        int bestDistance = currentDistance;
+        graspMeanValue = currentSolution->local_search_distance;
+        bestSolution = copySolution(currentSolution);
+        iterationsToBest = 1;
+        timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+        updateEliteSet(currentSolution);
+        freeSolution(currentSolution);
+        timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+        int iterationsSinceLastImprovement = 0;
+        int startingRestartParameter = config.restart_parameter;
+        while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
+            printf("\r time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            totalIterations++;
+            iterationsSinceLastImprovement++;
+            randomSeed++;
+            randomizerConstructive = seedRand(randomSeed);
+            randomizerLocalSearch = seedRand(randomSeed);
+            currentSolution = GRASP();
+            if (iterationsSinceLastImprovement >= startingRestartParameter) {
+                resetEliteSet();
+                iterationsSinceLastImprovement = 0;
+                startingRestartParameter+=config.restart_parameter;
+            }
+//            printEliteSet();
+            if (currentSolution != NULL) {
+                if (eliteSet_currentSize > 0) {
+                    struct solution* targetSolution = getRandomElite();
+                    currentSolution = truncated_path_relinking(currentSolution, targetSolution);
+                }
+                updateEliteSet(currentSolution);
+                graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
+                if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                    freeSolution(bestSolution);
+                    bestSolution = copySolution(currentSolution);
+                    timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+                    iterationsToBest = totalIterations;
+                    bestDistance = bestSolution->local_search_distance;
+                    iterationsSinceLastImprovement = 0;
+                }
+                freeSolution(currentSolution);
+            }
+//            printf("\nIterations since last improvement: %d", iterationsSinceLastImprovement);
+            timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+            if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
+                ltime = time(NULL);
+                char* currentTime = asctime(localtime(&ltime));
+                if (strlen(currentTime) > 0) {
+                    currentTime[strlen(currentTime) - 1] = 0;
+                }
+                //                printf("\r %s --- Time elapsed in GRASP: %.2f (s) of %d (s). Current Mean distance: %.6f "
+                //                        "Previous mean distance: %.6f", currentTime,
+                //                        timeElapsed, config.GRASP_criterion_parameter, graspMeanValue, previousGraspMeanValue);
+                lastTimeElapsed = timeElapsed;
+                previousGraspMeanValue = graspMeanValue;
+            }
+        }
+        resetEliteSet();
+    }else if (config.GRASP_criterion_type == 7) { // time + target limit with path relinking and restart every X seconds without improvement
+        printf("\nExecuting GRASP until target distance %d is found or time limit of %d seconds runs out.\n",
+                config.GRASP_criterion_parameter, config.GRASP_criterion_parameter2);
+        start = clock();
+        struct solution* currentSolution = GRASP();
+        totalIterations++;
+        int currentDistance = currentSolution->local_search_distance;
+        int bestDistance = currentDistance;
+        graspMeanValue = currentSolution->local_search_distance;
+        bestSolution = copySolution(currentSolution);
+        iterationsToBest = 1;
+        timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+        updateEliteSet(currentSolution);
+        freeSolution(currentSolution);
+        timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
+        double  timeSinceLastImprovement = 0;
+        time_t lastImprovement = clock();
+        int startingRestartParameter = config.restart_parameter;
+        while (timeElapsed < config.GRASP_criterion_parameter2 && bestDistance > config.GRASP_criterion_parameter) {
+            printf("\r time elapsed: %.2f, current best distance: %d. Total iterations: %d", timeElapsed, bestDistance, totalIterations);
+            totalIterations++;
+            timeSinceLastImprovement = ((double) (clock() - lastImprovement)) / CLOCKS_PER_SEC;
+            randomSeed++;
+            randomizerConstructive = seedRand(randomSeed);
+            randomizerLocalSearch = seedRand(randomSeed);
+            currentSolution = GRASP();
+            if (timeSinceLastImprovement >= startingRestartParameter) {
+                resetEliteSet();
+                lastImprovement = clock();
+            }
+//            printEliteSet();
+            if (currentSolution != NULL) {
+                if (eliteSet_currentSize > 0) {
+                    struct solution* targetSolution = getRandomElite();
+                    currentSolution = truncated_path_relinking(currentSolution, targetSolution);
+                }
+                updateEliteSet(currentSolution);
+                graspMeanValue = ((graspMeanValue * (totalIterations - 1)) + currentSolution->local_search_distance) / totalIterations;
+                if (currentSolution->local_search_distance < bestSolution->local_search_distance) {
+                    freeSolution(bestSolution);
+                    bestSolution = copySolution(currentSolution);
+                    timeToBest = ((double) (clock() - timeToBestStart)) / CLOCKS_PER_SEC;
+                    iterationsToBest = totalIterations;
+                    bestDistance = bestSolution->local_search_distance;
+                    lastImprovement = clock();
+                }
+                freeSolution(currentSolution);
+            }
+//            printf("\ntime since last improvement: %.2f", timeSinceLastImprovement);
             timeElapsed = ((double) (clock() - start)) / CLOCKS_PER_SEC;
             if (timeElapsed - lastTimeElapsed > config.GRASP_criterion_parameter / 10) {
                 ltime = time(NULL);
@@ -1865,6 +2054,7 @@ void execute(char *file) {
         randomizerConstructive = seedRand(randomSeed);
         randomizerLocalSearch = seedRand(randomSeed);
         randomizerGeneral = seedRand(randomSeed);
+        printf("\n\n------Execution %d of %d for %s ----\n\n", i+1, config.repeatTimes, config.logName);
         for (int j = alpha; j <= alphaUB; j = j + config.alphaStep) {
             config.alpha = j;
             constructiveMethodArguments(file, constructiveMethodIndex, localSearchMethodIndex);
@@ -1963,18 +2153,20 @@ void printHelp() {
             "argument 6: path \n"
             "argument 7: 0 use timestamp initial seed or use specified initial seed\n"
             "argument 8: RCL type: 'qt' for quantity-based, 'ql' for quality-based\n"
-            "argument 9: GRASP type: 0 for disabled | 1 for time based | 2 for iteration based | 3 for target+time | 4 for target+time with path relinking \n"
+            "argument 9: GRASP type: 0 for disabled | 1 for time based | 2 for iteration based | 3 for target+time | 4 for target+time with path relinking"
+            "| 5 for target+time with path relinking and restart \n"
             "argument 10: GRASP parameter (time, iteration or target value) limit \n"
             "argument 11: Secondary GRASP parameter (target) limit \n"
-            "[argument 12: alpha value *optional*] \n "
-            "[argument 13: alpha value upper bound *optional* (if provided, argument 5 will be treated as the lower bound and all values will be tested]\n"
-            "[argument 14: alpha incremental step\n");
+            "[argument 12: path relinking restart parameter (0 uses default value) *optional*] \n "
+            "[argument 13: alpha value *optional*] \n "
+            "[argument 14: alpha value upper bound *optional* (if provided, argument 5 will be treated as the lower bound and all values will be tested]\n"
+            "[argument 15: alpha incremental step\n");
 
     printf("\n Note that if you choose a method that is random-based (RNN, RDSNN, all),"
             " you MUST provide the alpha value.");
     printf("\n Example: ./tspProblem execution1 DSNN first 10 folder instances 0");
-    printf("\n Example 2: ./tspProblem execution1 RDSNN none 5 file instances/a280.tsp 2 qt 2 50 0 20 ");
-    printf("\n Example 3: ./tspProblem myexecution all first 5 file instances/a280.tsp 0 qt 1 60 0 1 10 2 \n");
+    printf("\n Example 2: ./tspProblem execution1 RDSNN none 5 file instances/a280.tsp 2 qt 2 50 0 0 20 ");
+    printf("\n Example 3: ./tspProblem myexecution all first 5 file instances/a280.tsp 0 qt 1 60 0 0 1 10 2 \n");
 }
 
 void printConfigs() {
@@ -1995,7 +2187,8 @@ void printConfigs() {
     printf("\n initial seed %d", config.initialSeed);
     printf("\n GRASP type (0 disabled, 1 time, 2 iteration): %d", config.GRASP_criterion_type);
     printf("\n GRASP parameter: %d", config.GRASP_criterion_parameter);
-    printf("\n Secondary GRASP parameter: %d\n", config.GRASP_criterion_parameter2);
+    printf("\n Secondary GRASP parameter: %d", config.GRASP_criterion_parameter2);
+    printf("\n Path relinking restart parameter: %d\n", config.restart_parameter);
 }
 
 int main(int argc, char** argv) {
@@ -2021,12 +2214,15 @@ int main(int argc, char** argv) {
                 config.GRASP_criterion_parameter = atoi(argv[10]);
                 config.GRASP_criterion_parameter2 = atoi(argv[11]);
                 if (argc >= 13) {
-                    config.alpha = atoi(argv[12]);
+                    config.restart_parameter = atoi(argv[12]);
                     if (argc >= 14) {
-                        config.alphaUB = atoi(argv[13]);
-                        config.testAlpha = 1;
+                        config.alpha = atoi(argv[13]);
                         if (argc >= 15) {
-                            config.alphaStep = atoi(argv[14]);
+                            config.alphaUB = atoi(argv[14]);
+                            config.testAlpha = 1;
+                            if (argc >= 16) {
+                                config.alphaStep = atoi(argv[15]);
+                            }
                         }
                     }
                 }

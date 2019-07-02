@@ -58,3 +58,5 @@ dkms.conf
 # OS files
 Thumbs.db
 .DS_Store
+
+drmemory

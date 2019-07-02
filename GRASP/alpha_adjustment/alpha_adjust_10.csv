@@ -1,6 +1,6 @@
 name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed, total time, alpha type, grasp time, timeToBest grasp, iterationsToBestGrasp
-instances/adjustment/pr439.tsp,439,Random Double-sided nearest neighbor (RDSNN),299020,0.004681,1st improv 2opt,115929,0.008431,10,1558524057,4.502762,ql,4.502748,2.725628,211,
-instances/adjustment/d2103.tsp,2103,Random Double-sided nearest neighbor (RDSNN),502233,0.098754,1st improv 2opt,97253,0.275697,10,1558524058,124.462096,ql,124.462095,4.932412,14,
-instances/adjustment/d15112.tsp,15112,Random Double-sided nearest neighbor (RDSNN),15453243,4.727276,1st improv 2opt,1826515,40.463731,10,1558524059,15413.636640,ql,15413.636638,936.952221,21,
-instances/adjustment/rl1889.tsp,1889,Random Double-sided nearest neighbor (RDSNN),1989531,0.072105,1st improv 2opt,363874,0.202377,10,1558524060,93.877236,ql,93.877232,23.138858,87,
-instances/adjustment/d657.tsp,657,Random Double-sided nearest neighbor (RDSNN),152006,0.011469,1st improv 2opt,54951,0.017145,10,1558524061,9.823061,ql,9.823059,8.440884,301,
+instances/adjustment/d2103.tsp,2103,Random Double-sided nearest neighbor (RDSNN),493295,0.062948,1st improv 2opt,96627,0.182836,10,1558563859,49.879170,ql,49.879168,3.249958,13,
+instances/adjustment/d15112.tsp,15112,Random Double-sided nearest neighbor (RDSNN),15342904,3.499534,1st improv 2opt,1823628,21.702928,10,1558563860,4943.362067,ql,4943.362065,2514.795648,101,
+instances/adjustment/d657.tsp,657,Random Double-sided nearest neighbor (RDSNN),150573,0.009781,1st improv 2opt,54970,0.011426,10,1558563861,3.905633,ql,3.905631,1.035841,52,
+instances/adjustment/pr439.tsp,439,Random Double-sided nearest neighbor (RDSNN),354250,0.003886,1st improv 2opt,116231,0.005665,10,1558563862,1.720725,ql,1.720725,1.280415,148,
+instances/adjustment/rl1889.tsp,1889,Random Double-sided nearest neighbor (RDSNN),1793694,0.057080,1st improv 2opt,366618,0.129166,10,1558563863,38.307487,ql,38.307486,15.147514,79,

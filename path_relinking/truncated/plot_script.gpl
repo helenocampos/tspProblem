@@ -1,0 +1,10 @@
+set term png truecolor
+set output "histogram.png"
+set xlabel "Distance from S_B or S_T"
+set ylabel "Distribution (%) _{log scale}"
+set grid
+set boxwidth 0.8
+set logscale y 10
+set xrange [:24]
+set style fill transparent solid 0.5 border lt-1
+plot "histogram_data" u 1:2:xtic(1) w boxes lc rgb"green" notitle

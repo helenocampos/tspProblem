@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'pcb1173_grasp_pr'
+		set terminal postscript color 'Helvetica'
+		set output 'pcb1173_grasp_pr-qq.ps'
+		plot "pcb1173_grasp_pr-el.dat" t "empirical" w points, "pcb1173_grasp_pr-tl.dat" t "estimated" with lines, "pcb1173_grasp_pr-ul.dat" t "+1 std dev range" w lines, "pcb1173_grasp_pr-ll.dat" t "-1 std dev range" w lines
+		quit

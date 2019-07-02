@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'pcb1173-GRASP2'
+		set terminal postscript color 'Helvetica'
+		set output 'pcb1173-GRASP2-qq.ps'
+		plot "pcb1173-GRASP2-el.dat" t "empirical" w points, "pcb1173-GRASP2-tl.dat" t "estimated" with lines, "pcb1173-GRASP2-ul.dat" t "+1 std dev range" w lines, "pcb1173-GRASP2-ll.dat" t "-1 std dev range" w lines
+		quit

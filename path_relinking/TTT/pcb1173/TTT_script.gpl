@@ -1,0 +1,15 @@
+		set xlabel 'time to target solution (log_2)'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+		                set yrange [0:1]
+										set xrange [-1:]
+		set key right bottom
+                set grid
+		set title 'TTT for pcb1173.tsp'
+    set logscale x 2
+		set terminal png butt enhanced
+		set xtics font ", 10"
+		set output 'TTT_pcb1173.png'
+		plot "pcb1173-GRASP2-ee.dat" t "GRASP" w line lw 3, "pcb1173_grasp_pr-ee.dat" t "GRASP + PR" w line lw 3
+
+		quit

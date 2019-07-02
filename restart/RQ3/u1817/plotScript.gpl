@@ -1,0 +1,14 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+		                set yrange [0:1]
+										set xrange [-1:]
+		set key right bottom
+                set grid
+		set title 'TTT for u1817.tsp'
+#    set logscale x 2
+		set terminal png butt enhanced
+		set xtics font ", 10"
+		set output 'u1817_rq3.png'
+plot "u1817_15_i-out" t "Iterations-based" w line lw 3,"u1817_15_t-out" t "Time-based" w line lw 3,"u1817_no-out" t "no restart" w line lw 3
+		quit

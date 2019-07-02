@@ -1,0 +1,14 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+		                set yrange [0:1]
+										set xrange [-1:]
+		set key right bottom
+                set grid
+		set title 'TTT for pcb1173.tsp'
+#    set logscale x 2
+		set terminal png butt enhanced
+		set xtics font ", 10"
+		set output 'pcb1173_time.png'
+plot "pcb1173_15-out" t "restart(15)" w line lw 3,"pcb1173_30-out" t "restart(30)" w line lw 3,"pcb1173_45-out" t "restart(45)" w line lw 3,"pcb1173_60-out" t "restart(60)" w line lw 3,"pcb1173_75-out" t "restart(75)" w line lw 3,"pcb1173_no_restart-out" t "no restart" w line lw 3
+		quit

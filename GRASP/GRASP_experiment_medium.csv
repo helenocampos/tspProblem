@@ -1,0 +1,7 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed, total time, alpha type, grasp time, timeToBest grasp, iterationsToBestGrasp, meanGRASPDistance, totalIterationsGrasp
+instances/medium/pcb1173.tsp,1173,Random Double-sided nearest neighbor (RDSNN),400146,0.019761,1st improv 2opt,65029,0.061096,25,1558635187,1000.038320,ql,1000.038319,306.571345,3881,67530.200114,12293
+instances/medium/rl1304.tsp,1304,Random Double-sided nearest neighbor (RDSNN),2670130,0.024405,1st improv 2opt,283865,0.083209,25,1558644633,1000.017043,ql,1000.017042,891.883390,8401,304024.008894,9445
+instances/medium/vm1084.tsp,1084,Random Double-sided nearest neighbor (RDSNN),2055537,0.017048,1st improv 2opt,266424,0.046283,25,1558659841,1000.053328,ql,1000.053328,500.076839,7763,280039.566778,15207
+instances/medium/vm1748.tsp,1748,Random Double-sided nearest neighbor (RDSNN),3546285,0.046555,1st improv 2opt,380494,0.162770,25,1558664701,1000.034478,ql,1000.034478,366.647666,1692,394572.577691,4859
+instances/medium/u1817.tsp,1817,Random Double-sided nearest neighbor (RDSNN),558835,0.049653,1st improv 2opt,66822,0.182116,25,1558668953,1000.035729,ql,1000.035727,294.037412,1289,69640.428135,4251
+instances/medium/d1291.tsp,1291,Random Double-sided nearest neighbor (RDSNN),585285,0.024445,1st improv 2opt,56882,0.085577,25,1558677456,1000.044948,ql,1000.044947,61.095395,534,61743.255705,8502

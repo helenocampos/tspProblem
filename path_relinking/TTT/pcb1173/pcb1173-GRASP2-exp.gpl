@@ -1,0 +1,12 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title 'pcb1173-GRASP2'
+		set terminal postscript color 'Helvetica'
+		set output 'pcb1173-GRASP2-exp.ps'
+		plot "pcb1173-GRASP2-ee.dat" t "empirical" w points, "pcb1173_grasp_pr-ee.dat" t "empirical" w points
+		
+		quit

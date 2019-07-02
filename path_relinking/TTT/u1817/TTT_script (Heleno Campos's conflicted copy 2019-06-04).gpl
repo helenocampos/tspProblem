@@ -1,0 +1,13 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title ''
+        	set logscale x 2
+		set terminal png 
+		set output 'TTT_u1817.png'
+		plot "u1817-GRASP-ee.dat" t "GRASP" w line, "u1817-GRASP-PR-ee.dat" t "GRASP + PR" w line
+		
+		quit

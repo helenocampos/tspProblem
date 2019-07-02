@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'u1817'
+		set terminal postscript color 'Helvetica'
+		set output 'u1817-qq.ps'
+		plot "u1817-el.dat" t "empirical" w points, "u1817-tl.dat" t "estimated" with lines, "u1817-ul.dat" t "+1 std dev range" w lines, "u1817-ll.dat" t "-1 std dev range" w lines
+		quit

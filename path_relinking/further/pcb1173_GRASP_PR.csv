@@ -1,0 +1,2 @@
+name,n,constructive method, constructive distance, constructive calc time, local search method, localsearch distance, localsearch time, alpha, random seed, total time, alpha type, grasp time, timeToBest grasp, iterationsToBestGrasp, meanGRASPDistance, totalIterationsGrasp
+instances/medium/pcb1173.tsp,1173,Random Double-sided nearest neighbor (RDSNN),61743,0.020444,1st improv 2opt,61710,0.058154,25,1559831720,1000.162053,ql,1000.162052,995.181911,10228,62805.841327,10279

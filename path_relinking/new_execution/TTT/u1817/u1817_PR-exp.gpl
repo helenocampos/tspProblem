@@ -1,0 +1,11 @@
+		set xlabel 'time to target solution'
+		set size ratio 1
+		set ylabel 'cumulative probability'
+                set yrange [0:1]
+		set key right bottom
+                set grid
+		set title 'u1817_PR'
+		set terminal postscript color 'Helvetica'
+		set output 'u1817_PR-exp.ps'
+		plot "u1817_PR-ee.dat" t "empirical" w points, "u1817_PR-te.dat" t "theoretical" w lines
+		quit

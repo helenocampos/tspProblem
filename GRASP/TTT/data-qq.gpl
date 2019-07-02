@@ -1,0 +1,9 @@
+		set xlabel 'exponential quantiles'
+		set size ratio 1
+		set ylabel 'measured times'
+		set key right bottom
+		set title 'data'
+		set terminal postscript color 'Helvetica'
+		set output 'data-qq.ps'
+		plot "data-el.dat" t "empirical" w points, "data-tl.dat" t "estimated" with lines, "data-ul.dat" t "+1 std dev range" w lines, "data-ll.dat" t "-1 std dev range" w lines
+		quit
